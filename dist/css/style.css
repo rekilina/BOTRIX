@@ -1,0 +1,181 @@
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-Medium.woff2") format("woff2"), url(".../fonts/Mulish-Medium");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url(".../fonts/Mulish-Regular");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Xolonium;
+  font-display: swap;
+  src: url("../fonts/Xolonium-Bold.woff2") format("woff2"), url(".../fonts/Xolonium-Bold");
+  font-style: normal;
+  font-weight: 700;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  pointer-events: all !important;
+  background-color: #12121C;
+  overflow-x: clip;
+  margin: 0 auto;
+  color: #ffffff;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+body.stop-scrolling {
+  overflow: auto !important;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.rotatebtn {
+  position: relative;
+  left: 100px;
+  width: 196px;
+  height: 196px;
+}
+
+.rotatebtn:hover .ellips_63 {
+  transform: rotate(180deg);
+}
+
+.rotatebtn:hover .ellips_50 {
+  transform: rotate(-180deg);
+  transform-origin: center;
+}
+
+.rotatebtn:hover .ellips_48-img {
+  opacity: 0;
+}
+
+.ellips_63 {
+  width: 196px;
+  height: 196px;
+  position: absolute;
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+.ellips_63-img {
+  width: 165px;
+  height: 165px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../img/rotatebtn/Ellipse63.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.ellips_53 {
+  width: 172px;
+  height: 172px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%);
+  right: 50%;
+  background-image: url(../img/rotatebtn/Ellipse53.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.ellips_50 {
+  width: 196px;
+  height: 196px;
+  position: absolute;
+  transition: all 1s ease;
+  z-index: 3;
+}
+
+.ellips_50-img {
+  width: 172px;
+  height: 172px;
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-image: url(../img/rotatebtn/Ellipse50.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.ellips_48 {
+  width: 196px;
+  height: 196px;
+  position: absolute;
+  transition: all 1s ease;
+  z-index: 6;
+}
+
+.ellips_48-img {
+  width: 142px;
+  height: 142px;
+  display: inline-block;
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  background: linear-gradient(0deg, rgba(0, 106, 218, 0.2), rgba(0, 106, 218, 0.2)), linear-gradient(119.34deg, #FFFFFF 1.38%, #006ADA 42.92%, #006ADA 77.21%);
+  cursor: pointer;
+  z-index: 6;
+  border-radius: 50%;
+  transition: opacity 1s ease;
+}
+
+.ellips_48-imghover {
+  width: 142px;
+  height: 142px;
+  display: inline-block;
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  background: linear-gradient(135.26deg, rgba(255, 255, 255, 0.25) 4.03%, rgba(255, 255, 255, 0.25) 32.68%, rgba(0, 106, 218, 0.25) 83.09%), #FFFFFF;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 50%;
+}
