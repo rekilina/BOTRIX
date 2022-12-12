@@ -773,6 +773,60 @@ body.stop-scrolling {
   flex-basis: 472px;
 }
 
+.arrow-btn__circle {
+  width: 94px;
+  height: 94px;
+  position: relative;
+  border-radius: 47px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.arrow-btn__circle:hover {
+  width: 195px;
+  background-color: #ffffff;
+}
+
+.arrow-btn__circle:hover .arrow-btn__arrow-small {
+  opacity: 0;
+}
+
+.arrow-btn__circle:hover .arrow-btn__arrow-long {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.arrow-btn__arrow-small {
+  position: absolute;
+  height: 15px;
+  width: 25px;
+  display: inline-block;
+  background-image: url(../img/slider-arrow-small.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  right: 33px;
+  top: 40px;
+}
+
+.arrow-btn__arrow-long {
+  position: absolute;
+  height: 15px;
+  width: 55px;
+  display: inline-block;
+  background-image: url(../img/slider-arrow-long.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(0);
+  right: 33px;
+  top: 40px;
+}
+
 .webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }
 
 .webp .videoPoster { background-image: url(../img/MainImage.webp); }
