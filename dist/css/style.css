@@ -63,6 +63,79 @@ body.stop-scrolling {
   margin: 0 auto;
 }
 
+.h1 {
+  font-family: "Xolonium", sans-serif;
+  font-size: 56px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+.h2 {
+  font-family: "Xolonium", sans-serif;
+  font-size: 44px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+.h3 {
+  font-family: "Xolonium", sans-serif;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+.ticker {
+  font-family: "Xolonium", sans-serif;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  text-decoration: none;
+  letter-spacing: 0;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+.descriptor {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.4;
+  text-decoration: none;
+  letter-spacing: 0;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+.color-green {
+  color: #60E878;
+}
+
 .rotatebtn {
   position: relative;
   left: 100px;
@@ -179,4 +252,69 @@ body.stop-scrolling {
   cursor: pointer;
   z-index: 5;
   border-radius: 50%;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.header__login {
+  width: 126px;
+  height: 56px;
+  margin-right: 40px;
+  display: inline-block;
+}
+
+.header__login-img {
+  width: 100%;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 16px 16px 16px 24px;
+  border: 1px solid #FFFFFF;
+  border-radius: 32px;
+}
+
+.header__nav-li {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-li:last-child::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/IconRobot.svg);
+  margin-left: 8px;
+}
+
+.header__nav-link {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.header__user-login {
+  margin-right: 55px;
+}
+
+.header__user-register {
+  padding: 16px 32px;
+  background-color: #006ADA;
+  border-radius: 32px;
 }
