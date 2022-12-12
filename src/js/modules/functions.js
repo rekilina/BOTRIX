@@ -23,3 +23,11 @@ export function iswebp() {
 //     prevArrow: '<button class="banner-section__slider-btn banner-section__slider-btn-prev"> <img src="img/arrow-left.svg" alt="arrow-left"></button>',
 //     nextArrow: '<button class="banner-section__slider-btn banner-section__slider-btn-next"> <img src="img/arrow-right.svg" alt="arrow-right"></button>',
 // })
+
+// Ticker
+// https://www.jqueryscript.net/animation/horizontal-animation-conveyor-ticker.html
+$(function () {
+    $('.main-marquee').jConveyorTicker({
+        anim_duration: 150,
+    });
+});

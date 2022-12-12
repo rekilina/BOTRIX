@@ -31,7 +31,7 @@ export const js = () => {
             mode: app.isBuild ? "production" : "development",
             entry: {
                 app: "./src/js/app.js",
-                
+                jConveyorTicker: "./src/js/jConveyorTicker.js",
             },
             output: {
                 filename: '[name].js',

@@ -100,12 +100,11 @@ body.stop-scrolling {
   font-family: "Xolonium", sans-serif;
   font-size: 24px;
   line-height: 1.4;
-  letter-spacing: normal;
   font-weight: 700;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
-  color: #ffffff;
+  color: #12121C;
 }
 
 .subtitle {
@@ -411,6 +410,49 @@ body.stop-scrolling {
 .main-banner__imgbox-img {
   width: 100%;
   height: auto;
+}
+
+.main-marquee {
+  transform: rotate(-6deg);
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  top: 174px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.main-marquee__marquee {
+  position: absolute;
+  left: -50px;
+  bottom: 0;
+  width: auto;
+  padding: 22px 0;
+  display: inline-flex;
+  align-items: center;
+  background-color: #60E878;
+}
+
+.main-marquee__marquee-item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.main-marquee__marquee-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.main-marquee__marquee-text {
+  flex-shrink: 0;
 }
 
 .webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }

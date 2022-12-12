@@ -94,12 +94,11 @@ body.stop-scrolling {
     font-family: $xolonium;
     font-size: 24px;
     line-height: 1.4;
-    letter-spacing: normal;
     font-weight: 700; 
     text-transform: uppercase;
     padding: 0;
     margin: 0;
-    color: $white;
+    color: $vulcan;
 }
 
 .subtitle {
@@ -372,6 +371,42 @@ body.stop-scrolling {
         &-img {
             width: 100%;
             height: auto;
+        }
+    }
+}
+.main-marquee {
+    transform: rotate(-6deg);
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    top: 174px;
+    user-select: none;
+    pointer-events: none;
+    &__marquee {
+        position: absolute;
+        left: -50px;
+        bottom: 0;
+        width: auto;
+        padding: 22px 0;
+        display: inline-flex;
+        align-items: center;
+        background-color: $green;
+        &-item {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        &-icon {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        &-text {
+            flex-shrink: 0;
         }
     }
 }
