@@ -454,7 +454,6 @@ body.stop-scrolling {
     &__h2 {
         padding-bottom: 50px;
         position: relative;
-
         &::after {
             content: '';
             background-image: url(../img/functions_h2.svg);
@@ -542,7 +541,6 @@ body.stop-scrolling {
     &__h2 {
         position: relative;
         letter-spacing: 0.068em;
-
         &::after {
             content: '';
             background-image: url(../img/opportunities_h2.svg);
@@ -653,4 +651,124 @@ body.stop-scrolling {
     -webkit-transition-delay: 0s, 800ms;
     -moz-transition-delay: 0s, 800ms;
     transition-delay: 0s, 800ms;
+}
+
+.messengers {
+    padding-top: 130px;
+    padding-bottom: 120px;
+    &__h2 {
+        width: 70%;
+        display: inline-block;
+        position: relative;
+        letter-spacing: 0.067em;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            height: 65px;
+            width: 380px;
+            background-image: url(../img/messengers_h2.svg);
+            @include backsvg;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 178px;
+            height: 55px;
+            width: 55px;
+            background-image: url(../img/SmileGreen.svg);
+            @include backsvg;
+        }
+    }
+    &__text {
+        font-family: $mulish;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 140%;
+        color: $white;
+        margin-top: 64px;
+        width: 74%;
+    }
+    &__wrapper {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        &-shrink {
+            flex-shrink: 1;
+            flex-basis: 52%;
+        }
+    }
+    &__list {
+        flex-shrink: 0;
+        flex-grow: 1;
+        flex-basis: 40%;
+        // width: 48%;
+        position: relative;
+        padding-left: 16px;
+        &-li {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: #88888D;
+            position: relative;
+            padding-left: 40px;
+            &::before {
+                content: '';
+                width: 24px;
+                height: 24px;
+                background-image: url(../img/Bullet.svg);
+                @include backsvg;
+                display: inline-flex;
+                position: absolute;
+                top: 2px;
+                left: -16px;
+            }
+            & + .messengers__list-li {
+                margin-top: 24px;
+            }
+        }
+    }
+}
+.capabilities {
+    padding-top: 157px;
+    padding-bottom: 120px;
+    &__h2 {
+        letter-spacing: 0.068em;
+        position: relative;
+        width: 80%;
+        &::after {
+            content: '';
+            position: absolute;
+            top: -37px;
+            right: -220px;
+            height: 143px;
+            width: 371px;
+            background-image: url(../img/capabilities_h2.svg);
+            @include backsvg;
+        }
+    }
+    &__descr {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        display: flex;
+        justify-content: space-between;
+        gap: 65px;
+        &-subtitle {
+            flex-basis: 663px;
+        }
+        &-text {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: $aluminium;
+            flex-basis: 472px;
+        }
+    }
 }
