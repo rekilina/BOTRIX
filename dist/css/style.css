@@ -68,6 +68,7 @@ body.stop-scrolling {
   left: 100px;
   width: 196px;
   height: 196px;
+  cursor: pointer;
 }
 
 .rotatebtn:hover .ellips_63 {
