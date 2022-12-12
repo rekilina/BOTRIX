@@ -1,0 +1,23 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M36 35H12C10.343 35 9 36.343 9 38V42L5 46L9 50V54C9 55.657 10.343 57 12 57H36C37.657 57 39 55.657 39 54V38C39 36.343 37.657 35 36 35Z" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M14 41H23" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M14 46H32" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M28 50H26V52H28V50Z" fill="#60E878"/>
+<path d="M24 50H22V52H24V50Z" fill="#60E878"/>
+<path d="M20 50H18V52H20V50Z" fill="#60E878"/>
+<path d="M16 50H14V52H16V50Z" fill="#60E878"/>
+<path d="M32 50H30V52H32V50Z" fill="#60E878"/>
+<path d="M25 32V26C25 24.343 26.343 23 28 23H49C50.657 23 52 24.343 52 26V39L55.853 45H42" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M30 27H39" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M30 31H47" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M24.9991 29H17.2461L19.9991 24V18C19.9991 16.343 21.3421 15 22.9991 15H38.9991C40.6561 15 41.9991 16.343 41.9991 18V23" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M42 35H47" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M3 12H7" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M11 12H15" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M9 14V18" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M9 6V10" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M47 49H52" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M43 58V53" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M49.5993 55.6L46.4023 52.403" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M48.6526 18.748C49.7646 17.471 50.5396 15.893 50.8446 14.153L55.1316 9.886L50.0306 8.344C48.4886 5.183 45.2526 3 41.4986 3C36.4426 3 32.3086 6.95 32.0156 11.933" stroke="#60E878" stroke-width="2" stroke-miterlimit="10"/>
+</svg>

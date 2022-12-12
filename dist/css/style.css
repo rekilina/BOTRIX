@@ -168,14 +168,14 @@ body.stop-scrolling {
   top: 50%;
   transform: translateX(50%) translateY(-50%);
   color: #ffffff;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
 }
 
 .ellips_63 {
   width: 196px;
   height: 196px;
   position: absolute;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   z-index: 1;
 }
 
@@ -214,7 +214,7 @@ body.stop-scrolling {
   width: 196px;
   height: 196px;
   position: absolute;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   z-index: 3;
 }
 
@@ -237,7 +237,7 @@ body.stop-scrolling {
   width: 196px;
   height: 196px;
   position: absolute;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   z-index: 6;
 }
 
@@ -252,7 +252,7 @@ body.stop-scrolling {
   cursor: pointer;
   z-index: 6;
   border-radius: 50%;
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
 }
 
 .ellips_48-imghover {
@@ -773,6 +773,58 @@ body.stop-scrolling {
   flex-basis: 472px;
 }
 
+.capabilities__slider {
+  overflow: visible;
+  clip-path: inset(-100vw -100vw -100vw -20px) !important;
+  -webkit-clip-path: inset(-100vw -100vw -100vw -20px) !important;
+  -moz-clip-path: inset(-100vw -100vw -100vw -20px) !important;
+}
+
+.capabilities__slider .slick-list {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+  overflow: visible !important;
+}
+
+.capabilities__slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
+  margin-right: 48px;
+  box-shadow: 0px 0px 12px rgba(96, 232, 120, 0.5);
+  border-radius: 32px;
+  width: 370px !important;
+  height: 280px;
+}
+
+.capabilities__slide-content {
+  padding: 64px 30px;
+  width: 368px;
+  height: 278px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 32px;
+  background: #12121C;
+}
+
+.capabilities__slide-img {
+  width: 60px;
+  height: 60px;
+}
+
+.capabilities__slide-text {
+  margin-top: 24px;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
 .arrow-btn__circle {
   width: 94px;
   height: 94px;
@@ -780,7 +832,7 @@ body.stop-scrolling {
   border-radius: 47px;
   border: 1px solid #ffffff;
   background-color: transparent;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 
@@ -794,11 +846,17 @@ body.stop-scrolling {
 }
 
 .arrow-btn__circle:hover .arrow-btn__arrow-long {
-  transform: scale(1);
+  transform: scale(1) translateX(50%);
   opacity: 1;
 }
 
-.arrow-btn__arrow-small {
+.arrow-btn__circle-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.arrow-btn__circle-right .arrow-btn__arrow-small {
   position: absolute;
   height: 15px;
   width: 25px;
@@ -807,12 +865,13 @@ body.stop-scrolling {
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  transform: rotate(180deg);
-  right: 33px;
+  transform: rotate(180deg) translateX(-50%);
+  right: 50%;
   top: 40px;
+  transition: all 0.5s ease;
 }
 
-.arrow-btn__arrow-long {
+.arrow-btn__circle-right .arrow-btn__arrow-long {
   position: absolute;
   height: 15px;
   width: 55px;
@@ -823,8 +882,40 @@ body.stop-scrolling {
   background-repeat: no-repeat;
   opacity: 0;
   transform: scale(0);
-  right: 33px;
+  right: 50%;
   top: 40px;
+  transition: all 0.5s ease;
+}
+
+.arrow-btn__circle-left .arrow-btn__arrow-small {
+  position: absolute;
+  height: 15px;
+  width: 25px;
+  display: inline-block;
+  background-image: url(../img/slider-arrow-small.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: rotate(0);
+  left: 33px;
+  top: 40px;
+  transition: all 0.5s ease;
+}
+
+.arrow-btn__circle-left .arrow-btn__arrow-long {
+  position: absolute;
+  height: 15px;
+  width: 55px;
+  display: inline-block;
+  background-image: url(../img/slider-arrow-long.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(0) rotate(180deg);
+  left: 33px;
+  top: 40px;
+  transition: scale 0.5s ease;
 }
 
 .webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }
