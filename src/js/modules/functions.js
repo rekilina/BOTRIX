@@ -31,3 +31,20 @@ $(function () {
         anim_duration: 150,
     });
 });
+
+$('.videoPoster').on('click', function (e) {
+    e.preventDefault();
+    var poster = $(this);
+    var wrapper = poster.closest('.js-videoWrapper');
+    videoPlay(wrapper);
+});
+
+function videoPlay(wrapper) {
+    console.log('here');
+    var iframe = wrapper.find('.js-videoIframe');
+    console.log(iframe.data('src'));
+    var src = iframe.data('src');
+    console.log()
+    wrapper.addClass('videoWrapperActive');
+    iframe.attr('src', src + "?autoplay=1");
+}
