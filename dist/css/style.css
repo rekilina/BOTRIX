@@ -78,7 +78,7 @@ body.stop-scrolling {
   font-family: "Xolonium", sans-serif;
   font-size: 44px;
   line-height: 1.2;
-  letter-spacing: normal;
+  letter-spacing: 0.05em;
   font-weight: 700;
   padding: 0;
   margin: 0;
@@ -338,7 +338,7 @@ body.stop-scrolling {
 
 .main-banner {
   padding-top: 72px;
-  padding-bottom: 100px;
+  padding-bottom: 260px;
   position: relative;
 }
 
@@ -453,6 +453,96 @@ body.stop-scrolling {
 
 .main-marquee__marquee-text {
   flex-shrink: 0;
+}
+
+.functions {
+  padding-top: 68px;
+}
+
+.functions__h2 {
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.functions__h2::after {
+  content: "";
+  background-image: url(../img/functions_h2.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  width: 456px;
+  height: 31px;
+  right: 0;
+  bottom: 11px;
+  transform: translateX(-81%);
+}
+
+.functions__h2 .decor {
+  margin-left: 5px;
+  letter-spacing: 0.072em;
+}
+
+.functions__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+
+.functions__cards-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #60E878;
+  filter: drop-shadow(0px 0px 12px rgba(96, 232, 120, 0.5));
+  border-radius: 32px;
+  height: 155px;
+  flex-basis: 160px;
+}
+
+.functions__cards-img {
+  width: 64px;
+  height: 64px;
+}
+
+.functions__cards-green {
+  flex-basis: 472px;
+  padding: 42px 32px;
+  background: #60E878;
+  border-radius: 32px;
+}
+
+.functions__cards-green .functions__cards-description {
+  color: #222233;
+}
+
+.functions__cards-green .functions__cards-title {
+  color: #12121C;
+}
+
+.functions__cards-white {
+  flex-basis: 472px;
+  padding: 42px 32px;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.2);
+  border-radius: 32px;
+}
+
+.functions__cards-title {
+  margin-bottom: 12px;
+}
+
+.functions__cards-description {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #88888D;
 }
 
 .webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }
