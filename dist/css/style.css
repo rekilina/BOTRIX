@@ -67,7 +67,7 @@ body.stop-scrolling {
   font-family: "Xolonium", sans-serif;
   font-size: 56px;
   line-height: 1.2;
-  letter-spacing: 0;
+  letter-spacing: 0.066em;
   font-weight: 700;
   padding: 0;
   margin: 0;
@@ -78,7 +78,7 @@ body.stop-scrolling {
   font-family: "Xolonium", sans-serif;
   font-size: 44px;
   line-height: 1.2;
-  letter-spacing: 0;
+  letter-spacing: normal;
   font-weight: 700;
   padding: 0;
   margin: 0;
@@ -89,7 +89,7 @@ body.stop-scrolling {
   font-family: "Xolonium", sans-serif;
   font-size: 24px;
   line-height: 1.4;
-  letter-spacing: 0;
+  letter-spacing: normal;
   font-weight: 700;
   padding: 0;
   margin: 0;
@@ -100,7 +100,7 @@ body.stop-scrolling {
   font-family: "Xolonium", sans-serif;
   font-size: 24px;
   line-height: 1.4;
-  letter-spacing: 0;
+  letter-spacing: normal;
   font-weight: 700;
   text-transform: uppercase;
   padding: 0;
@@ -114,7 +114,7 @@ body.stop-scrolling {
   font-size: 24px;
   line-height: 1.4;
   text-decoration: none;
-  letter-spacing: 0;
+  letter-spacing: normal;
   padding: 0;
   margin: 0;
   color: #ffffff;
@@ -126,7 +126,7 @@ body.stop-scrolling {
   font-size: 17px;
   line-height: 1.4;
   text-decoration: none;
-  letter-spacing: 0;
+  letter-spacing: normal;
   padding: 0;
   margin: 0;
   color: #ffffff;
@@ -138,7 +138,6 @@ body.stop-scrolling {
 
 .rotatebtn {
   position: relative;
-  left: 100px;
   width: 196px;
   height: 196px;
   cursor: pointer;
@@ -155,6 +154,22 @@ body.stop-scrolling {
 
 .rotatebtn:hover .ellips_48-img {
   opacity: 0;
+}
+
+.rotatebtn:hover .rotatebtn-text {
+  color: #006ADA;
+}
+
+.rotatebtn-text {
+  position: absolute;
+  text-align: center;
+  width: 70%;
+  z-index: 6;
+  right: 50%;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%);
+  color: #ffffff;
+  transition: color 1s ease;
 }
 
 .ellips_63 {
@@ -298,6 +313,9 @@ body.stop-scrolling {
   height: 24px;
   background-image: url(../img/IconRobot.svg);
   margin-left: 8px;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .header__nav-link {
@@ -318,3 +336,81 @@ body.stop-scrolling {
   background-color: #006ADA;
   border-radius: 32px;
 }
+
+.main-banner {
+  padding-top: 72px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.main-banner__inner {
+  position: relative;
+}
+
+.main-banner__content {
+  width: 47%;
+  position: relative;
+}
+
+.main-banner__content .decor::before {
+  height: 38px;
+  width: 140px;
+  display: inline-block;
+  content: "";
+  background-image: url(../img/IconWave4.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-right: 36px;
+}
+
+.main-banner__content-h1 {
+  position: relative;
+}
+
+.no-webp .main-banner__content-h1::after {
+  background-image: url(../img/IconArrowDown.png); }
+
+.main-banner__content-h1::after {
+  content: "";
+  width: 64px;
+  height: 64px;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 100px;
+  bottom: -18px;
+}
+
+.main-banner__content-description {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 140%;
+  color: #88888D;
+  margin-top: 59px;
+  padding-left: 333px;
+}
+
+.main-banner__content-rotatebtn {
+  position: absolute;
+  bottom: -90px;
+  left: 0;
+}
+
+.main-banner__imgbox {
+  position: absolute;
+  right: -195px;
+  top: -176px;
+  overflow: visible;
+  width: 900px;
+}
+
+.main-banner__imgbox-img {
+  width: 100%;
+  height: auto;
+}
+
+.webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }

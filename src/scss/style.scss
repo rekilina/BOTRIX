@@ -10,6 +10,12 @@ $notification: #FF0033;
 $mulish: 'Mulish', sans-serif;
 $xolonium: 'Xolonium', sans-serif;
 
+@mixin backsvg {
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 *,
 *::after,
 *::before {
@@ -55,7 +61,7 @@ body.stop-scrolling {
     font-family: $xolonium;
     font-size: 56px;
     line-height: 1.2;
-    letter-spacing: 0;
+    letter-spacing: 0.066em;
     font-weight: 700;
     padding: 0;
     margin: 0;
@@ -66,7 +72,7 @@ body.stop-scrolling {
     font-family: $xolonium;
     font-size: 44px;
     line-height: 1.2;
-    letter-spacing: 0;
+    letter-spacing: normal;
     font-weight: 700;   
     padding: 0;
     margin: 0;    
@@ -77,7 +83,7 @@ body.stop-scrolling {
     font-family: $xolonium;
     font-size: 24px;
     line-height: 1.4;
-    letter-spacing: 0;
+    letter-spacing: normal;
     font-weight: 700;   
     padding: 0;
     margin: 0;
@@ -88,7 +94,7 @@ body.stop-scrolling {
     font-family: $xolonium;
     font-size: 24px;
     line-height: 1.4;
-    letter-spacing: 0;
+    letter-spacing: normal;
     font-weight: 700; 
     text-transform: uppercase;
     padding: 0;
@@ -102,7 +108,7 @@ body.stop-scrolling {
     font-size: 24px;
     line-height: 1.4;
     text-decoration: none;
-    letter-spacing: 0;
+    letter-spacing: normal;
     padding: 0;
     margin: 0;
     color: $white;
@@ -114,7 +120,7 @@ body.stop-scrolling {
     font-size: 17px;
     line-height: 1.4;
     text-decoration: none;
-    letter-spacing: 0;
+    letter-spacing: normal;
     padding: 0;
     margin: 0;
     color: $white;
@@ -126,7 +132,6 @@ body.stop-scrolling {
 
 .rotatebtn {
     position: relative;
-    left: 100px;
     width: 196px;
     height: 196px;
     cursor: pointer;
@@ -140,8 +145,21 @@ body.stop-scrolling {
     &:hover .ellips_48-img {
         opacity: 0;
     }
+    &:hover .rotatebtn-text {
+        color: $navyblue;
+    }
 }
-
+.rotatebtn-text {
+    position: absolute;
+    text-align: center;
+    width: 70%;
+    z-index: 6;
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%);
+    color: $white;
+    transition: color 1s ease;
+}
 .ellips_63 {
     width: 196px;
     height: 196px;
@@ -271,6 +289,9 @@ body.stop-scrolling {
                 height: 24px;
                 background-image: url(../img/IconRobot.svg);
                 margin-left: 8px;
+                background-size: 100% 100%;
+                background-position: center center;
+                background-repeat: no-repeat;
             }
         }
         &-link {
@@ -290,6 +311,67 @@ body.stop-scrolling {
             padding: 16px 32px;
             background-color: $navyblue;
             border-radius: 32px;
+        }
+    }
+}
+
+.main-banner {
+    padding-top: 72px;
+    padding-bottom: 100px;
+    position: relative;
+    &__inner {
+        position: relative;
+    }
+    &__content {
+        width: 47%;
+        position: relative;
+        & .decor::before {
+            height: 38px;
+            width: 140px;
+            display: inline-block;
+            content: '';
+            background-image: url(../img/IconWave4.svg);
+            @include backsvg;
+            margin-right: 36px;
+        }
+        &-h1 {
+            position: relative;
+            &::after {
+                content: "";
+                width: 64px;
+                height: 64px;
+                background-image: url(../img/IconArrowDown.png);
+                @include backsvg;
+                position: absolute;
+                right: 100px;
+                bottom: -18px;
+            }
+        }
+        &-description {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 140%;
+            color: $aluminium;     
+            margin-top: 59px;
+            padding-left: 333px;
+        }
+        &-rotatebtn {
+            position: absolute;
+            bottom: -90px;
+            left: 0;
+        }
+    }
+    &__imgbox {
+        position: absolute;
+        right: -195px;
+        top: -176px;
+        overflow: visible;
+        width: 900px;
+        &-img {
+            width: 100%;
+            height: auto;
         }
     }
 }

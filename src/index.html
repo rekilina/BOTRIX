@@ -2,21 +2,57 @@
 <html lang="en">
 
 @@include('html/head.html', {
-    "title": "Главная"
+"title": "Главная"
 })
+
 <body>
-    @@include('html/header.html', {}) 
+    @@include('html/header.html', {})
     <main>
-        
-        
-        
+        <section class="main-banner">
+            <div class="container">
+                <div class="main-banner__inner">
+                    <div class="main-banner__content">
+                        <h1 class="h1 main-banner__content-h1">
+                            Конструктор <span class="color-green decor">чат ботов</span> и массовых <span
+                                class="color-green">рассылок</span>
+                        </h1>
+                        <p class="main-banner__content-description">Автоматизируйте бизнес в мессенджерах вместе
+                            c&nbsp;Botrix и получите конверсию до 75%</p>
+                        <div class="main-banner__content-rotatebtn">
+                            <div class="rotatebtn">
+                                <div class="ellips_53"></div>
+                                <div class="ellips_63">
+                                    <div class="ellips_63-img"></div>
+                                </div>
+                                <div class="ellips_50">
+                                    <div class="ellips_50-img"></div>
+                                </div>
+                                <div class="ellips_48">
+                                    <div class="ellips_48-imghover"></div>
+                                    <div class="ellips_48-img"></div>
+                                </div>
+                                <div class="rotatebtn-text descriptor">
+                                    Тестировать чат&#8209;бот
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-banner__imgbox">
+                        <img src="@img/MainImage.png" alt="MainImage" class="main-banner__imgbox-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
     </main>
-    @@include('html/footer.html', {}) 
+    @@include('html/footer.html', {})
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="@js/app.js"></script>
 </body>
+
 </html>
 
 <!-- <div class="rotatebtn">
