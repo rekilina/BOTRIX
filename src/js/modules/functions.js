@@ -81,7 +81,7 @@ export function createProgressBar(slider_selector) {
 
 $('.functionality__preview').on('click', function(e) {
     $(this).siblings('.functionality__content').slideToggle();
-    $(this).siblings('.functionality__content').toggleClass('flex');
+    // $(this).siblings('.functionality__content').toggleClass('flex');
     $(this).find('.functionality__preview-circle').toggleClass('transparent');
     $(this).find('.functionality__preview-title').toggleClass('color-green');
     $(this).toggleClass('functionality__preview-bordernone');
