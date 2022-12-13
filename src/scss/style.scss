@@ -1656,3 +1656,42 @@ body.stop-scrolling {
         margin-top: 24px;
     }
 }
+
+.feedback {
+    padding: 120px 0;
+    &__h2 {
+        letter-spacing: 0.07em;
+        position: relative;
+        width: 600px;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 664px;
+            height: 73px;
+            background-image: url(../img/feedback_h2.svg);
+            @include backsvg;
+            position: absolute;
+            top: 22px;
+            left: 0;
+        }
+        & .decor {
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 77px;
+                height: 23px;
+                background-image: url(../img/IconWave4.svg);
+                @include backsvg;
+                position: relative;
+                top: 0;
+                left: -10px;
+            }
+        }
+        &-decor {
+            display: block;
+            text-align: right;
+        }
+        
+    }
+}

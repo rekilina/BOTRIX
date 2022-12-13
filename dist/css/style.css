@@ -1647,6 +1647,49 @@ body.stop-scrolling {
   margin-top: 24px;
 }
 
+.feedback {
+  padding: 120px 0;
+}
+
+.feedback__h2 {
+  letter-spacing: 0.07em;
+  position: relative;
+  width: 600px;
+}
+
+.feedback__h2::after {
+  content: "";
+  display: inline-block;
+  width: 664px;
+  height: 73px;
+  background-image: url(../img/feedback_h2.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 22px;
+  left: 0;
+}
+
+.feedback__h2 .decor::before {
+  content: "";
+  display: inline-block;
+  width: 77px;
+  height: 23px;
+  background-image: url(../img/IconWave4.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  left: -10px;
+}
+
+.feedback__h2-decor {
+  display: block;
+  text-align: right;
+}
+
 .webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }
 
 .webp .videoPoster { background-image: url(../img/MainImage.webp); }

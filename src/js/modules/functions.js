@@ -41,13 +41,6 @@ $('.tariffs__slider').slick({
     prevArrow: '<div class="tariffs__slider-btn arrow-btn__circle arrow-btn__circle-left"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
 });
 
-// кастомные стрелки slick
-// $('.capabilities__slider').slick({
-//     dots: true,
-//     prevArrow: '<button class="banner-section__slider-btn banner-section__slider-btn-prev"> <img src="img/arrow-left.svg" alt="arrow-left"></button>',
-//     nextArrow: '<button class="banner-section__slider-btn banner-section__slider-btn-next"> <img src="img/arrow-right.svg" alt="arrow-right"></button>',
-// })
-
 // Ticker
 // https://www.jqueryscript.net/animation/horizontal-animation-conveyor-ticker.html
 $(function () {
