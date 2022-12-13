@@ -1518,18 +1518,11 @@ body.stop-scrolling {
 .tariffs__wrapper {
   margin-top: 38px;
   display: flex;
-  justify-content: space-between;
-}
-
-.tariffs__wrapper-shrink {
-  flex-shrink: 1;
-  flex-basis: 43.5%;
+  justify-content: flex-end;
 }
 
 .tariffs__list {
-  flex-shrink: 0;
-  flex-grow: 1;
-  flex-basis: 40%;
+  width: 680px;
   position: relative;
   padding-left: 16px;
 }
@@ -1561,6 +1554,10 @@ body.stop-scrolling {
 
 .tariffs__list-li + .tariffs__list-li {
   margin-top: 24px;
+}
+
+.tariffs__list-li-emph {
+  color: #ffffff;
 }
 
 .tariffs__slider {
