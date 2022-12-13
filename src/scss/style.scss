@@ -752,7 +752,7 @@ body.stop-scrolling {
 .capabilities {
     padding-top: 157px;
     padding-bottom: 120px;
-
+    margin-bottom: 120px;
     &__h2 {
         letter-spacing: 0.068em;
         position: relative;
@@ -844,6 +844,7 @@ body.stop-scrolling {
             color: #FFFFFF;
         }
     }
+    &__progressbar {}
 }
 
 .arrow-btn {
@@ -959,4 +960,44 @@ body.stop-scrolling {
     background-repeat: no-repeat;
     background-size: 0 100%;
     transition: background-size .4s ease-in-out;
+}
+
+.horizontal-marquee {
+    transform: rotate(0);
+    position: static;
+}
+
+.calculate {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    &__inner {
+        position: relative;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+
+    }
+    &__content {
+        position: absolute;
+        right: 0;
+        top: 387px;
+        width: 472px;
+    }
+    &__text {
+
+    }
+    &__btn {
+        font-family: $mulish;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 140%;
+        color: #FFFFFF;
+        padding: 36px 72px;
+        background-color: $navyblue;
+        border-radius: 48px;
+        margin-top: 48px;
+        display: inline-block;
+    }
 }

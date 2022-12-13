@@ -730,6 +730,7 @@ body.stop-scrolling {
 .capabilities {
   padding-top: 157px;
   padding-bottom: 120px;
+  margin-bottom: 120px;
 }
 
 .capabilities__h2 {
@@ -941,6 +942,46 @@ body.stop-scrolling {
   background-repeat: no-repeat;
   background-size: 0 100%;
   transition: background-size 0.4s ease-in-out;
+}
+
+.horizontal-marquee {
+  transform: rotate(0);
+  position: static;
+}
+
+.calculate {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.calculate__inner {
+  position: relative;
+}
+
+.calculate__img {
+  width: 100%;
+  height: auto;
+}
+
+.calculate__content {
+  position: absolute;
+  right: 0;
+  top: 387px;
+  width: 472px;
+}
+
+.calculate__btn {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #FFFFFF;
+  padding: 36px 72px;
+  background-color: #006ADA;
+  border-radius: 48px;
+  margin-top: 48px;
+  display: inline-block;
 }
 
 .webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }
