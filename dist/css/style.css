@@ -1873,6 +1873,10 @@ body.stop-scrolling {
   border-radius: 48px;
 }
 
+.footer {
+  padding: 120px 0;
+}
+
 .webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }
 
 .webp .videoPoster { background-image: url(../img/MainImage.webp); }
