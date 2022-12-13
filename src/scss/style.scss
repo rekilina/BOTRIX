@@ -1314,7 +1314,7 @@ body.stop-scrolling {
 
 .articles {
     padding-top: 215px;
-    padding-bottom: 120px;
+    padding-bottom: 140px;
 
     &__h2 {
         width: 50%;
@@ -1380,6 +1380,95 @@ body.stop-scrolling {
                 height: 24px;
                 background-image: url(../img/ArrowLink.svg);
                 @include backsvg;
+            }
+        }
+    }
+}
+
+.questions {
+    padding: 120px 0;
+    &__h2 {
+        letter-spacing: 0.07em;
+        position: relative;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 506px;
+            height: 166px;
+            background-image: url(../img/questions_h2.svg);
+            @include backsvg;
+            position: absolute;
+            top: -20px;
+            right: 382px;
+        }
+    }
+    &__toggle {
+        width: 680px;
+        margin-top: 170px;
+        &-item {
+            width: 100%;
+            padding: 24px 0;
+            border-bottom: 1px solid #222233;
+        }
+    }
+    &__text {
+        font-family: $mulish;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #88888D;
+        padding: 48px 0 18px 0;
+        display: none;
+    }
+    &__preview {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all $time ease;
+        &-title {
+            transition: all $time ease;
+            max-width: 530px;
+        }
+        &--active {
+            padding-top: 24px;
+        }
+        &:hover {
+            & .questions__circle-vertical {
+                transform: rotate(0);
+            }
+            & .questions__preview-title {
+                color: $green;
+            }
+        }
+    }
+    &__circle {
+        width: 84px;
+        height: 56px;
+        background: #FFFFFF;
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-horizontal {
+            width: 28px;
+            height: 4px;
+            border-radius: 3px;
+            background-color: $vulcan;
+            position: absolute;
+        }
+        &-vertical {
+            width: 28px;
+            height: 4px;
+            border-radius: 3px;
+            background-color: $vulcan;
+            transform: rotate(-90deg);
+            position: absolute;
+            transition: all $time ease;
+            &--active {
+                transform: rotate(0);
             }
         }
     }

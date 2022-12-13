@@ -81,6 +81,14 @@ $('.functionality__preview').on('click', function(e) {
     $(this).toggleClass('functionality__preview-bordernone');
 })
 
+$('.questions__preview').on('click', function(e) {
+    $(this).siblings('.questions__text').slideToggle();
+    $(this).toggleClass('questions__preview--active');
+    $(this).find('.questions__preview-title').toggleClass('color-green');
+    $(this).find('.questions__circle-vertical').toggleClass('questions__circle-vertical--active');
+})
+
+
 
 
 

@@ -1292,7 +1292,7 @@ body.stop-scrolling {
 
 .articles {
   padding-top: 215px;
-  padding-bottom: 120px;
+  padding-bottom: 140px;
 }
 
 .articles__h2 {
@@ -1366,6 +1366,109 @@ body.stop-scrolling {
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.questions {
+  padding: 120px 0;
+}
+
+.questions__h2 {
+  letter-spacing: 0.07em;
+  position: relative;
+}
+
+.questions__h2::after {
+  content: "";
+  display: inline-block;
+  width: 506px;
+  height: 166px;
+  background-image: url(../img/questions_h2.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -20px;
+  right: 382px;
+}
+
+.questions__toggle {
+  width: 680px;
+  margin-top: 170px;
+}
+
+.questions__toggle-item {
+  width: 100%;
+  padding: 24px 0;
+  border-bottom: 1px solid #222233;
+}
+
+.questions__text {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #88888D;
+  padding: 48px 0 18px 0;
+  display: none;
+}
+
+.questions__preview {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.questions__preview-title {
+  transition: all 0.5s ease;
+  max-width: 530px;
+}
+
+.questions__preview--active {
+  padding-top: 24px;
+}
+
+.questions__preview:hover .questions__circle-vertical {
+  transform: rotate(0);
+}
+
+.questions__preview:hover .questions__preview-title {
+  color: #60E878;
+}
+
+.questions__circle {
+  width: 84px;
+  height: 56px;
+  background: #FFFFFF;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.questions__circle-horizontal {
+  width: 28px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: #12121C;
+  position: absolute;
+}
+
+.questions__circle-vertical {
+  width: 28px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: #12121C;
+  transform: rotate(-90deg);
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.questions__circle-vertical--active {
+  transform: rotate(0);
 }
 
 .webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }
