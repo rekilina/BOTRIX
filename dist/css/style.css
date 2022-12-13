@@ -778,6 +778,7 @@ body.stop-scrolling {
   clip-path: inset(-100vw -100vw -100vw -20px) !important;
   -webkit-clip-path: inset(-100vw -100vw -100vw -20px) !important;
   -moz-clip-path: inset(-100vw -100vw -100vw -20px) !important;
+  padding-top: 90px;
 }
 
 .capabilities__slider .slick-list {
@@ -837,7 +838,7 @@ body.stop-scrolling {
 }
 
 .arrow-btn__circle:hover {
-  width: 195px;
+  width: 194px;
   background-color: #ffffff;
 }
 
@@ -850,10 +851,15 @@ body.stop-scrolling {
   opacity: 1;
 }
 
+.arrow-btn__circle:hover.arrow-btn__circle-right {
+  transform: translateX(100px);
+}
+
 .arrow-btn__circle-right {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 100px;
+  transform-origin: center left;
 }
 
 .arrow-btn__circle-right .arrow-btn__arrow-small {
@@ -861,11 +867,11 @@ body.stop-scrolling {
   height: 15px;
   width: 25px;
   display: inline-block;
-  background-image: url(../img/slider-arrow-small.svg);
+  background-image: url(../img/slider-arrow-small-right.svg);
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  transform: rotate(180deg) translateX(-50%);
+  transform: translateX(50%);
   right: 50%;
   top: 40px;
   transition: all 0.5s ease;
@@ -876,7 +882,7 @@ body.stop-scrolling {
   height: 15px;
   width: 55px;
   display: inline-block;
-  background-image: url(../img/slider-arrow-long.svg);
+  background-image: url(../img/slider-arrow-long-right.svg);
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -887,17 +893,23 @@ body.stop-scrolling {
   transition: all 0.5s ease;
 }
 
+.arrow-btn__circle-left {
+  position: absolute;
+  top: 0;
+  right: 220px;
+}
+
 .arrow-btn__circle-left .arrow-btn__arrow-small {
   position: absolute;
   height: 15px;
   width: 25px;
   display: inline-block;
-  background-image: url(../img/slider-arrow-small.svg);
+  background-image: url(../img/slider-arrow-small-left.svg);
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  transform: rotate(0);
-  left: 33px;
+  transform: rotate(0) translateX(50%);
+  right: 50%;
   top: 40px;
   transition: all 0.5s ease;
 }
@@ -907,13 +919,13 @@ body.stop-scrolling {
   height: 15px;
   width: 55px;
   display: inline-block;
-  background-image: url(../img/slider-arrow-long.svg);
+  background-image: url(../img/slider-arrow-long-left.svg);
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
   opacity: 0;
-  transform: scale(0) rotate(180deg);
-  left: 33px;
+  transform: scale(0);
+  right: 50%;
   top: 40px;
   transition: scale 0.5s ease;
 }

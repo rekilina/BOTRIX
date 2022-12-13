@@ -777,6 +777,7 @@ body.stop-scrolling {
         clip-path: inset( -100vw -100vw -100vw -20px )!important;
         -webkit-clip-path: inset(-100vw -100vw -100vw -20px) !important;
         -moz-clip-path: inset(-100vw -100vw -100vw -20px) !important;
+        padding-top: 90px; // чтобы было куда стрелки ставить
         & .slick-list {
             padding-top: 24px!important;
             padding-bottom: 24px!important;
@@ -831,7 +832,7 @@ body.stop-scrolling {
         transition: all $time ease;
         cursor: pointer;
         &:hover {
-            width: 195px;
+            width: 194px;
             background-color: $white;
         }
         &:hover {
@@ -842,18 +843,25 @@ body.stop-scrolling {
                 transform: scale(1) translateX(50%);
                 opacity: 1;
             }
+            &.arrow-btn__circle-right {
+                transform: translateX(100px);
+                // поскольку transform-origin тут не спасет
+                // 194px - 94px = 100px
+            }
         } 
         &-right {
             position: absolute;
-            top: 0;right: 0;
+            top: 0;
+            right: 100px;
+            transform-origin: center left;
             & .arrow-btn__arrow-small {
                 position: absolute;
                 height: 15px;
                 width: 25px;
                 display: inline-block;
-                background-image: url(../img/slider-arrow-small.svg);
+                background-image: url(../img/slider-arrow-small-right.svg);
                 @include backsvg;
-                transform: rotate(180deg) translateX(-50%);
+                transform: translateX(50%);
                 right: 50%;
                 top: 40px;
                 transition: all $time ease;
@@ -863,7 +871,7 @@ body.stop-scrolling {
                 height: 15px;
                 width: 55px;
                 display: inline-block;
-                background-image: url(../img/slider-arrow-long.svg);
+                background-image: url(../img/slider-arrow-long-right.svg);
                 @include backsvg;
                 opacity: 0;
                 transform: scale(0);
@@ -873,15 +881,18 @@ body.stop-scrolling {
             }
         }
         &-left {
+            position: absolute;
+            top: 0;
+            right: 220px;
             & .arrow-btn__arrow-small {
                 position: absolute;
                 height: 15px;
                 width: 25px;
                 display: inline-block;
-                background-image: url(../img/slider-arrow-small.svg);
+                background-image: url(../img/slider-arrow-small-left.svg);
                 @include backsvg;
-                transform: rotate(0);
-                left: 33px;
+                transform: rotate(0) translateX(50%);
+                right: 50%;
                 top: 40px;
                 transition: all $time ease;
             }
@@ -890,11 +901,11 @@ body.stop-scrolling {
                 height: 15px;
                 width: 55px;
                 display: inline-block;
-                background-image: url(../img/slider-arrow-long.svg);
+                background-image: url(../img/slider-arrow-long-left.svg);
                 @include backsvg;
                 opacity: 0;
-                transform: scale(0) rotate(180deg);
-                left: 33px;
+                transform: scale(0);
+                right: 50%;
                 top: 40px;
                 transition: scale $time ease;
             }
