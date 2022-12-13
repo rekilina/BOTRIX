@@ -1690,6 +1690,144 @@ body.stop-scrolling {
   text-align: right;
 }
 
+.feedback__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 64px;
+}
+
+.feedback__main {
+  max-width: 576px;
+}
+
+.feedback__main-title {
+  margin-bottom: 48px;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.feedback__form-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.feedback__form .placeholder {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #88888D;
+  position: absolute;
+  top: 16px;
+  left: 24px;
+}
+
+.feedback__form-input {
+  outline: none;
+  margin-bottom: 24px;
+  padding: 16px 24px;
+  border: 1px solid #88888D;
+  border-radius: 48px;
+  background-color: transparent;
+  width: 100%;
+  position: relative;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.feedback__form-input::-moz-placeholder {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #88888D;
+}
+
+.feedback__form-input::placeholder {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #88888D;
+}
+
+.feedback__form-input:focus ~ .placeholder,
+.feedback__form-input:valid ~ .placeholder {
+  display: none;
+}
+
+.feedback__form-message {
+  min-height: 132px;
+  border-radius: 32px;
+}
+
+.feedback__form-text {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #88888D;
+  margin-top: 14px;
+}
+
+.feedback__form-link {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.feedback__form-btn {
+  width: 100%;
+  background-color: #006ADA;
+  border-radius: 32px;
+  padding: 16px 32px;
+  text-align: center;
+  border: none;
+  margin-top: 24px;
+}
+
+.feedback__social {
+  flex-basis: 472px;
+  flex-shrink: 1;
+}
+
+.feedback__social-text {
+  width: 80%;
+  margin-bottom: 48px;
+}
+
+.feedback__social-icons {
+  display: flex;
+  gap: 48px;
+}
+
+.feedback__social-link {
+  width: 96px;
+  height: 96px;
+}
+
+.feedback__social-img {
+  width: 100%;
+  height: auto;
+}
+
 .webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }
 
 .webp .videoPoster { background-image: url(../img/MainImage.webp); }

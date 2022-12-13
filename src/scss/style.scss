@@ -1694,4 +1694,120 @@ body.stop-scrolling {
         }
         
     }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 64px;
+    }
+    &__main {
+        max-width: 576px;
+        &-title {
+            margin-bottom: 48px;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &-wrapper {
+            position: relative;
+            // margin-bottom: 24px;
+            width: 100%;
+        }
+        & .placeholder {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: $aluminium;
+            position: absolute;
+            top: 16px;
+            left: 24px;
+        }
+        &-input {
+            outline: none;
+            margin-bottom: 24px;
+            padding: 16px 24px;
+            border: 1px solid $aluminium;
+            border-radius: 48px;
+            background-color: transparent;
+            width: 100%;
+            position: relative;
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: $white;
+            &::placeholder {
+                font-family: $mulish;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color: $aluminium;
+            }
+            &:focus ~ .placeholder,
+            &:valid ~ .placeholder {
+                display: none;
+            }
+        }
+        &-name {}
+        &-phone {}
+        &-message {
+            min-height: 132px;
+            border-radius: 32px;
+        }
+        &-text {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: $aluminium;
+            margin-top: 14px;
+        }
+        &-link {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: $white;
+            text-decoration: none;
+
+        }
+        &-btn {
+            width: 100%;
+            background-color: $navyblue;
+            border-radius: 32px;
+            padding: 16px 32px;
+            text-align: center;
+            border: none;
+            margin-top: 24px;
+        }
+    }
+    &__social {
+        flex-basis: 472px;
+        flex-shrink: 1;
+        &-text {
+            width: 80%;
+            margin-bottom: 48px;
+        }
+        &-icons {
+            display: flex;
+            gap: 48px;
+        }
+        &-link {
+            width: 96px;
+            height: 96px;
+        }
+        &-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
 }
