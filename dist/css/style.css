@@ -171,6 +171,35 @@ body.stop-scrolling {
   color: #006ADA;
 }
 
+.rotatebtn:active {
+  transition: all 0.1s ease;
+}
+
+.rotatebtn:active .ellips_0 {
+  opacity: 1;
+}
+
+.rotatebtn:active .ellips_53,
+.rotatebtn:active .ellips_63,
+.rotatebtn:active .ellips_50,
+.rotatebtn:active .ellips_48 {
+  opacity: 0;
+}
+
+.rotatebtn:active .rotatebtn-text {
+  color: #ffffff;
+}
+
+.rotatebtn:disabled {
+  opacity: 0.6;
+}
+
+.rotatebtn--disabled {
+  opacity: 0.6;
+  cursor: auto;
+  pointer-events: none;
+}
+
 .rotatebtn-text {
   position: absolute;
   text-align: center;
@@ -181,6 +210,19 @@ body.stop-scrolling {
   transform: translateX(50%) translateY(-50%);
   color: #ffffff;
   transition: color 0.5s ease;
+}
+
+.ellips_0 {
+  opacity: 0;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background-color: transparent;
+  width: 142px;
+  height: 142px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%);
+  right: 50%;
 }
 
 .ellips_63 {
@@ -1819,8 +1861,7 @@ body.stop-scrolling {
 }
 
 .feedback__social {
-  flex-basis: 472px;
-  flex-shrink: 1;
+  width: 472px;
 }
 
 .feedback__social-text {
@@ -1986,7 +2027,7 @@ body.stop-scrolling {
   opacity: 1;
 }
 
-.modal-failure--active .modal-success__wrapper {
+.modal-failure--active .modal-failure__wrapper {
   transform: translateX(-50%) translateY(-50%) scale(1);
 }
 
@@ -2039,6 +2080,162 @@ body.stop-scrolling {
 }
 
 .modal-failure__close-img {
+  width: 100%;
+}
+
+.modal-goto {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1000;
+  background-color: rgba(18, 18, 28, 0.8);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.modal-goto--active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-goto--active .modal-goto__wrapper {
+  transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.modal-goto__wrapper {
+  width: 576px;
+  height: 395px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #222233;
+  border: 2px solid #88888D;
+  border-radius: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(0.5);
+  padding: 110px 40px 40px;
+  transition: all 0.5s ease;
+}
+
+.modal-goto__subtitle {
+  text-align: center;
+  width: 100%;
+}
+
+.modal-goto__social {
+  width: 256px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  margin: 0 auto;
+}
+
+.modal-goto__social-link {
+  width: 96px;
+  height: 96px;
+}
+
+.modal-goto__social-img {
+  width: 100%;
+  height: auto;
+}
+
+.modal-goto__close {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.modal-goto__close-img {
+  width: 100%;
+}
+
+.modal-calc {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1000;
+  background-color: rgba(18, 18, 28, 0.8);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.modal-calc--active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-calc--active .modal-calc__wrapper {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-calc__wrapper {
+  width: 576px;
+  height: 395px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #222233;
+  border: 2px solid #88888D;
+  border-radius: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  padding: 110px 40px 40px;
+  transition: all 0.5s ease;
+}
+
+.modal-calc__subtitle {
+  text-align: center;
+  width: 100%;
+}
+
+.modal-calc__social {
+  width: 256px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  margin: 0 auto;
+}
+
+.modal-calc__social-link {
+  width: 96px;
+  height: 96px;
+}
+
+.modal-calc__social-img {
+  width: 100%;
+  height: auto;
+}
+
+.modal-calc__close {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.modal-calc__close-img {
   width: 100%;
 }
 

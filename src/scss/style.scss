@@ -164,6 +164,33 @@ body.stop-scrolling {
     &:hover .rotatebtn-text {
         color: $navyblue;
     }
+
+    &:active {
+        & .ellips_0 {
+            opacity: 1;
+        }
+        & .ellips_53,
+        & .ellips_63,
+        & .ellips_50,
+        & .ellips_48 {
+            opacity: 0;
+        }
+        & .rotatebtn-text {
+            color: $white;
+        }
+
+        transition: all 0.1s ease;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+    }
+
+    &--disabled {
+        opacity: 0.6;
+        cursor: auto;
+        pointer-events: none;
+    }
 }
 
 .rotatebtn-text {
@@ -176,6 +203,19 @@ body.stop-scrolling {
     transform: translateX(50%) translateY(-50%);
     color: $white;
     transition: color $time ease;
+}
+
+.ellips_0 {
+    opacity: 0;
+    border: 1px solid $white;
+    border-radius: 50%;
+    background-color: transparent;
+    width: 142px;
+    height: 142px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(50%);
+    right: 50%;
 }
 
 .ellips_63 {
@@ -1809,8 +1849,7 @@ body.stop-scrolling {
     }
 
     &__social {
-        flex-basis: 472px;
-        flex-shrink: 1;
+        width: 472px;
 
         &-text {
             width: 80%;
@@ -1974,7 +2013,7 @@ body.stop-scrolling {
     &--active {
         visibility: visible;
         opacity: 1;
-        & .modal-success__wrapper {
+        & .modal-failure__wrapper {
             transform: translateX(-50%) translateY(-50%) scale(1);
         }
     }
@@ -2018,6 +2057,163 @@ body.stop-scrolling {
     &__img {
         width: 64px;
         height: 64px;
+    }
+
+    &__close {
+        width: 56px;
+        height: 56px;
+
+        position: absolute;
+        right: 24px;
+        top: 24px;
+
+        &-img {
+            width: 100%;
+        }
+    }
+}
+
+.modal-goto {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1000;
+    background-color: rgba(18, 18, 28, 0.8);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $time ease;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+        & .modal-goto__wrapper {
+            transform: translateX(-50%) translateY(-50%) scale(1);
+        }
+    }
+
+    &__wrapper {
+        width: 576px;
+        height: 395px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background: #222233;
+        border: 2px solid #88888D;
+        border-radius: 32px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) scale(0.5);
+        padding: 110px 40px 40px;
+
+        transition: all $time ease;
+    }
+
+    &__subtitle {
+        text-align: center;
+        width: 100%;
+    }
+
+    &__social {
+        width: 256px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 40px;
+        margin: 0 auto;
+        &-link {
+            width: 96px;
+            height: 96px;
+        }
+
+        &-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__close {
+        width: 56px;
+        height: 56px;
+
+        position: absolute;
+        right: 24px;
+        top: 24px;
+
+        &-img {
+            width: 100%;
+        }
+    }
+}
+
+.modal-calc {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1000;
+    background-color: rgba(18, 18, 28, 0.8);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $time ease;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+        & .modal-calc__wrapper {
+            transform: translate(-50%, -50%) scale(1);
+
+        }
+    }
+
+    &__wrapper {
+        width: 576px;
+        height: 395px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background: #222233;
+        border: 2px solid #88888D;
+        border-radius: 32px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+        padding: 110px 40px 40px;
+
+        transition: all $time ease;
+    }
+
+    &__subtitle {
+        text-align: center;
+        width: 100%;
+    }
+
+    &__social {
+        width: 256px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 40px;
+        margin: 0 auto;
+        &-link {
+            width: 96px;
+            height: 96px;
+        }
+
+        &-img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__close {

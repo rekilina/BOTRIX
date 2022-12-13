@@ -100,13 +100,26 @@ $('.questions__preview').on('click', function(e) {
 
 // for modal windows
 $('.main-banner__content-rotatebtn').on('click', function(e) {
-    $('.modal-failure').addClass('modal-failure--active');
-    console.log(this);
+    if(!$(this).hasClass('rotatebtn--disabled')) {
+        $('.modal-goto').addClass('modal-goto--active');
+    }
 })
 
-$('.modal-failure').on('click', function(e) {
+$('.modal-goto__close').on('click', function(e) {
     e.preventDefault();
-    $('.modal-failure').removeClass('modal-failure--active');
+    $('.modal-goto').removeClass('modal-goto--active');
+})
+
+
+
+$('.calculate__btn').on('click', function(e) {
+    e.preventDefault();
+    $('.modal-calc').addClass('modal-calc--active');
+})
+
+$('.modal-calc__close').on('click', function(e) {
+    e.preventDefault();
+    $('.modal-calc').removeClass('modal-calc--active');
 })
 
 
