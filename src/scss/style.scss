@@ -67,7 +67,7 @@ body.stop-scrolling {
 }
 
 .flex {
-    display: flex!important;
+    display: flex !important;
 }
 
 .h1 {
@@ -1210,6 +1210,177 @@ body.stop-scrolling {
             bottom: 50%;
             transform: translateY(50%);
             width: 100%;
+        }
+    }
+}
+
+.customdev {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-top: 56px; // из-за паддингов в предыдущем блоке
+
+    &__h2 {
+        width: 60%;
+        letter-spacing: 0.07em;
+    }
+
+    &__cards {
+        margin-top: 64px;
+        display: flex;
+        gap: 48px;
+
+        &-wrapper {
+            background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
+            box-shadow: 0px 0px 10px rgba(96, 232, 120, 0.2);
+            width: 232px;
+            height: 106px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 32px;
+        }
+    }
+
+    &__card {
+        width: 230px;
+        height: 104px;
+        background-color: $vulcan;
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+
+        &-text {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: #FFFFFF;
+            text-align: center;
+
+            &.color-green {
+                color: $green;
+            }
+        }
+    }
+
+    &__content {
+        width: 50%;
+        height: 230px;
+        margin-top: 76px;
+        position: relative;
+        &-text {
+            position: relative;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                width: 510px;
+                height: 206px;
+                right: 90px;
+                top: -10px;
+                background-image: url(../img/customdev_vector.svg);
+                @include backsvg;
+            }
+        }
+    }
+
+    &__messagers {
+        position: absolute;
+        right: -56px;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 48px;
+    }
+    &__inner {
+        position: relative;
+    }
+    &__imgbox {
+        &-img {
+            position: absolute;
+            top: -200px;
+            right: -25px;
+            width: 543px;
+            height: auto;
+        }
+    }
+}
+
+.articles {
+    padding-top: 215px;
+    padding-bottom: 120px;
+
+    &__h2 {
+        width: 50%;
+        letter-spacing: 0.07em;
+        position: relative;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 67px;
+            height: 67px;
+            background-image: url(../img/articles_h2.svg);
+            @include backsvg;
+            position: absolute;
+            top: -47px;
+            right: 59px;
+        }
+    }
+
+    &__inner {
+        margin-top: 64px;
+        display: flex;
+        justify-content: center;
+        gap: 48px;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        flex-basis: 368px;
+
+        &-imgbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 248px;
+            background: #222233;
+            border-radius: 32px;
+
+        }
+
+        &-img {
+            width: 200px;
+            height: 200px;
+        }
+
+        &-text {
+            margin-top: 40px;
+            padding-left: 10px;
+        }
+
+        &-link {
+            color: #006ADA;
+            padding: 16px 0 16px 10px;
+            margin-top: 8px;
+            display: inline-block;
+            &::after {
+                content: '';
+                display: inline-block;
+                position: relative;
+                left: 5px;
+                top: 6px;
+                width: 24px;
+                height: 24px;
+                background-image: url(../img/ArrowLink.svg);
+                @include backsvg;
+            }
         }
     }
 }
