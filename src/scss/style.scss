@@ -1811,3 +1811,41 @@ body.stop-scrolling {
     }
 
 }
+
+.subscribe {
+    padding: 120px 0;
+    margin-bottom: 80px;
+    &__inner {
+        background-image: url(../img/subscribe_banner.png);
+        background-position: left bottom;
+        width: 100%;
+        height: 472px;
+        background-size: 73%;
+        background-repeat: no-repeat;
+        border-radius: 32px;
+        background-color: $steelgrey;
+        padding: 80px 95px;
+        position: relative;
+    }
+    &__h2 {
+        letter-spacing: 0.066em;
+    }
+    &__container {
+        width: 336px;
+        position: absolute;
+        right: 95px;
+        bottom: 80px;
+        &-subtitle {
+            width: 100%;
+            margin-bottom: 45px;
+        }
+        &-btn {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            background-color: $navyblue;
+            padding: 36px;
+            border-radius: 48px;
+        }
+    }
+}

@@ -1828,6 +1828,53 @@ body.stop-scrolling {
   height: auto;
 }
 
+.subscribe {
+  padding: 120px 0;
+  margin-bottom: 80px;
+}
+
+.no-webp .subscribe__inner {
+  background-image: url(../img/subscribe_banner.png); }
+
+.subscribe__inner {
+  background-position: left bottom;
+  width: 100%;
+  height: 472px;
+  background-size: 73%;
+  background-repeat: no-repeat;
+  border-radius: 32px;
+  background-color: #222233;
+  padding: 80px 95px;
+  position: relative;
+}
+
+.subscribe__h2 {
+  letter-spacing: 0.066em;
+}
+
+.subscribe__container {
+  width: 336px;
+  position: absolute;
+  right: 95px;
+  bottom: 80px;
+}
+
+.subscribe__container-subtitle {
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+.subscribe__container-btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: #006ADA;
+  padding: 36px;
+  border-radius: 48px;
+}
+
 .webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }
 
 .webp .videoPoster { background-image: url(../img/MainImage.webp); }
+
+.webp .subscribe__inner { background-image: url(../img/subscribe_banner.webp); }
