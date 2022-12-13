@@ -389,6 +389,14 @@ body.stop-scrolling {
   color: #ffffff;
 }
 
+.header__nav-link:hover {
+  background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 .header__user {
   display: inline-flex;
   justify-content: space-between;
@@ -1163,6 +1171,12 @@ body.stop-scrolling {
   -webkit-clip-path: inset(-100vw 0 0 0) !important;
           clip-path: inset(-100vw 0 0 0) !important;
   display: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.functionality__content-wrapper {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }

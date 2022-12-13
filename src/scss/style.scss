@@ -380,6 +380,13 @@ body.stop-scrolling {
             font-size: 17px;
             line-height: 140%;
             color: $white;
+            &:hover {
+                background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
         }
     }
 
@@ -1155,7 +1162,11 @@ body.stop-scrolling {
         display: none;
         flex-direction: row;
         justify-content: space-between;
-
+        &-wrapper {
+            display: flex;
+            flex-direction: row;
+        justify-content: space-between;
+        }
         &-left {
             flex-basis: 57%;
             flex-shrink: 0;
