@@ -253,7 +253,6 @@
             </div>
         </section>
 
-
         <div class="main-marquee horizontal-marquee">
             <ul id="ticker" class="main-marquee__marquee">
                 <li class="main-marquee__marquee-item">
@@ -1063,6 +1062,29 @@
                 </li>
             </ul>
         </div>
+
+        
+        <div class="modal-success">
+            <div class="modal-success__wrapper">
+                <h3 class="h3 modal-success__h3">Ваша заявка отправлена!</h3>
+                <p class="modal-success__text">Наш менеджер скоро свяжется с вами</p>
+                <img src="@img/IconRobot.svg" alt="IconRobot" class="modal-success__img">
+                <a href="#" class="modal-success__close">
+                    <img src="@img/close-modal.svg" alt="" class="modal-success__close-img">
+                </a>
+            </div>
+        </div>
+        <div class="modal-failure">
+            <div class="modal-success__wrapper">
+                <h3 class="h3 modal-success__h3">Что-то пошло не так!</h3>
+                <p class="modal-success__text">Ваша заявка не была отправлена. Пожалуйста, проверьте интернет-соединение и попробуйте снова.</p>
+                <img src="@img/CrossWaveGreen.svg" alt="CrossWaveGreen" class="modal-success__img">
+                <a href="#" class="modal-success__close">
+                    <img src="@img/close-modal.svg" alt="" class="modal-success__close-img">
+                </a>
+            </div>
+        </div>
+        <div class="modal-goto"></div>
 
     </main>
     @@include('html/footer.html', {})

@@ -98,6 +98,17 @@ $('.questions__preview').on('click', function(e) {
 
 
 
+// for modal windows
+$('.main-banner__content-rotatebtn').on('click', function(e) {
+    $('.modal-failure').addClass('modal-failure--active');
+    console.log(this);
+})
+
+$('.modal-failure').on('click', function(e) {
+    e.preventDefault();
+    $('.modal-failure').removeClass('modal-failure--active');
+})
+
 
 
 
