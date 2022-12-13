@@ -1105,8 +1105,8 @@ bottom: -168px;
     &__content {
         overflow: visible!important;
         clip-path: inset(-100vw 0 0 0) !important;
-        display: flex;
-        display: hidden;
+        // display: flex;
+        display: none;
         flex-direction: row;
         justify-content: space-between;
 
