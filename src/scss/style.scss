@@ -426,7 +426,7 @@ body.stop-scrolling {
     flex-direction: row;
     flex-wrap: nowrap;
     position: relative;
-    top: 174px;
+    top: 190px;
     user-select: none;
     pointer-events: none;
 
@@ -1058,12 +1058,12 @@ body.stop-scrolling {
             @include backsvg;
             position: relative;
             top: -9px;
-            left: -259px;
+            left: 259px;
         }
     }
 
     &__container {
-        margin-top: 69px;
+        margin-top: 44px;
     }
 
     &__card {
@@ -1081,7 +1081,7 @@ body.stop-scrolling {
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
-        padding: 24px 0 24px 0;
+        padding: 30px 0 30px 0;
         border-bottom: 1px solid #222233;
 
         &:hover {
@@ -1217,7 +1217,7 @@ body.stop-scrolling {
 .customdev {
     padding-top: 120px;
     padding-bottom: 120px;
-    margin-top: 56px; // из-за паддингов в предыдущем блоке
+    // margin-top: 56px; // из-за паддингов в предыдущем блоке
 
     &__h2 {
         width: 60%;
@@ -1270,8 +1270,9 @@ body.stop-scrolling {
     &__content {
         width: 50%;
         height: 230px;
-        margin-top: 76px;
+        margin-top: 73px;
         position: relative;
+
         &-text {
             position: relative;
 
@@ -1298,9 +1299,11 @@ body.stop-scrolling {
         justify-content: flex-start;
         gap: 48px;
     }
+
     &__inner {
         position: relative;
     }
+
     &__imgbox {
         &-img {
             position: absolute;
@@ -1320,6 +1323,7 @@ body.stop-scrolling {
         width: 50%;
         letter-spacing: 0.07em;
         position: relative;
+
         &::after {
             content: '';
             display: inline-block;
@@ -1370,6 +1374,7 @@ body.stop-scrolling {
             padding: 16px 0 16px 10px;
             margin-top: 8px;
             display: inline-block;
+
             &::after {
                 content: '';
                 display: inline-block;
@@ -1387,9 +1392,11 @@ body.stop-scrolling {
 
 .questions {
     padding: 120px 0;
+
     &__h2 {
-        letter-spacing: 0.07em;
+        letter-spacing: 0.09em;
         position: relative;
+
         &::after {
             content: '';
             display: inline-block;
@@ -1402,15 +1409,18 @@ body.stop-scrolling {
             right: 382px;
         }
     }
+
     &__toggle {
         width: 680px;
         margin-top: 170px;
+
         &-item {
             width: 100%;
             padding: 24px 0;
             border-bottom: 1px solid #222233;
         }
     }
+
     &__text {
         font-family: $mulish;
         font-style: normal;
@@ -1418,9 +1428,10 @@ body.stop-scrolling {
         font-size: 18px;
         line-height: 140%;
         color: #88888D;
-        padding: 48px 0 18px 0;
+        padding: 48px 0 22px 0;
         display: none;
     }
+
     &__preview {
         width: 100%;
         cursor: pointer;
@@ -1428,22 +1439,27 @@ body.stop-scrolling {
         align-items: center;
         justify-content: space-between;
         transition: all $time ease;
+
         &-title {
             transition: all $time ease;
             max-width: 530px;
         }
+
         &--active {
             padding-top: 24px;
         }
+
         &:hover {
             & .questions__circle-vertical {
                 transform: rotate(0);
             }
+
             & .questions__preview-title {
                 color: $green;
             }
         }
     }
+
     &__circle {
         width: 84px;
         height: 56px;
@@ -1452,6 +1468,7 @@ body.stop-scrolling {
         display: flex;
         align-items: center;
         justify-content: center;
+
         &-horizontal {
             width: 28px;
             height: 4px;
@@ -1459,6 +1476,7 @@ body.stop-scrolling {
             background-color: $vulcan;
             position: absolute;
         }
+
         &-vertical {
             width: 28px;
             height: 4px;
@@ -1467,9 +1485,174 @@ body.stop-scrolling {
             transform: rotate(-90deg);
             position: absolute;
             transition: all $time ease;
+
             &--active {
                 transform: rotate(0);
             }
         }
+    }
+}
+
+.tariffs {
+    padding: 120px 0;
+    &__h2 {
+        letter-spacing: 0.07em;
+        position: relative;
+        width: 70%;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 739px;
+            height: 85px;
+            background-image: url(../img/tariffs_h2.svg);
+            @include backsvg;
+            position: absolute;
+            top: 53px;
+            left: 0;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 100px;
+        max-width: 785px;
+    }
+
+    &__wrapper {
+        margin-top: 38px;
+        display: flex;
+        justify-content: space-between;
+
+        &-shrink {
+            flex-shrink: 1;
+            flex-basis: 43.5%;
+        }
+    }
+
+    &__list {
+        flex-shrink: 0;
+        flex-grow: 1;
+        flex-basis: 40%;
+        position: relative;
+        padding-left: 16px;
+        &-li {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: #88888D;
+            position: relative;
+            padding-left: 31px;
+
+            &::before {
+                content: '';
+                width: 24px;
+                height: 24px;
+                background-image: url(../img/Bullet.svg);
+                @include backsvg;
+                display: inline-flex;
+                position: absolute;
+                top: 2px;
+                left: -16px;
+            }
+
+            &+.tariffs__list-li {
+                margin-top: 24px;
+            }
+        }
+    }
+    &__slider {
+        overflow: visible;
+        clip-path: inset(-100vw -100vw -100vw -20px) !important;
+        -webkit-clip-path: inset(-100vw -100vw -100vw -20px) !important;
+        -moz-clip-path: inset(-100vw -100vw -100vw -20px) !important;
+        padding-top: 90px; // чтобы было куда стрелки ставить
+
+        margin-top: 61px;
+
+        & .slick-list {
+            padding-top: 24px !important;
+            padding-bottom: 24px !important;
+            overflow: visible !important;
+            margin-top: 30px;
+        }
+
+    }
+
+    &__slide {
+        background-color: $vulcan;
+        margin-right: 48px;
+        border-radius: 32px;
+        width: 352px !important;
+        height: 605px;
+        border: 1px solid $aluminium;
+        &:hover{
+            background-color: $steelgrey;
+            cursor: pointer;
+        }
+        &-top {
+            padding: 40px 40px 22px 40px;
+            border-bottom: 1px solid $aluminium;
+        }
+        &-content {
+            padding: 40px;
+        }
+        &-title {
+            margin-bottom: 12px;
+        }
+        &-cost {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 140%;
+            display: inline-block;
+            // position: relative;
+            &::after {
+                content: '';
+                width: 20px;
+                height: 25px;
+                display: inline-block;
+                position: relative;
+                left: 10px;
+                bottom: 0;
+                background-image: url(../img/rub.svg);
+                @include backsvg;
+            }
+        }
+        &-list {}
+        &-li {
+            display: flex;
+            align-items: flex-start;
+            height: 50px;
+            &+.tariffs__slide-li {
+                margin-top: 8px;
+            }
+        }
+        &-icon {
+            margin-right: 24px;
+            height: 24px;
+            width: 24px;
+        }
+        &-text {
+            &-grey {
+                color: $aluminium;
+            }
+        }
+        &-btn {
+            margin: 33px auto 0;
+            border: none;
+            background-color: $navyblue;
+            width: 100%;
+            border-radius: 32px;
+            padding: 16px 105px;
+            text-align: center;
+
+        }
+    }
+
+    &__progressbar {
+        margin-top: 24px;
     }
 }
