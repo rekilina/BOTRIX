@@ -59,3 +59,21 @@ function videoPlay(wrapper) {
     wrapper.addClass('videoWrapperActive');
     iframe.attr('src', src + "?autoplay=1");
 }
+
+
+export function createProgressBar(slider_selector) {
+    var $slider = $(slider_selector);
+    var $progressBar = $slider.siblings('.progress');
+    var $progressBarLabel = $progressBar.find('.slider__label');
+    $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+        $progressBar
+            .css('background-size', calc + '% 100%')
+            .attr('aria-valuenow', calc);
+    });
+}
+
+
+
+
+
