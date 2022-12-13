@@ -1583,11 +1583,13 @@ body.stop-scrolling {
   width: 352px !important;
   height: 605px;
   border: 1px solid #88888D;
+  transition: all 0.5s ease;
 }
 
 .tariffs__slide:hover {
   background-color: #222233;
   cursor: pointer;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
 }
 
 .tariffs__slide-top {
