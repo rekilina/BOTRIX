@@ -1946,6 +1946,7 @@ body {
             @media(max-width: $d770) {
                 width: calc(100% - 96px);
             }
+
             @media(max-width: $d660) {
                 min-height: 100px;
             }
@@ -2496,6 +2497,7 @@ body {
         position: absolute;
         bottom: 133px;
         display: none;
+
         @media(max-width: $d660) {
             display: inline-block;
         }
@@ -2511,6 +2513,7 @@ body {
 
     @media(max-width: $d770) {
         padding-top: 0;
+        padding-bottom: 116px;
     }
 
     &__h2 {
@@ -2527,6 +2530,14 @@ body {
             position: absolute;
             top: -20px;
             right: 382px;
+
+            @media(max-width: $d770) {
+                left: inherit;
+                right: 0;
+                top: -5px;
+                width: 186px;
+                height: 74px;
+            }
         }
     }
 
@@ -2557,7 +2568,7 @@ body {
             }
 
 
-            
+
         }
     }
 
@@ -2583,7 +2594,7 @@ body {
         @media(max-width: $d660) {
             height: 172px;
             padding: 0 0;
-            
+
         }
 
         &-title {
@@ -2650,6 +2661,10 @@ body {
 .tariffs {
     padding: 120px 0;
 
+    @media(max-width: $d770) {
+        padding-top: 0;
+    }
+
     &__h2 {
         letter-spacing: 0.07em;
         position: relative;
@@ -2665,18 +2680,38 @@ body {
             position: absolute;
             top: 53px;
             left: 0;
+
+            @media(max-width: $d770) {
+                // left: inherit;
+                // right: 0;
+                left: 0;
+                top: inherit;
+                bottom: -40px;
+                width: 289px;
+                height: 59px;
+                background-image: url(../img/tariffs_h2-mobile.svg);
+            }
+
         }
     }
 
     &__subtitle {
         margin-top: 100px;
         max-width: 785px;
+
+        @media(max-width: $d770) {
+            margin-top: 81px;
+        }
     }
 
     &__wrapper {
         margin-top: 38px;
         display: flex;
         justify-content: flex-end;
+
+        @media(max-width: $d660) {
+            margin-top: 23px;
+        }
 
     }
 
@@ -2695,6 +2730,13 @@ body {
             position: relative;
             padding-left: 31px;
 
+            @media(max-width: $d660) {
+                font-size: 16px;
+                padding-left: 23px;
+                letter-spacing: -0.005em;
+                line-height: 138%;
+            }
+
             &::before {
                 content: '';
                 width: 24px;
@@ -2709,6 +2751,10 @@ body {
 
             &+.tariffs__list-li {
                 margin-top: 24px;
+
+                @media(max-width: $d660) {
+                    margin-top: 16px;
+                }
             }
 
             &-emph {
@@ -2726,11 +2772,21 @@ body {
 
         margin-top: 63px;
 
+        @media(max-width: $d770) {
+            margin-top: 0;
+            padding-top: 0;
+            padding-bottom: 150px;
+        }
+
         & .slick-list {
             padding-top: 24px !important;
             padding-bottom: 24px !important;
             overflow: visible !important;
             margin-top: 30px;
+
+            @media(max-width: $d770) {
+                margin-top: 15px;
+            }
         }
 
     }
@@ -2744,6 +2800,15 @@ body {
         border: 1px solid $aluminium;
         transition: all $time ease;
 
+        @media(max-width: $d770) {
+            width: 320px !important;
+            height: 560px;
+        }
+
+        @media(max-width: $d360) {
+            width: calc(100vw - 42px) !important;
+        }
+
         &:hover {
             background-color: $steelgrey;
             cursor: pointer;
@@ -2753,10 +2818,18 @@ body {
         &-top {
             padding: 40px 40px 22px 40px;
             border-bottom: 1px solid $aluminium;
+
+            @media(max-width: $d770) {
+                padding: 30px 30px 20px 30px;
+            }
         }
 
         &-content {
             padding: 40px;
+
+            @media(max-width: $d770) {
+                padding: 24px 30px;
+            }
         }
 
         &-title {
@@ -2801,11 +2874,19 @@ body {
             margin-right: 24px;
             height: 24px;
             width: 24px;
+
+            @media(max-width: $d770) {
+                margin-right: 20px;
+            }
         }
 
         &-text {
             &-grey {
                 color: $aluminium;
+            }
+
+            @media(max-width: $d770) {
+                letter-spacing: -0.03em;
             }
         }
 
@@ -2823,6 +2904,13 @@ body {
 
     &__progressbar {
         margin-top: 24px;
+        width: 100%;
+
+        @media (max-width: $d770) {
+            margin-top: 0;
+            position: absolute;
+            bottom: 133px;
+        }
     }
 }
 

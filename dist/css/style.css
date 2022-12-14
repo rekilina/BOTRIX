@@ -2019,6 +2019,7 @@ body {
 
 .tariffs__progressbar {
   margin-top: 24px;
+  width: 100%;
 }
 
 .feedback {
@@ -2986,6 +2987,15 @@ body {
 
   .questions {
     padding-top: 0;
+    padding-bottom: 116px;
+  }
+
+  .questions__h2::after {
+    left: inherit;
+    right: 0;
+    top: -5px;
+    width: 186px;
+    height: 74px;
   }
 
   .questions__toggle {
@@ -2999,6 +3009,60 @@ body {
 
   .questions__toggle-item:first-child {
     padding: 0;
+  }
+
+  .tariffs {
+    padding-top: 0;
+  }
+
+  .tariffs__h2::after {
+    left: 0;
+    top: inherit;
+    bottom: -40px;
+    width: 289px;
+    height: 59px;
+    background-image: url(../img/tariffs_h2-mobile.svg);
+  }
+
+  .tariffs__subtitle {
+    margin-top: 81px;
+  }
+
+  .tariffs__slider {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 150px;
+  }
+
+  .tariffs__slider .slick-list {
+    margin-top: 15px;
+  }
+
+  .tariffs__slide {
+    width: 320px !important;
+    height: 560px;
+  }
+
+  .tariffs__slide-top {
+    padding: 30px 30px 20px 30px;
+  }
+
+  .tariffs__slide-content {
+    padding: 24px 30px;
+  }
+
+  .tariffs__slide-icon {
+    margin-right: 20px;
+  }
+
+  .tariffs__slide-text {
+    letter-spacing: -0.03em;
+  }
+
+  .tariffs__progressbar {
+    margin-top: 0;
+    position: absolute;
+    bottom: 133px;
   }
 }
 
@@ -3185,6 +3249,21 @@ body {
     height: 172px;
     padding: 0 0;
   }
+
+  .tariffs__wrapper {
+    margin-top: 23px;
+  }
+
+  .tariffs__list-li {
+    font-size: 16px;
+    padding-left: 23px;
+    letter-spacing: -0.005em;
+    line-height: 138%;
+  }
+
+  .tariffs__list-li + .tariffs__list-li {
+    margin-top: 16px;
+  }
 }
 
 @media (max-width: 660px) and (max-width: 500px) {
@@ -3321,6 +3400,10 @@ body {
   }
 
   .articles__slide {
+    width: calc(100vw - 42px) !important;
+  }
+
+  .tariffs__slide {
     width: calc(100vw - 42px) !important;
   }
 }

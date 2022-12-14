@@ -198,6 +198,16 @@ $('.articles__slider-btn.arrow-btn__circle-left').hover(function(e) {
         $('.articles__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(0)');
     }
 })
+
+$('.tariffs__slider-btn.arrow-btn__circle-left').hover(function(e) {
+    if(Number(window.innerWidth) <= 660) {
+        $('.tariffs__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(100px)');
+    }
+}, function(e) {
+    if(Number(window.innerWidth) <= 660) {
+        $('.tariffs__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(0)');
+    }
+})
 // ------------------------------------------------------------
 
 
