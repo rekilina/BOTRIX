@@ -64,6 +64,7 @@ body.stop-scrolling {
     max-width: 1300px;
     padding: 0 50px;
     margin: 0 auto;
+
     @media(max-width: $d500) {
         padding: 0 21px;
     }
@@ -106,6 +107,7 @@ body.stop-scrolling {
     @media (max-width: $d660) {
         font-size: 36px;
     }
+
     @media (max-width: $d360) {
         font-size: 30px;
     }
@@ -154,6 +156,7 @@ body.stop-scrolling {
     @media (max-width: $d660) {
         font-size: 18px;
     }
+
     @media (max-width: $d500) {
         font-size: 12px;
     }
@@ -454,6 +457,7 @@ body.stop-scrolling {
         align-items: center;
         padding: 24px 0;
         gap: 10px;
+
         @media(max-width: $d500) {
             padding: 28px 20px;
         }
@@ -757,19 +761,23 @@ body.stop-scrolling {
             background-image: url(../img/IconWave4.svg);
             @include backsvg;
             margin-right: 36px;
+
             @media(max-width: $d1250) {
                 margin-right: 10px;
             }
+
             @media(max-width: $d770) {
                 width: 100px;
                 height: 30px;
                 margin-right: 10px;
             }
+
             @media(max-width: $d500) {
                 width: 75px;
                 height: 25px;
                 margin-right: 20px;
             }
+
             @media (max-width: $d360) {
                 width: 55px;
                 height: 20px;
@@ -789,6 +797,7 @@ body.stop-scrolling {
                 position: absolute;
                 left: 400px;
                 bottom: -21px;
+
                 @media(max-width: $d900) {
                     left: 330px;
                 }
@@ -803,6 +812,7 @@ body.stop-scrolling {
                     height: 40px;
                     bottom: -10px;
                 }
+
                 @media(max-width: $d500) {
                     left: 245px;
                     width: 40px;
@@ -823,6 +833,7 @@ body.stop-scrolling {
             right: -12px;
             bottom: -168px;
             width: 240px;
+
             @media(max-width: $d500) {
                 font-size: 16px;
                 line-height: 140%;
@@ -837,6 +848,7 @@ body.stop-scrolling {
             position: absolute;
             bottom: -257px;
             left: 0;
+
             @media(max-width: $d770) {
                 bottom: -340px;
                 left: -3px;
@@ -946,14 +958,18 @@ body.stop-scrolling {
             }
         }
 
-        &-text {
-        }
+        &-text {}
     }
 }
 
 .functions {
     padding-top: 236px;
     padding-bottom: 80px;
+
+    @media(max-width: $d500) {
+        padding-top: 428px;
+        padding-top: 50px;
+    }
 
     &__h2 {
         padding-bottom: 50px;
@@ -970,6 +986,12 @@ body.stop-scrolling {
             height: 31px;
             right: 24px;
             bottom: 11px;
+
+            @media(max-width: $d900) {
+                width: 70vw;
+                right: 70px;
+                bottom: 23px;
+            }
         }
 
         & .decor {
@@ -980,15 +1002,58 @@ body.stop-scrolling {
 
     &__card {
         margin-bottom: 38px;
+        border-radius: 32px;
+        padding: 42px 32px;
+
+        @media(max-width: $d770) {
+            border-radius: 24px;
+            padding: 30px 15px;
+            margin-bottom: 12px;
+        }
+
+        @media(max-width: $d660) {
+            width: 90%;
+        }
+
+        @media(max-width: $d500) {
+            border-radius: 24px;
+            padding: 24px 15px;
+            margin-bottom: 12px;
+            width: 100%;
+        }
+
     }
 
     &__cards {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 10px;
-        flex-wrap: wrap;
         padding-top: 50px;
+
+        &-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 10px;
+            flex-wrap: nowrap;
+
+            @media(max-width: $d1250) {
+                justify-content: space-around;
+            }
+
+            @media(max-width: $d900) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &--reverse {
+                @media(max-width: $d900) {
+                    flex-direction: column-reverse;
+                    align-items: center;
+                }
+            }
+        }
+
+        @media(max-width: $d770) {
+            padding-top: 10px;
+        }
 
         &-icon {
             display: flex;
@@ -996,9 +1061,12 @@ body.stop-scrolling {
             justify-content: center;
             border: 1px solid #60E878;
             filter: drop-shadow(0px 0px 12px rgba(96, 232, 120, 0.5));
-            border-radius: 32px;
             height: 155px;
             width: 160px;
+            padding: 0;
+            @media(max-width: $d1250) {
+                display: none;
+            }
         }
 
         &-img {
@@ -1008,9 +1076,7 @@ body.stop-scrolling {
 
         &-green {
             width: 472px;
-            padding: 42px 32px;
             background: #60E878;
-            border-radius: 32px;
 
             & .functions__cards-description {
                 color: $steelgrey;
@@ -1023,15 +1089,18 @@ body.stop-scrolling {
 
         &-white {
             width: 472px;
-            padding: 42px 32px;
             border: 1px solid #FFFFFF;
             // filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.6));
             box-shadow: (0px 0px 12px rgba(255, 255, 255, 0.2));
-            border-radius: 32px;
         }
 
         &-title {
             margin-bottom: 12px;
+
+            @media(max-width: $d770) {
+                text-align: center;
+                margin-bottom: 3px;
+            }
         }
 
         &-description {
@@ -1041,6 +1110,13 @@ body.stop-scrolling {
             font-size: 18px;
             line-height: 140%;
             color: $aluminium;
+
+            @media(max-width: $d770) {
+                font-size: 16px;
+                text-align: center;
+                width: 80%;
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -1048,6 +1124,10 @@ body.stop-scrolling {
 .opportunities {
     padding-top: 120px;
     padding-bottom: 120px;
+
+    @media (max-width: $d770) {
+        padding-top: 25px;
+    }
 
     &__h2 {
         position: relative;
@@ -1063,6 +1143,18 @@ body.stop-scrolling {
             bottom: 0;
             width: 508px;
             height: 44px;
+
+            @media (max-width: $d900) {
+                width: 173px;
+                height: 46px;
+                left: 118px;
+                content: '';
+                background-image: url(../img/opportunities_h2-media.svg);
+                @include backsvg;
+                display: inline-block;
+                position: absolute;
+                bottom: 3px;
+            }
         }
 
         & .decor {
@@ -1073,9 +1165,17 @@ body.stop-scrolling {
     &__wrapper {
         margin: 64px auto 0;
         position: relative;
-        height: 674px;
-        max-width: 1200px;
+        padding: 0;
+        padding-bottom: 56%;
+        height: 0;
+        overflow: hidden;
+        // height: 674px;
+        // max-width: 1200px;
         width: 100%;
+        @media (max-width: $d770) {
+            margin-top: 42px;
+        }
+
     }
 
     &__video {
@@ -1139,11 +1239,19 @@ body.stop-scrolling {
     padding-top: 132px;
     padding-bottom: 120px;
 
+    @media (max-width: $d770) {
+        padding-top: 5px;
+    }
+
     &__h2 {
         width: 70%;
         display: inline-block;
         position: relative;
         letter-spacing: 0.067em;
+        @media (max-width: $d770) {
+            width: 100%;
+            letter-spacing: 0.049em;
+        }
 
         &::before {
             content: '';
@@ -1165,6 +1273,15 @@ body.stop-scrolling {
             width: 55px;
             background-image: url(../img/SmileGreen.svg);
             @include backsvg;
+
+            transform: rotate(17deg);
+
+            @media (max-width: $d770) {
+                width: 32px;
+                height: 32px;
+                right: 22px;
+                bottom: 24px;
+            }
         }
     }
 
@@ -1177,12 +1294,20 @@ body.stop-scrolling {
         color: $white;
         margin-top: 64px;
         width: 74%;
+        @media (max-width: $d770) {
+            font-size: 20px;
+            width: 100%;
+            margin-top: 41px;
+        }
     }
 
     &__wrapper {
         margin-top: 40px;
         display: flex;
-        justify-content: flex-end
+        justify-content: flex-end;
+        @media (max-width: $d770) {
+            margin-top: 23px;
+        }
     }
 
     &__list {
@@ -1199,6 +1324,11 @@ body.stop-scrolling {
             position: relative;
             padding-left: 40px;
 
+            @media (max-width: $d770) {
+                font-size: 16px;
+                padding-left: 23px;
+            }
+
             &::before {
                 content: '';
                 width: 24px;
@@ -1213,6 +1343,9 @@ body.stop-scrolling {
 
             &+.messengers__list-li {
                 margin-top: 24px;
+                @media (max-width: $d770) {
+                    margin-top: 14px;
+                }
             }
         }
     }

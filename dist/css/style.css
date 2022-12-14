@@ -789,15 +789,20 @@ body.stop-scrolling {
 
 .functions__card {
   margin-bottom: 38px;
+  border-radius: 32px;
+  padding: 42px 32px;
 }
 
 .functions__cards {
+  padding-top: 50px;
+}
+
+.functions__cards-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 10px;
-  flex-wrap: wrap;
-  padding-top: 50px;
+  flex-wrap: nowrap;
 }
 
 .functions__cards-icon {
@@ -806,9 +811,9 @@ body.stop-scrolling {
   justify-content: center;
   border: 1px solid #60E878;
   filter: drop-shadow(0px 0px 12px rgba(96, 232, 120, 0.5));
-  border-radius: 32px;
   height: 155px;
   width: 160px;
+  padding: 0;
 }
 
 .functions__cards-img {
@@ -818,9 +823,7 @@ body.stop-scrolling {
 
 .functions__cards-green {
   width: 472px;
-  padding: 42px 32px;
   background: #60E878;
-  border-radius: 32px;
 }
 
 .functions__cards-green .functions__cards-description {
@@ -833,10 +836,8 @@ body.stop-scrolling {
 
 .functions__cards-white {
   width: 472px;
-  padding: 42px 32px;
   border: 1px solid #FFFFFF;
   box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.2);
-  border-radius: 32px;
 }
 
 .functions__cards-title {
@@ -883,8 +884,10 @@ body.stop-scrolling {
 .opportunities__wrapper {
   margin: 64px auto 0;
   position: relative;
-  height: 674px;
-  max-width: 1200px;
+  padding: 0;
+  padding-bottom: 56%;
+  height: 0;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -974,6 +977,7 @@ body.stop-scrolling {
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
+  transform: rotate(17deg);
 }
 
 .messengers__text {
@@ -2498,6 +2502,14 @@ body.stop-scrolling {
   .main-banner__content .decor::before {
     margin-right: 10px;
   }
+
+  .functions__cards-row {
+    justify-content: space-around;
+  }
+
+  .functions__cards-icon {
+    display: none;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -2546,6 +2558,36 @@ body.stop-scrolling {
     right: -160px;
     top: 0px;
   }
+
+  .functions__h2::after {
+    width: 70vw;
+    right: 70px;
+    bottom: 23px;
+  }
+
+  .functions__cards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .functions__cards-row--reverse {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .opportunities__h2::after {
+    width: 173px;
+    height: 46px;
+    left: 118px;
+    content: "";
+    background-image: url(../img/opportunities_h2-media.svg);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    bottom: 3px;
+  }
 }
 
 @media (max-width: 770px) {
@@ -2580,6 +2622,71 @@ body.stop-scrolling {
 
   .main-marquee {
     bottom: -430px;
+  }
+
+  .functions__card {
+    border-radius: 24px;
+    padding: 30px 15px;
+    margin-bottom: 12px;
+  }
+
+  .functions__cards {
+    padding-top: 10px;
+  }
+
+  .functions__cards-title {
+    text-align: center;
+    margin-bottom: 3px;
+  }
+
+  .functions__cards-description {
+    font-size: 16px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .opportunities {
+    padding-top: 25px;
+  }
+
+  .opportunities__wrapper {
+    margin-top: 42px;
+  }
+
+  .messengers {
+    padding-top: 5px;
+  }
+
+  .messengers__h2 {
+    width: 100%;
+    letter-spacing: 0.049em;
+  }
+
+  .messengers__h2::after {
+    width: 32px;
+    height: 32px;
+    right: 22px;
+    bottom: 24px;
+  }
+
+  .messengers__text {
+    font-size: 20px;
+    width: 100%;
+    margin-top: 41px;
+  }
+
+  .messengers__wrapper {
+    margin-top: 23px;
+  }
+
+  .messengers__list-li {
+    font-size: 16px;
+    padding-left: 23px;
+  }
+
+  .messengers__list-li + .messengers__list-li {
+    margin-top: 14px;
   }
 }
 
@@ -2623,6 +2730,10 @@ body.stop-scrolling {
 
   .main-marquee {
     bottom: -500px;
+  }
+
+  .functions__card {
+    width: 90%;
   }
 }
 
@@ -2683,6 +2794,18 @@ body.stop-scrolling {
   .main-marquee__marquee-icon {
     width: 24px;
     height: 24px;
+  }
+
+  .functions {
+    padding-top: 428px;
+    padding-top: 50px;
+  }
+
+  .functions__card {
+    border-radius: 24px;
+    padding: 24px 15px;
+    margin-bottom: 12px;
+    width: 100%;
   }
 }
 
