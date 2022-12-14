@@ -2161,6 +2161,7 @@ body {
             flex-direction: column;
             margin-top: 41px;
             gap: 16px;
+            align-items: center;
         }
 
         &-wrapper {
@@ -2232,26 +2233,33 @@ body {
         &-text {
             position: relative;
             white-space: wrap;
+            z-index: 20;
 
-            &::after {
-                content: '';
-                display: inline-block;
-                position: absolute;
-                width: 510px;
-                height: 206px;
-                right: 90px;
-                top: -10px;
-                background-image: url(../img/customdev_vector.svg);
-                @include backsvg;
+            & .decor {
 
-                @media(max-width: $d770) {
-                    background-image: url(../img/customdev_vector-mobile.svg);
-                    width: 266px;
-                    height: 107px;
-                    right: 12px;
-                    top: 29px;
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    width: 510px;
+                    height: 206px;
+                    // right: 90px;
+                    // top: -10px;
+                    left: -2em;
+                    top: -1em;
+                    background-image: url(../img/customdev_vector.svg);
+                    @include backsvg;
+                    z-index: 1;
+                    @media(max-width: $d500) {
+                        background-image: url(../img/customdev_vector-mobile.svg);
+                        width: 266px;
+                        height: 107px;
+                        left: 2em;
+                        top: 1.4em;
+                    }
                 }
             }
+
 
             @media(max-width: $d770) {
                 width: 100%;
@@ -2269,11 +2277,14 @@ body {
         align-items: center;
         justify-content: flex-start;
         gap: 48px;
-
+        z-index: 20;
         @media(max-width: $d770) {
-            position: static;
+            position: relative;
+            right: inherit;
+        bottom: inherit;
             justify-content: center;
             margin-top: 77px;
+            z-index: 20;
         }
     }
 
@@ -2300,7 +2311,8 @@ body {
                 width: 330px;
                 margin: 0 auto;
                 position: static;
-                margin-top: 8px;
+                margin-top: 12px;
+                display: block;
             }
         }
     }

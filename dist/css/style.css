@@ -1591,20 +1591,22 @@ body {
 .customdev__content-text {
   position: relative;
   white-space: wrap;
+  z-index: 20;
 }
 
-.customdev__content-text::after {
+.customdev__content-text .decor::after {
   content: "";
   display: inline-block;
   position: absolute;
   width: 510px;
   height: 206px;
-  right: 90px;
-  top: -10px;
+  left: -2em;
+  top: -1em;
   background-image: url(../img/customdev_vector.svg);
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .customdev__messagers {
@@ -1615,6 +1617,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 48px;
+  z-index: 20;
 }
 
 .customdev__inner {
@@ -2848,6 +2851,7 @@ body {
     flex-direction: column;
     margin-top: 41px;
     gap: 16px;
+    align-items: center;
   }
 
   .customdev__cards-wrapper {
@@ -2868,14 +2872,6 @@ body {
     text-align: center;
   }
 
-  .customdev__content-text::after {
-    background-image: url(../img/customdev_vector-mobile.svg);
-    width: 266px;
-    height: 107px;
-    right: 12px;
-    top: 29px;
-  }
-
   .customdev__content-text {
     width: 100%;
     margin: 0 auto;
@@ -2883,16 +2879,20 @@ body {
   }
 
   .customdev__messagers {
-    position: static;
+    position: relative;
+    right: inherit;
+    bottom: inherit;
     justify-content: center;
     margin-top: 77px;
+    z-index: 20;
   }
 
   .customdev__imgbox-img {
     width: 330px;
     margin: 0 auto;
     position: static;
-    margin-top: 8px;
+    margin-top: 12px;
+    display: block;
   }
 
   .questions__toggle {
@@ -3148,6 +3148,14 @@ body {
 
   .customdev__card-text {
     letter-spacing: -0.061em;
+  }
+
+  .customdev__content-text .decor::after {
+    background-image: url(../img/customdev_vector-mobile.svg);
+    width: 266px;
+    height: 107px;
+    left: 2em;
+    top: 1.4em;
   }
 }
 
