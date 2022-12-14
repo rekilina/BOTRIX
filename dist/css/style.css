@@ -1590,6 +1590,7 @@ body {
 
 .customdev__content-text {
   position: relative;
+  white-space: wrap;
 }
 
 .customdev__content-text::after {
@@ -2839,6 +2840,61 @@ body {
     padding-left: 23px;
   }
 
+  .customdev {
+    padding-top: 5px;
+  }
+
+  .customdev__cards {
+    flex-direction: column;
+    margin-top: 41px;
+    gap: 16px;
+  }
+
+  .customdev__cards-wrapper {
+    height: 100px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .customdev__card {
+    height: 98px;
+    width: calc(100% - 2px);
+    max-width: 318px;
+  }
+
+  .customdev__content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .customdev__content-text::after {
+    background-image: url(../img/customdev_vector-mobile.svg);
+    width: 266px;
+    height: 107px;
+    right: 12px;
+    top: 29px;
+  }
+
+  .customdev__content-text {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .customdev__messagers {
+    position: static;
+    justify-content: center;
+    margin-top: 77px;
+  }
+
+  .customdev__imgbox-img {
+    width: 330px;
+    margin: 0 auto;
+    position: static;
+    margin-top: 8px;
+  }
+
   .questions__toggle {
     width: 100%;
   }
@@ -3088,6 +3144,10 @@ body {
   .calculate__btn {
     padding: 36px;
     width: 100%;
+  }
+
+  .customdev__card-text {
+    letter-spacing: -0.061em;
   }
 }
 

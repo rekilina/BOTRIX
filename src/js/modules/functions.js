@@ -1,8 +1,8 @@
 // Проверка поддержки webp браузером
-// Если поддерживает, то добавляем класс webp 
-// Если не поддерживает, добавляем класс no-webp 
+// Если поддерживает, то добавляем класс webp
+// Если не поддерживает, добавляем класс no-webp
 export function iswebp() {
-    // проверка поддержки webp 
+    // проверка поддержки webp
     function testWebp(callBack) {
         let webP = new Image();
         webP.onload = webP.onerror = function () {
@@ -10,7 +10,7 @@ export function iswebp() {
         };
         webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
     }
-    // Добавление класса 
+    // Добавление класса
     testWebp(function (support) {
         let className = support === true ? 'webp' : 'no-webp';
         document.documentElement.classList.add(className);
@@ -183,9 +183,9 @@ $('.capabilities__slider-btn.arrow-btn__circle-left').hover(function(e) {
 
 $(window).on("resize", function(e) {
     if(Number(window.innerWidth) > 660) {
-        if ($('.functionality__content-top').css('display') != 'none') {
-            $('.functionality__content-top').css('display', 'none');
-        }
+        $('.functionality__content-top').css('display', 'none');
+        // if ($('.functionality__content-top').css('display') != 'none') {
+        // }
     }
 
 })

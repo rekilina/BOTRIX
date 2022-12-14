@@ -1912,6 +1912,7 @@ body {
         }
 
         &:hover {
+
             & .functionality__preview-plus {
                 transform: rotate(90deg);
             }
@@ -2142,6 +2143,10 @@ body {
     padding-bottom: 120px;
     // margin-top: 56px; // из-за паддингов в предыдущем блоке
 
+    @media(max-width: $d770) {
+        padding-top: 5px;
+    }
+
     &__h2 {
         width: 60%;
         letter-spacing: 0.07em;
@@ -2152,6 +2157,12 @@ body {
         display: flex;
         gap: 48px;
 
+        @media(max-width: $d770) {
+            flex-direction: column;
+            margin-top: 41px;
+            gap: 16px;
+        }
+
         &-wrapper {
             background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
             box-shadow: 0px 0px 10px rgba(96, 232, 120, 0.2);
@@ -2161,6 +2172,12 @@ body {
             align-items: center;
             justify-content: center;
             border-radius: 32px;
+
+            @media(max-width: $d770) {
+                height: 100px;
+                width: 100%;
+                max-width: 320px;
+            }
         }
     }
 
@@ -2175,6 +2192,12 @@ body {
         flex-direction: column;
         gap: 8px;
 
+        @media(max-width: $d770) {
+            height: 98px;
+            width: calc(100% - 2px);
+            max-width: 318px;
+        }
+
         &-text {
             font-family: $mulish;
             font-style: normal;
@@ -2183,6 +2206,10 @@ body {
             line-height: 140%;
             color: #FFFFFF;
             text-align: center;
+
+            @media(max-width:$d500) {
+                letter-spacing: -0.061em;
+            }
 
             &.color-green {
                 color: $green;
@@ -2196,8 +2223,15 @@ body {
         margin-top: 73px;
         position: relative;
 
+        @media(max-width: $d770) {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
         &-text {
             position: relative;
+            white-space: wrap;
 
             &::after {
                 content: '';
@@ -2209,6 +2243,20 @@ body {
                 top: -10px;
                 background-image: url(../img/customdev_vector.svg);
                 @include backsvg;
+
+                @media(max-width: $d770) {
+                    background-image: url(../img/customdev_vector-mobile.svg);
+                    width: 266px;
+                    height: 107px;
+                    right: 12px;
+                    top: 29px;
+                }
+            }
+
+            @media(max-width: $d770) {
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
             }
         }
     }
@@ -2221,6 +2269,12 @@ body {
         align-items: center;
         justify-content: flex-start;
         gap: 48px;
+
+        @media(max-width: $d770) {
+            position: static;
+            justify-content: center;
+            margin-top: 77px;
+        }
     }
 
     &__inner {
@@ -2228,12 +2282,26 @@ body {
     }
 
     &__imgbox {
+
         &-img {
             position: absolute;
             top: -200px;
             right: -25px;
             width: 543px;
             height: auto;
+
+            // @media(max-width: $d770) {
+            //     width: 330px;
+            //     margin: 0 auto;
+            //     top: 200px;
+            //     right: -25px;
+            // }
+            @media(max-width: $d770) {
+                width: 330px;
+                margin: 0 auto;
+                position: static;
+                margin-top: 8px;
+            }
         }
     }
 }
