@@ -2116,7 +2116,7 @@ body.stop-scrolling {
     padding: 120px 0;
 
     &__h2 {
-        letter-spacing: 0.09em;
+        letter-spacing: 0.078em;
         position: relative;
 
         &::after {
@@ -2134,12 +2134,16 @@ body.stop-scrolling {
 
     &__toggle {
         width: 680px;
-        margin-top: 170px;
+        margin-top: 166px;
 
         &-item {
             width: 100%;
             padding: 24px 0;
             border-bottom: 1px solid #222233;
+
+            &:first-child {
+                padding-bottom: 27px;
+            }
         }
     }
 
@@ -2172,8 +2176,12 @@ body.stop-scrolling {
         }
 
         &:hover {
+            & .questions__circle {
+                width: 56px;
+            }
+
             & .questions__circle-vertical {
-                transform: rotate(0);
+                // transform: rotate(0);
             }
 
             & .questions__preview-title {
@@ -2190,6 +2198,8 @@ body.stop-scrolling {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        transition: all $time ease;
 
         &-horizontal {
             width: 28px;
@@ -2292,7 +2302,7 @@ body.stop-scrolling {
         -moz-clip-path: inset(-100vw -100vw -100vw -20px) !important;
         padding-top: 90px; // чтобы было куда стрелки ставить
 
-        margin-top: 61px;
+        margin-top: 63px;
 
         & .slick-list {
             padding-top: 24px !important;
@@ -2476,7 +2486,7 @@ body.stop-scrolling {
 
         &-input {
             outline: none;
-            margin-bottom: 24px;
+            margin-bottom: 23px;
             padding: 16px 24px;
             border: 1px solid $aluminium;
             border-radius: 48px;
@@ -2573,8 +2583,8 @@ body.stop-scrolling {
 }
 
 .subscribe {
-    padding: 120px 0;
-    margin-bottom: 80px;
+    padding: 122px 0;
+    margin-bottom: 78px;
 
     &__inner {
         background-image: url(../img/subscribe_banner.png);
@@ -2585,7 +2595,7 @@ body.stop-scrolling {
         background-repeat: no-repeat;
         border-radius: 32px;
         background-color: $steelgrey;
-        padding: 80px 95px;
+        padding: 81px 95px;
         position: relative;
     }
 

@@ -1681,7 +1681,7 @@ body.stop-scrolling {
 }
 
 .questions__h2 {
-  letter-spacing: 0.09em;
+  letter-spacing: 0.078em;
   position: relative;
 }
 
@@ -1701,13 +1701,17 @@ body.stop-scrolling {
 
 .questions__toggle {
   width: 680px;
-  margin-top: 170px;
+  margin-top: 166px;
 }
 
 .questions__toggle-item {
   width: 100%;
   padding: 24px 0;
   border-bottom: 1px solid #222233;
+}
+
+.questions__toggle-item:first-child {
+  padding-bottom: 27px;
 }
 
 .questions__text {
@@ -1739,8 +1743,8 @@ body.stop-scrolling {
   padding-top: 24px;
 }
 
-.questions__preview:hover .questions__circle-vertical {
-  transform: rotate(0);
+.questions__preview:hover .questions__circle {
+  width: 56px;
 }
 
 .questions__preview:hover .questions__preview-title {
@@ -1755,6 +1759,7 @@ body.stop-scrolling {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease;
 }
 
 .questions__circle-horizontal {
@@ -1859,7 +1864,7 @@ body.stop-scrolling {
   -webkit-clip-path: inset(-100vw -100vw -100vw -20px) !important;
   -moz-clip-path: inset(-100vw -100vw -100vw -20px) !important;
   padding-top: 90px;
-  margin-top: 61px;
+  margin-top: 63px;
 }
 
 .tariffs__slider .slick-list {
@@ -2038,7 +2043,7 @@ body.stop-scrolling {
 
 .feedback__form-input {
   outline: none;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
   padding: 16px 24px;
   border: 1px solid #88888D;
   border-radius: 48px;
@@ -2136,8 +2141,8 @@ body.stop-scrolling {
 }
 
 .subscribe {
-  padding: 120px 0;
-  margin-bottom: 80px;
+  padding: 122px 0;
+  margin-bottom: 78px;
 }
 
 .no-webp .subscribe__inner{
@@ -2151,7 +2156,7 @@ body.stop-scrolling {
   background-repeat: no-repeat;
   border-radius: 32px;
   background-color: #222233;
-  padding: 80px 95px;
+  padding: 81px 95px;
   position: relative;
 }
 
