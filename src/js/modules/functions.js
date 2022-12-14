@@ -200,3 +200,17 @@ $('.burger__btn').on('click', function(e) {
 
 // ------------------------------------------------------------
 
+//---------------------slick btns-----------------------------
+
+$('.capabilities__slider-btn.arrow-btn__circle-left').hover(function(e) {
+    if(Number(window.innerWidth) <= 660) {
+        console.log('here');
+        $('.capabilities__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(100px)');
+    }
+}, function(e) {
+    if(Number(window.innerWidth) <= 660) {
+        console.log('here');
+        $('.capabilities__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(0)');
+    }
+})
+// ------------------------------------------------------------

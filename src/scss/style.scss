@@ -971,7 +971,7 @@ body.stop-scrolling {
 
 .functions {
     padding-top: 236px;
-    padding-bottom: 80px;
+    padding-bottom: 73px;
 
     @media(max-width: $d660) {
         padding-top: 328px;
@@ -1011,14 +1011,14 @@ body.stop-scrolling {
     }
 
     &__card {
-        margin-bottom: 38px;
+        margin-bottom: 47px;
         border-radius: 32px;
         padding: 42px 32px;
 
         @media(max-width: $d770) {
             border-radius: 24px;
             padding: 30px 15px;
-            margin-bottom: 12px;
+            margin-bottom: 24px;
         }
 
         @media(max-width: $d660) {
@@ -1028,7 +1028,7 @@ body.stop-scrolling {
         @media(max-width: $d500) {
             border-radius: 24px;
             padding: 24px 15px;
-            margin-bottom: 12px;
+            margin-bottom: 23px;
             width: 100%;
         }
 
@@ -1051,6 +1051,7 @@ body.stop-scrolling {
             @media(max-width: $d900) {
                 flex-direction: column;
                 align-items: center;
+                gap: 0;
             }
 
             &--reverse {
@@ -1137,7 +1138,7 @@ body.stop-scrolling {
     padding-bottom: 120px;
 
     @media (max-width: $d770) {
-        padding-top: 25px;
+        padding-top: 15px;
     }
 
     &__h2 {
@@ -1288,15 +1289,15 @@ body.stop-scrolling {
         &::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 8px;
             // right: 178px;
-            left: 607px;
-            height: 55px;
-            width: 55px;
+            left: 615px;
+            height: 38px;
+            width: 38px;
             background-image: url(../img/SmileGreen.svg);
             @include backsvg;
 
-            transform: rotate(17deg);
+            transform: rotate(32deg);
 
             @media (max-width: $d770) {
                 right: -24px;
@@ -1326,7 +1327,7 @@ body.stop-scrolling {
         font-size: 24px;
         line-height: 140%;
         color: $white;
-        margin-top: 64px;
+        margin-top: 66px;
         width: 74%;
 
         @media (max-width: $d770) {
@@ -1392,6 +1393,10 @@ body.stop-scrolling {
     padding-top: 157px;
     padding-bottom: 120px;
     margin-bottom: 77px;
+    
+    & .container {
+        position: relative;
+    }
 
     @media (max-width: $d770) {
         padding-top: 0;
@@ -1427,6 +1432,10 @@ body.stop-scrolling {
         display: flex;
         justify-content: space-between;
         gap: 65px;
+
+        @media (max-width: $d660) {
+            margin-bottom: 0;
+        }
 
         @media (max-width: $d770) {
             margin-top: 40px;
@@ -1470,6 +1479,17 @@ body.stop-scrolling {
             padding-bottom: 24px !important;
             overflow: visible !important;
             margin-top: 30px;
+
+            @media (max-width: $d660) {
+                // padding-top: 10px !important;
+                // padding-bottom: 90px;
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: $d660) {
+            padding-top: 0;
+            padding-bottom: 150px;
         }
 
     }
@@ -1485,6 +1505,11 @@ body.stop-scrolling {
         width: 370px !important;
         height: 280px;
 
+        @media (max-width: $d660) {
+            width: 320px !important;
+            height: 268px;
+        }
+
         &-content {
             padding: 64px 29px;
             width: 368px;
@@ -1494,6 +1519,11 @@ body.stop-scrolling {
             align-items: center;
             border-radius: 32px;
             background: #12121C;
+
+            @media (max-width: $d660) {
+                width: 318px;
+                height: 266px;
+            }
         }
 
         &-img {
@@ -1510,11 +1540,21 @@ body.stop-scrolling {
             line-height: 140%;
             text-align: center;
             color: #FFFFFF;
+
+            @media (max-width: $d660) {
+                font-size: 20px;
+            }
         }
     }
 
     &__progressbar {
         margin-top: 24px;
+
+        @media (max-width: $d660) {
+            margin-top: 0;
+            position: absolute;
+            bottom: 133px;
+        }
     }
 }
 
@@ -1545,9 +1585,12 @@ body.stop-scrolling {
             }
 
             &.arrow-btn__circle-right {
-                transform: translateX(100px);
                 // поскольку transform-origin тут не спасет
                 // 194px - 94px = 100px
+                transform: translateX(100px);
+                @media (max-width: $d660) {
+                    transform: translateX(0);
+                }
             }
         }
 
@@ -1556,6 +1599,13 @@ body.stop-scrolling {
             top: 0;
             right: 100px;
             transform-origin: center left;
+
+            @media (max-width: $d660) {
+                top: inherit;
+                bottom: 0;
+                right: inherit;
+                left: 118px;
+            }
 
             & .arrow-btn__arrow-small {
                 position: absolute;
@@ -1589,6 +1639,13 @@ body.stop-scrolling {
             position: absolute;
             top: 0;
             right: 220px;
+
+            @media (max-width: $d660) {
+                top: inherit;
+                bottom: 0;
+                right: inherit;
+                left: 0;
+            }
 
             & .arrow-btn__arrow-small {
                 position: absolute;
@@ -1716,7 +1773,7 @@ body.stop-scrolling {
     }
 
     &__container {
-        margin-top: 44px;
+        margin-top: 68px;
     }
 
     &__card {
@@ -1734,7 +1791,7 @@ body.stop-scrolling {
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
-        padding: 30px 0 30px 0;
+        padding: 24px 0;
         border-bottom: 1px solid #222233;
 
         &:hover {
@@ -1756,8 +1813,10 @@ body.stop-scrolling {
         }
 
         &-title {
-            display: inline-block;
+            display: inline-flex;
             max-width: 538px;
+            min-height: 68px;
+            align-items: center;
         }
 
         &-circle {
@@ -1804,7 +1863,7 @@ body.stop-scrolling {
         }
 
         &-text {
-            margin-bottom: 40px;
+            margin-bottom: 42px;
             letter-spacing: -0.053em;
             width: 90%;
         }
@@ -1816,7 +1875,7 @@ body.stop-scrolling {
         }
 
         &-list {
-            margin-bottom: 64px;
+            margin-bottom: 62px;
             padding-left: 15px;
         }
 
@@ -1864,7 +1923,8 @@ body.stop-scrolling {
             overflow: hidden;
             position: relative;
             width: 100%;
-            margin-top: -24px;
+            margin-top: -26px;
+            margin-left: -3px;
         }
 
         &-img {
@@ -1877,7 +1937,7 @@ body.stop-scrolling {
 }
 
 .customdev {
-    padding-top: 120px;
+    padding-top: 116px;
     padding-bottom: 120px;
     // margin-top: 56px; // из-за паддингов в предыдущем блоке
 
@@ -1978,7 +2038,7 @@ body.stop-scrolling {
 }
 
 .articles {
-    padding-top: 215px;
+    padding-top: 217px;
     padding-bottom: 140px;
 
     &__h2 {
