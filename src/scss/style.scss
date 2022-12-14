@@ -42,13 +42,14 @@ a {
 }
 
 html {
-    overflow-x: clip;
+    // overflow-x: clip;
+    overflow-x: hidden;
 }
 
 body {
     pointer-events: all !important;
     background-color: $vulcan;
-    overflow-x: clip;
+    overflow-x: hidden;
     margin: 0 auto;
     color: $white;
     font-family: $mulish;
@@ -56,9 +57,9 @@ body {
     line-height: 1.2;
 }
 
-body.stop-scrolling {
-    overflow: auto !important;
-}
+// body.stop-scrolling {
+//     overflow: auto !important;
+// }
 
 .container {
     max-width: 1300px;

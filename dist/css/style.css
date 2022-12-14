@@ -41,22 +41,18 @@ a {
 }
 
 html {
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 body {
   pointer-events: all !important;
   background-color: #12121C;
-  overflow-x: clip;
+  overflow-x: hidden;
   margin: 0 auto;
   color: #ffffff;
   font-family: "Mulish", sans-serif;
   font-size: 20px;
   line-height: 1.2;
-}
-
-body.stop-scrolling {
-  overflow: auto !important;
 }
 
 .container {
