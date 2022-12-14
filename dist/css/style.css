@@ -41,18 +41,21 @@ a {
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
+  width: 100vw;
+  margin: 0 auto;
 }
 
 body {
   pointer-events: all !important;
   background-color: #12121C;
-  overflow-x: hidden;
   margin: 0 auto;
   color: #ffffff;
   font-family: "Mulish", sans-serif;
   font-size: 20px;
   line-height: 1.2;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -2774,6 +2777,10 @@ body {
   .functionality__h2::after {
     left: 0;
     width: 255px;
+  }
+
+  .questions__toggle {
+    width: 100%;
   }
 }
 

@@ -42,19 +42,23 @@ a {
 }
 
 html {
-    // overflow-x: clip;
-    overflow-x: hidden;
+    overflow-x: clip;
+    // overflow-x: hidden;
+    width: 100vw;
+    margin: 0 auto;
+    
 }
-
 body {
     pointer-events: all !important;
     background-color: $vulcan;
-    overflow-x: hidden;
     margin: 0 auto;
     color: $white;
     font-family: $mulish;
     font-size: 20px;
     line-height: 1.2;
+    width: 100%;
+    overflow-x: hidden;
+
 }
 
 // body.stop-scrolling {
@@ -2221,6 +2225,10 @@ body {
     &__toggle {
         width: 680px;
         margin-top: 166px;
+
+        @media (max-width: $d770) {
+            width: 100%;
+        }
 
         &-item {
             width: 100%;
