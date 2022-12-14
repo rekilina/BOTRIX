@@ -62,6 +62,10 @@ body.stop-scrolling {
     visibility: hidden;
 }
 
+.visible {
+    visibility: visible;
+}
+
 .transparent {
     opacity: 0 !important;
 }
@@ -136,6 +140,53 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
+}
+
+.btn {
+    background-color: $navyblue;
+    color: $white;
+    transition: all $time ease;
+    cursor: pointer;
+    &:hover {
+        background-color: $white;
+        color: $navyblue;
+    }
+    &:active {
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+    }
+    &.btn-disabled {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+}
+
+.link {
+    color: $navyblue;
+    transition: all $time ease;
+    cursor: pointer;
+    &:visited {
+        color: $navyblue;
+    }
+    &:hover {
+        background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    // &:active {
+    //     color: $white;
+    //     // background: transparent;
+    // }
+    &:not(.link:active) {
+        color: $navyblue;
+    }
+    &.link-disabled {
+        opacity: 0.6;
+        pointer-events: none;
+    }
 }
 
 .color-green {
@@ -316,14 +367,27 @@ body.stop-scrolling {
     }
 }
 
+.disabled {
+    opacity: 0.6;
+}
 
 .header {
-    position: absolute;
-    z-index: 20;
+    position: fixed;
+    z-index: 200;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+
+    background: rgb(18,18,28);
+    background: -moz-linear-gradient(180deg, rgba(18,18,28,1) 0%, rgba(18,18,28,0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(18,18,28,1) 0%, rgba(18,18,28,0) 100%);
+    background: linear-gradient(180deg, rgba(18,18,28,1) 0%, rgba(18,18,28,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12121c",endColorstr="#12121c",GradientType=1);
+
+    &--dropdown {
+        background-color: $vulcan;
+    }
 
     &__inner {
         display: flex;
@@ -346,6 +410,7 @@ body.stop-scrolling {
     &__nav {
         display: flex;
         align-items: center;
+        transition: all $time ease;
 
         &-ul {
             display: flex;
@@ -354,6 +419,7 @@ body.stop-scrolling {
             padding: 16px 16px 16px 24px;
             border: 1px solid #FFFFFF;
             border-radius: 32px;
+            transition: all $time ease;
         }
 
         &-li {
@@ -396,6 +462,8 @@ body.stop-scrolling {
         align-items: center;
         flex-basis: 23.3%;
 
+        transition: all $time ease;
+
         &-login {
             // margin-right: 55px;
         }
@@ -405,6 +473,125 @@ body.stop-scrolling {
             background-color: $navyblue;
             border-radius: 32px;
         }
+    }
+}
+
+.burger {
+    &__btn {
+        width: 56px;
+        height: 56px;
+        display: none;
+        transition: all $time ease;
+        position: relative;
+        &.show {
+            display: inline-block;
+            opacity: 1;
+        }
+        &.open {
+            background-image: url(../img/MenuMobile.svg);
+            @include backsvg;
+        }
+        &.close {
+            background-image: url(../img/MenuMobileClose.svg);
+            @include backsvg;
+            position: relative;
+            &::before {
+                content: 'Закрыть';
+                position: absolute;
+                right: 80px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        &:active {
+            background-image: url(../img/MenuMobileActive.svg);
+            @include backsvg;
+        }
+    }
+}
+
+.dropdown {
+    background-color: $vulcan;
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    z-index: 20;
+    top: 104px;
+    left: 50%;
+    // transform: translateX(-50%);
+    width: 100%;
+    visibility: hidden;
+    transition: all $time ease;
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+
+    &--active {
+        visibility: visible;
+        transform: translateX(-50%) scaleY(1);
+        opacity: 1;
+    }
+    
+    &__wrapper {
+        margin: 0 auto;
+    }
+    &__list {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-li {
+            display: inline-flex;
+            gap: 16px;
+            align-items: center;
+        }
+        &-link {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 160%;
+            &:hover {
+                background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+            &:active {
+                color: $green;
+            }
+        }
+        &-img {
+            width: 64px;
+            height: 64px;
+            display: inline-block;
+            &.dropdown__functions {
+                @include backsvg;
+                background-image: url(../img/CrossWaveGreen-0.svg);
+            }
+            &.dropdown__capabilities {
+                @include backsvg;
+                background-image: url(../img/ArrowFilledUp.svg);
+            }
+            &.dropdown__tariffs {
+                transform: rotate(10deg);
+                @include backsvg;
+                background-image: url(../img/SmileGreen.svg);
+
+            }
+            &.dropdown__instructions {
+                @include backsvg;
+                background-image: url(../img/CrossWaveGreen.svg);
+            }
+            &.dropdown__makeorder {
+                @include backsvg;
+                background-image: url(../img/IconRobot.svg);
+            }
+        }
+    }
+    & .header__user {
+        display: none;
     }
 }
 

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: Mulish;
   font-display: swap;
@@ -65,6 +67,10 @@ body.stop-scrolling {
 
 .hidden {
   visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }
 
 .transparent {
@@ -141,6 +147,56 @@ body.stop-scrolling {
   padding: 0;
   margin: 0;
   color: #ffffff;
+}
+
+.btn {
+  background-color: #006ADA;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #006ADA;
+}
+
+.btn:active {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn.btn-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.link {
+  color: #006ADA;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.link:visited {
+  color: #006ADA;
+}
+
+.link:hover {
+  background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.link:not(.link:active) {
+  color: #006ADA;
+}
+
+.link.link-disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .color-green {
@@ -322,13 +378,24 @@ body.stop-scrolling {
   border-radius: 50%;
 }
 
+.disabled {
+  opacity: 0.6;
+}
+
 .header {
-  position: absolute;
-  z-index: 20;
+  position: fixed;
+  z-index: 200;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  background: rgb(18, 18, 28);
+  background: linear-gradient(180deg, rgb(18, 18, 28) 0%, rgba(18, 18, 28, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12121c",endColorstr="#12121c",GradientType=1);
+}
+
+.header--dropdown {
+  background-color: #12121C;
 }
 
 .header__inner {
@@ -352,6 +419,7 @@ body.stop-scrolling {
 .header__nav {
   display: flex;
   align-items: center;
+  transition: all 0.5s ease;
 }
 
 .header__nav-ul {
@@ -361,6 +429,7 @@ body.stop-scrolling {
   padding: 16px 16px 16px 24px;
   border: 1px solid #FFFFFF;
   border-radius: 32px;
+  transition: all 0.5s ease;
 }
 
 .header__nav-li {
@@ -402,12 +471,161 @@ body.stop-scrolling {
   justify-content: space-between;
   align-items: center;
   flex-basis: 23.3%;
+  transition: all 0.5s ease;
 }
 
 .header__user-register {
   padding: 16px 32px;
   background-color: #006ADA;
   border-radius: 32px;
+}
+
+.burger__btn {
+  width: 56px;
+  height: 56px;
+  display: none;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.burger__btn.show {
+  display: inline-block;
+  opacity: 1;
+}
+
+.burger__btn.open {
+  background-image: url(../img/MenuMobile.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.burger__btn.close {
+  background-image: url(../img/MenuMobileClose.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.burger__btn.close::before {
+  content: "Закрыть";
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger__btn:active {
+  background-image: url(../img/MenuMobileActive.svg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.dropdown {
+  background-color: #12121C;
+  width: 100vw;
+  height: 100vw;
+  position: fixed;
+  z-index: 20;
+  top: 104px;
+  left: 50%;
+  width: 100%;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+}
+
+.dropdown--active {
+  visibility: visible;
+  transform: translateX(-50%) scaleY(1);
+  opacity: 1;
+}
+
+.dropdown__wrapper {
+  margin: 0 auto;
+}
+
+.dropdown__list {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown__list-li {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.dropdown__list-link {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 160%;
+}
+
+.dropdown__list-link:hover {
+  background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.dropdown__list-link:active {
+  color: #60E878;
+}
+
+.dropdown__list-img {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+}
+
+.dropdown__list-img.dropdown__functions {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../img/CrossWaveGreen-0.svg);
+}
+
+.dropdown__list-img.dropdown__capabilities {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../img/ArrowFilledUp.svg);
+}
+
+.dropdown__list-img.dropdown__tariffs {
+  transform: rotate(10deg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../img/SmileGreen.svg);
+}
+
+.dropdown__list-img.dropdown__instructions {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../img/CrossWaveGreen.svg);
+}
+
+.dropdown__list-img.dropdown__makeorder {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../img/IconRobot.svg);
+}
+
+.dropdown .header__user {
+  display: none;
 }
 
 .main-banner {
@@ -441,7 +659,7 @@ body.stop-scrolling {
   position: relative;
 }
 
-.no-webp .main-banner__content-h1::after {
+.no-webp .main-banner__content-h1::after{
   background-image: url(../img/IconArrowDown.png); }
 
 .main-banner__content-h1::after {
@@ -674,7 +892,7 @@ body.stop-scrolling {
   background-color: transparent;
 }
 
-.no-webp .videoPoster {
+.no-webp .videoPoster{
   background-image: url(../img/MainImage.png); }
 
 .videoPoster {
@@ -1903,7 +2121,7 @@ body.stop-scrolling {
   margin-bottom: 80px;
 }
 
-.no-webp .subscribe__inner {
+.no-webp .subscribe__inner{
   background-image: url(../img/subscribe_banner.png); }
 
 .subscribe__inner {
@@ -2253,8 +2471,8 @@ body.stop-scrolling {
   width: 100%;
 }
 
-.webp .main-banner__content-h1::after { background-image: url(../img/IconArrowDown.webp); }
+.webp .main-banner__content-h1::after{ background-image: url(../img/IconArrowDown.webp); }
 
-.webp .videoPoster { background-image: url(../img/MainImage.webp); }
+.webp .videoPoster{ background-image: url(../img/MainImage.webp); }
 
-.webp .subscribe__inner { background-image: url(../img/subscribe_banner.webp); }
+.webp .subscribe__inner{ background-image: url(../img/subscribe_banner.webp); }

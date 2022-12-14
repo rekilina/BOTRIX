@@ -98,7 +98,7 @@ $('.questions__preview').on('click', function(e) {
 
 
 
-// for modal windows
+// -------------------  modal windows ---------------------
 $('.main-banner__content-rotatebtn').on('click', function(e) {
     if(!$(this).hasClass('rotatebtn--disabled')) {
         $('.modal-goto').addClass('modal-goto--active');
@@ -111,7 +111,6 @@ $('.modal-goto__close').on('click', function(e) {
 })
 
 
-
 $('.calculate__btn').on('click', function(e) {
     e.preventDefault();
     $('.modal-calc').addClass('modal-calc--active');
@@ -122,6 +121,39 @@ $('.modal-calc__close').on('click', function(e) {
     $('.modal-calc').removeClass('modal-calc--active');
 })
 
+// ------------------------------------------------------------
+
+//------------------------- hide menu -------------------------
+$(window).on('scroll', function(e) {
+    var elementTop = $('.functions__h2').offset().top;
+    var headerBottom = $('.header').offset().top + $('.header').outerHeight();
+
+    if (elementTop < headerBottom) {
+        $('.header__nav-ul').css('display', 'none');
+        $('.burger__btn').css('display', 'inline-block');
+        // $('.header__nav-ul').fadeOut(100, 'linear');
+        // $('.burger__btn').fadeIn(200, 'linear');
+    }
+
+    if (elementTop >= headerBottom) {
+        $('.header__nav-ul').css('display', 'flex');
+        $('.burger__btn').css('display', 'none');
+        // $('.header__nav-ul').fadeIn(200, 'linear');
+        // $('.burger__btn').fadeOut(100, 'linear');
+    }
+
+})
+// ------------------------------------------------------------
+
+// --------------------burger menu ----------------------------
+$('.burger__btn').on('click', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('open');
+    $(this).toggleClass('close');
+    $('.dropdown').toggleClass('dropdown--active');
+    $('.header').toggleClass('header--dropdown');
+})
 
 
+// ------------------------------------------------------------
 
