@@ -12,12 +12,12 @@ $xolonium: 'Xolonium', sans-serif;
 $time: 0.5s;
 
 $d1250: 1250px;
-$d1000: 1000px;
+$d1100: 1100px;
 $d900: 900px;
 $d770: 770px;
 $d660: 660px;
 $d500: 500px;
-$d350: 350px;
+$d360: 359px;
 
 @mixin backsvg {
     background-size: 100% 100%;
@@ -64,6 +64,9 @@ body.stop-scrolling {
     max-width: 1300px;
     padding: 0 50px;
     margin: 0 auto;
+    @media(max-width: $d500) {
+        padding: 0 21px;
+    }
 }
 
 .hidden {
@@ -91,8 +94,20 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
+
+    @media (max-width: $d1250) {
+        font-size: 52px;
+    }
+
+    @media (max-width: $d900) {
+        font-size: 48px;
+    }
+
     @media (max-width: $d660) {
         font-size: 36px;
+    }
+    @media (max-width: $d360) {
+        font-size: 30px;
     }
 }
 
@@ -105,6 +120,7 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
+
     @media (max-width: $d660) {
         font-size: 24px;
     }
@@ -119,6 +135,7 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
+
     @media (max-width: $d660) {
         font-size: 18px;
     }
@@ -133,8 +150,12 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $vulcan;
+
     @media (max-width: $d660) {
         font-size: 18px;
+    }
+    @media (max-width: $d500) {
+        font-size: 12px;
     }
 }
 
@@ -148,6 +169,7 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
+
     @media (max-width: $d660) {
         font-size: 20px;
     }
@@ -163,9 +185,7 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
-    @media (max-width: $d770) {
-        font-size: 14px;
-    }
+
 }
 
 .btn {
@@ -173,15 +193,18 @@ body.stop-scrolling {
     color: $white;
     transition: all $time ease;
     cursor: pointer;
+
     &:hover {
         background-color: $white;
         color: $navyblue;
     }
+
     &:active {
         background-color: transparent;
         border: 1px solid $white;
         color: $white;
     }
+
     &.btn-disabled {
         opacity: 0.6;
         pointer-events: none;
@@ -192,9 +215,11 @@ body.stop-scrolling {
     color: $navyblue;
     transition: all $time ease;
     cursor: pointer;
+
     &:visited {
         color: $navyblue;
     }
+
     &:hover {
         background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
         -webkit-background-clip: text;
@@ -202,6 +227,7 @@ body.stop-scrolling {
         background-clip: text;
         text-fill-color: transparent;
     }
+
     // &:active {
     //     color: $white;
     //     // background: transparent;
@@ -209,6 +235,7 @@ body.stop-scrolling {
     &:not(.link:active) {
         color: $navyblue;
     }
+
     &.link-disabled {
         opacity: 0.6;
         pointer-events: none;
@@ -217,6 +244,10 @@ body.stop-scrolling {
 
 .color-green {
     color: $green;
+}
+
+.no-wrap {
+    white-space: nowrap;
 }
 
 .rotatebtn {
@@ -246,12 +277,14 @@ body.stop-scrolling {
         & .ellips_0 {
             opacity: 1;
         }
+
         & .ellips_53,
         & .ellips_63,
         & .ellips_50,
         & .ellips_48 {
             opacity: 0;
         }
+
         & .rotatebtn-text {
             color: $white;
         }
@@ -405,11 +438,11 @@ body.stop-scrolling {
     transform: translateX(-50%);
     width: 100%;
 
-    background: rgb(18,18,28);
-    background: -moz-linear-gradient(180deg, rgba(18,18,28,1) 0%, rgba(18,18,28,0) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(18,18,28,1) 0%, rgba(18,18,28,0) 100%);
-    background: linear-gradient(180deg, rgba(18,18,28,1) 0%, rgba(18,18,28,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12121c",endColorstr="#12121c",GradientType=1);
+    background: rgb(18, 18, 28);
+    background: -moz-linear-gradient(180deg, rgba(18, 18, 28, 1) 0%, rgba(18, 18, 28, 0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(18, 18, 28, 1) 0%, rgba(18, 18, 28, 0) 100%);
+    background: linear-gradient(180deg, rgba(18, 18, 28, 1) 0%, rgba(18, 18, 28, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12121c", endColorstr="#12121c", GradientType=1);
 
     &--dropdown {
         background-color: $vulcan;
@@ -421,6 +454,9 @@ body.stop-scrolling {
         align-items: center;
         padding: 24px 0;
         gap: 10px;
+        @media(max-width: $d500) {
+            padding: 28px 20px;
+        }
     }
 
     &__login {
@@ -431,6 +467,11 @@ body.stop-scrolling {
 
         &-img {
             width: 100%;
+        }
+
+        @media(max-width:$d500) {
+            width: 106px;
+            height: 48px;
         }
     }
 
@@ -477,6 +518,7 @@ body.stop-scrolling {
             font-size: 17px;
             line-height: 140%;
             color: $white;
+
             &:hover {
                 background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
                 -webkit-background-clip: text;
@@ -519,21 +561,26 @@ body.stop-scrolling {
         display: none;
         transition: all $time ease;
         position: relative;
+
         @media (max-width: $d1250) {
             display: inline-block;
         }
+
         &.show {
             display: inline-block;
             opacity: 1;
         }
+
         &.open {
             background-image: url(../img/MenuMobile.svg);
             @include backsvg;
         }
+
         &.close {
             background-image: url(../img/MenuMobileClose.svg);
             @include backsvg;
             position: relative;
+
             &::before {
                 content: 'Закрыть';
                 position: absolute;
@@ -542,6 +589,7 @@ body.stop-scrolling {
                 transform: translateY(-50%);
             }
         }
+
         &:active {
             background-image: url(../img/MenuMobileActive.svg);
             @include backsvg;
@@ -552,7 +600,7 @@ body.stop-scrolling {
 .dropdown {
     background-color: $vulcan;
     width: 100vw;
-    // height: 100vw;
+    min-height: 100vw;
     position: fixed;
     z-index: 20;
     top: 104px;
@@ -564,45 +612,53 @@ body.stop-scrolling {
     transform: translateX(-50%) scaleY(0);
     transform-origin: top;
     opacity: 0;
+    padding-bottom: 30px;
 
     &--active {
         visibility: visible;
         transform: translateX(-50%) scaleY(1);
         opacity: 1;
     }
-    
+
     &__wrapper {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     &__list {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         font-size: 64px;
+
         @media (max-width: $d1250) {
             font-size: 56px;
         }
+
         @media (max-width: $d900) {
             font-size: 48px;
         }
+
         @media (max-width: $d770) {
             font-size: 42px;
         }
+
         &-li {
             display: inline-flex;
             gap: 16px;
             align-items: center;
         }
+
         &-link {
             font-family: $mulish;
             font-style: normal;
             font-weight: 400;
             // font-size: 64px;
             line-height: 160%;
+
             &:hover {
                 background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
                 -webkit-background-clip: text;
@@ -610,41 +666,49 @@ body.stop-scrolling {
                 background-clip: text;
                 text-fill-color: transparent;
             }
+
             &:active {
                 color: $green;
             }
         }
+
         &-img {
             width: 1em;
             height: 1em;
             display: inline-block;
+
             &.dropdown__functions {
                 @include backsvg;
                 background-image: url(../img/CrossWaveGreen-0.svg);
             }
+
             &.dropdown__capabilities {
                 @include backsvg;
                 background-image: url(../img/ArrowFilledUp.svg);
             }
+
             &.dropdown__tariffs {
                 transform: rotate(10deg);
                 @include backsvg;
                 background-image: url(../img/SmileGreen.svg);
 
             }
+
             &.dropdown__instructions {
                 @include backsvg;
                 background-image: url(../img/CrossWaveGreen.svg);
             }
+
             &.dropdown__makeorder {
                 @include backsvg;
                 background-image: url(../img/IconRobot.svg);
             }
         }
     }
+
     & .header__user {
         display: none;
-        padding-bottom: 30px;
+
         @media (max-width: $d900) {
             display: inline-flex;
             justify-content: center;
@@ -660,6 +724,10 @@ body.stop-scrolling {
     padding-bottom: 260px;
     position: relative;
 
+    @media(max-width: $d900) {
+        padding-top: 124px;
+    }
+
     &__inner {
         position: relative;
     }
@@ -667,6 +735,19 @@ body.stop-scrolling {
     &__content {
         width: 47%;
         position: relative;
+        z-index: 30;
+
+        @media(max-width: $d900) {
+            width: 73%;
+        }
+
+        @media(max-width: $d770) {
+            width: 73%;
+        }
+
+        @media(max-width: $d660) {
+            width: 100%;
+        }
 
         & .decor::before {
             height: 38px;
@@ -676,6 +757,24 @@ body.stop-scrolling {
             background-image: url(../img/IconWave4.svg);
             @include backsvg;
             margin-right: 36px;
+            @media(max-width: $d1250) {
+                margin-right: 10px;
+            }
+            @media(max-width: $d770) {
+                width: 100px;
+                height: 30px;
+                margin-right: 10px;
+            }
+            @media(max-width: $d500) {
+                width: 75px;
+                height: 25px;
+                margin-right: 20px;
+            }
+            @media (max-width: $d360) {
+                width: 55px;
+                height: 20px;
+                margin-right: 10px;
+            }
         }
 
         &-h1 {
@@ -690,6 +789,26 @@ body.stop-scrolling {
                 position: absolute;
                 left: 400px;
                 bottom: -21px;
+                @media(max-width: $d900) {
+                    left: 330px;
+                }
+
+                @media(max-width: $d770) {
+                    left: 300px;
+                }
+
+                @media(max-width: $d660) {
+                    left: 250px;
+                    width: 40px;
+                    height: 40px;
+                    bottom: -10px;
+                }
+                @media(max-width: $d500) {
+                    left: 245px;
+                    width: 40px;
+                    height: 40px;
+                    bottom: 5px;
+                }
             }
         }
 
@@ -704,12 +823,24 @@ body.stop-scrolling {
             right: -12px;
             bottom: -168px;
             width: 240px;
+            @media(max-width: $d500) {
+                font-size: 16px;
+                line-height: 140%;
+                width: 255px;
+                text-align: right;
+                right: 0;
+                bottom: -95px;
+            }
         }
 
         &-rotatebtn {
             position: absolute;
             bottom: -257px;
             left: 0;
+            @media(max-width: $d770) {
+                bottom: -340px;
+                left: -3px;
+            }
         }
     }
 
@@ -720,6 +851,37 @@ body.stop-scrolling {
         overflow: visible;
         width: 900px;
         z-index: 1;
+
+        @media (max-width: $d1100) {
+            width: 700px;
+            right: -170px;
+            top: -100px;
+        }
+
+        @media (max-width: $d900) {
+            width: 450px;
+            right: -160px;
+            top: 0px;
+        }
+
+        @media (max-width: $d770) {
+            width: 370px;
+            right: -120px;
+            top: 93px;
+        }
+
+        @media (max-width: $d660) {
+            width: 370px;
+            right: -90px;
+            top: 270px;
+        }
+
+
+        @media (max-width: $d500) {
+            width: 370px;
+            right: -90px;
+            top: 443px;
+        }
 
         &-img {
             width: 100%;
@@ -739,6 +901,18 @@ body.stop-scrolling {
     user-select: none;
     pointer-events: none;
 
+    @media (max-width: $d770) {
+        bottom: -430px;
+    }
+
+    @media (max-width: $d660) {
+        bottom: -500px;
+    }
+
+    @media (max-width: $d500) {
+        bottom: -630px;
+    }
+
     &__marquee {
         position: absolute;
         left: -50px;
@@ -748,6 +922,10 @@ body.stop-scrolling {
         display: inline-flex;
         align-items: center;
         background-color: $green;
+
+        @media (max-width: $d500) {
+            padding: 20px 0;
+        }
 
         &-item {
             display: flex;
@@ -761,10 +939,14 @@ body.stop-scrolling {
             height: 32px;
             flex-shrink: 0;
             margin-right: 20px;
+
+            @media (max-width: $d500) {
+                width: 24px;
+                height: 24px;
+            }
         }
 
         &-text {
-            flex-shrink: 0;
         }
     }
 }
@@ -1409,11 +1591,13 @@ body.stop-scrolling {
         display: none;
         flex-direction: row;
         justify-content: space-between;
+
         &-wrapper {
             display: flex;
             flex-direction: row;
-        justify-content: space-between;
+            justify-content: space-between;
         }
+
         &-left {
             flex-basis: 57%;
             flex-shrink: 0;
@@ -2195,6 +2379,7 @@ body.stop-scrolling {
     &--active {
         visibility: visible;
         opacity: 1;
+
         & .modal-success__wrapper {
             transform: translateX(-50%) translateY(-50%) scale(1);
         }
@@ -2271,6 +2456,7 @@ body.stop-scrolling {
     &--active {
         visibility: visible;
         opacity: 1;
+
         & .modal-failure__wrapper {
             transform: translateX(-50%) translateY(-50%) scale(1);
         }
@@ -2347,6 +2533,7 @@ body.stop-scrolling {
     &--active {
         visibility: visible;
         opacity: 1;
+
         & .modal-goto__wrapper {
             transform: translateX(-50%) translateY(-50%) scale(1);
         }
@@ -2384,6 +2571,7 @@ body.stop-scrolling {
         position: absolute;
         bottom: 40px;
         margin: 0 auto;
+
         &-link {
             width: 96px;
             height: 96px;
@@ -2425,6 +2613,7 @@ body.stop-scrolling {
     &--active {
         visibility: visible;
         opacity: 1;
+
         & .modal-calc__wrapper {
             transform: translate(-50%, -50%) scale(1);
 
@@ -2463,6 +2652,7 @@ body.stop-scrolling {
         position: absolute;
         bottom: 40px;
         margin: 0 auto;
+
         &-link {
             width: 96px;
             height: 96px;

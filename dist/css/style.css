@@ -203,6 +203,10 @@ body.stop-scrolling {
   color: #60E878;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 .rotatebtn {
   position: relative;
   width: 196px;
@@ -391,7 +395,7 @@ body.stop-scrolling {
   width: 100%;
   background: rgb(18, 18, 28);
   background: linear-gradient(180deg, rgb(18, 18, 28) 0%, rgba(18, 18, 28, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12121c",endColorstr="#12121c",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12121c", endColorstr="#12121c", GradientType=1);
 }
 
 .header--dropdown {
@@ -528,6 +532,7 @@ body.stop-scrolling {
 .dropdown {
   background-color: #12121C;
   width: 100vw;
+  min-height: 100vw;
   position: fixed;
   z-index: 20;
   top: 104px;
@@ -538,6 +543,7 @@ body.stop-scrolling {
   transform: translateX(-50%) scaleY(0);
   transform-origin: top;
   opacity: 0;
+  padding-bottom: 30px;
 }
 
 .dropdown--active {
@@ -630,7 +636,6 @@ body.stop-scrolling {
 
 .dropdown .header__user {
   display: none;
-  padding-bottom: 30px;
 }
 
 .main-banner {
@@ -646,6 +651,7 @@ body.stop-scrolling {
 .main-banner__content {
   width: 47%;
   position: relative;
+  z-index: 30;
 }
 
 .main-banner__content .decor::before {
@@ -749,10 +755,6 @@ body.stop-scrolling {
   height: 32px;
   flex-shrink: 0;
   margin-right: 20px;
-}
-
-.main-marquee__marquee-text {
-  flex-shrink: 0;
 }
 
 .functions {
@@ -2477,6 +2479,10 @@ body.stop-scrolling {
 }
 
 @media (max-width: 1250px) {
+  .h1 {
+    font-size: 52px;
+  }
+
   .header__nav-ul {
     display: none;
   }
@@ -2488,9 +2494,25 @@ body.stop-scrolling {
   .dropdown__list {
     font-size: 56px;
   }
+
+  .main-banner__content .decor::before {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-banner__imgbox {
+    width: 700px;
+    right: -170px;
+    top: -100px;
+  }
 }
 
 @media (max-width: 900px) {
+  .h1 {
+    font-size: 48px;
+  }
+
   .header__user {
     display: none;
   }
@@ -2506,15 +2528,58 @@ body.stop-scrolling {
     width: 50%;
     margin: 40px auto;
   }
+
+  .main-banner {
+    padding-top: 124px;
+  }
+
+  .main-banner__content {
+    width: 73%;
+  }
+
+  .main-banner__content-h1::after {
+    left: 330px;
+  }
+
+  .main-banner__imgbox {
+    width: 450px;
+    right: -160px;
+    top: 0px;
+  }
 }
 
 @media (max-width: 770px) {
-  .descriptor {
-    font-size: 14px;
-  }
-
   .dropdown__list {
     font-size: 42px;
+  }
+
+  .main-banner__content {
+    width: 73%;
+  }
+
+  .main-banner__content .decor::before {
+    width: 100px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .main-banner__content-h1::after {
+    left: 300px;
+  }
+
+  .main-banner__content-rotatebtn {
+    bottom: -340px;
+    left: -3px;
+  }
+
+  .main-banner__imgbox {
+    width: 370px;
+    right: -120px;
+    top: 93px;
+  }
+
+  .main-marquee {
+    bottom: -430px;
   }
 }
 
@@ -2537,6 +2602,99 @@ body.stop-scrolling {
 
   .subtitle {
     font-size: 20px;
+  }
+
+  .main-banner__content {
+    width: 100%;
+  }
+
+  .main-banner__content-h1::after {
+    left: 250px;
+    width: 40px;
+    height: 40px;
+    bottom: -10px;
+  }
+
+  .main-banner__imgbox {
+    width: 370px;
+    right: -90px;
+    top: 270px;
+  }
+
+  .main-marquee {
+    bottom: -500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0 21px;
+  }
+
+  .ticker {
+    font-size: 12px;
+  }
+
+  .header__inner {
+    padding: 28px 20px;
+  }
+
+  .header__login {
+    width: 106px;
+    height: 48px;
+  }
+
+  .main-banner__content .decor::before {
+    width: 75px;
+    height: 25px;
+    margin-right: 20px;
+  }
+
+  .main-banner__content-h1::after {
+    left: 245px;
+    width: 40px;
+    height: 40px;
+    bottom: 5px;
+  }
+
+  .main-banner__content-description {
+    font-size: 16px;
+    line-height: 140%;
+    width: 255px;
+    text-align: right;
+    right: 0;
+    bottom: -95px;
+  }
+
+  .main-banner__imgbox {
+    width: 370px;
+    right: -90px;
+    top: 443px;
+  }
+
+  .main-marquee {
+    bottom: -630px;
+  }
+
+  .main-marquee__marquee {
+    padding: 20px 0;
+  }
+
+  .main-marquee__marquee-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 359px) {
+  .h1 {
+    font-size: 30px;
+  }
+
+  .main-banner__content .decor::before {
+    width: 55px;
+    height: 20px;
+    margin-right: 10px;
   }
 }
 
