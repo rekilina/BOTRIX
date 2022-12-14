@@ -437,15 +437,20 @@ body.stop-scrolling {
     position: fixed;
     z-index: 200;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // width: 100%;
+    width: 100vw;
+    left: 0;
 
     background: rgb(18, 18, 28);
     background: -moz-linear-gradient(180deg, rgba(18, 18, 28, 1) 0%, rgba(18, 18, 28, 0) 100%);
     background: -webkit-linear-gradient(180deg, rgba(18, 18, 28, 1) 0%, rgba(18, 18, 28, 0) 100%);
     background: linear-gradient(180deg, rgba(18, 18, 28, 1) 0%, rgba(18, 18, 28, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12121c", endColorstr="#12121c", GradientType=1);
+
+
+
 
     &--dropdown {
         background-color: $vulcan;
@@ -457,6 +462,7 @@ body.stop-scrolling {
         align-items: center;
         padding: 24px 0;
         gap: 10px;
+        width: 100%;
 
         @media(max-width: $d500) {
             padding: 28px 20px;
@@ -563,8 +569,8 @@ body.stop-scrolling {
         width: 56px;
         height: 56px;
         display: none;
-        transition: all $time ease;
-        position: relative;
+        // transition: all $time ease;
+        // position: relative;
 
         @media (max-width: $d1250) {
             display: inline-block;
@@ -609,7 +615,7 @@ body.stop-scrolling {
     z-index: 20;
     top: 104px;
     left: 50%;
-    // transform: translateX(-50%);
+    transform: translateX(-50%);
     width: 100%;
     visibility: hidden;
     transition: all $time ease;
@@ -1514,6 +1520,7 @@ body.stop-scrolling {
         @media (max-width: $d660) {
             width: 320px !important;
             height: 268px;
+            margin-right: 20px;
         }
 
         &-content {

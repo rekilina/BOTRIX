@@ -390,9 +390,8 @@ body.stop-scrolling {
   position: fixed;
   z-index: 200;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
+  width: 100vw;
+  left: 0;
   background: rgb(18, 18, 28);
   background: linear-gradient(180deg, rgb(18, 18, 28) 0%, rgba(18, 18, 28, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12121c", endColorstr="#12121c", GradientType=1);
@@ -408,6 +407,7 @@ body.stop-scrolling {
   align-items: center;
   padding: 24px 0;
   gap: 10px;
+  width: 100%;
 }
 
 .header__login {
@@ -490,8 +490,6 @@ body.stop-scrolling {
   width: 56px;
   height: 56px;
   display: none;
-  transition: all 0.5s ease;
-  position: relative;
 }
 
 .burger__btn.show {
@@ -537,6 +535,7 @@ body.stop-scrolling {
   z-index: 20;
   top: 104px;
   left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   visibility: hidden;
   transition: all 0.5s ease;
@@ -2862,6 +2861,7 @@ body.stop-scrolling {
   .capabilities__slide {
     width: 320px !important;
     height: 268px;
+    margin-right: 20px;
   }
 
   .capabilities__slide-content {
