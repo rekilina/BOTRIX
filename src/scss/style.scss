@@ -762,7 +762,7 @@ body.stop-scrolling {
             @include backsvg;
             margin-right: 36px;
             white-space: nowrap;
-            
+
 
             @media(max-width: $d1250) {
                 margin-right: 10px;
@@ -892,7 +892,7 @@ body.stop-scrolling {
         @media (max-width: $d660) {
             width: 370px;
             right: -90px;
-            top: 270px;
+            top: 320px;
         }
 
 
@@ -920,12 +920,16 @@ body.stop-scrolling {
     user-select: none;
     pointer-events: none;
 
+    @media (max-width: $d1100) {
+        bottom: -400px;
+    }
+
     @media (max-width: $d770) {
         bottom: -430px;
     }
 
     @media (max-width: $d660) {
-        bottom: -500px;
+        bottom: -530px;
     }
 
     @media (max-width: $d500) {
@@ -1138,7 +1142,7 @@ body.stop-scrolling {
     padding-bottom: 120px;
 
     @media (max-width: $d770) {
-        padding-top: 15px;
+        padding-top: 22px;
     }
 
     &__h2 {
@@ -1166,6 +1170,7 @@ body.stop-scrolling {
                 display: inline-block;
                 position: absolute;
                 bottom: -22px;
+
                 @media (max-width: $d500) {
                     bottom: 3px;
                 }
@@ -1393,13 +1398,14 @@ body.stop-scrolling {
     padding-top: 157px;
     padding-bottom: 120px;
     margin-bottom: 77px;
-    
+
     & .container {
         position: relative;
     }
 
     @media (max-width: $d770) {
         padding-top: 0;
+        margin-bottom: 5px;
     }
 
     &__h2 {
@@ -1588,6 +1594,7 @@ body.stop-scrolling {
                 // поскольку transform-origin тут не спасет
                 // 194px - 94px = 100px
                 transform: translateX(100px);
+
                 @media (max-width: $d660) {
                     transform: translateX(0);
                 }
@@ -1699,6 +1706,11 @@ body.stop-scrolling {
     padding-top: 120px;
     padding-bottom: 120px;
 
+    @media(max-width: $d770) {
+        padding-top: 60px;
+        padding-bottom: 103px;
+    }
+
     &__inner {
         position: relative;
     }
@@ -1707,6 +1719,20 @@ body.stop-scrolling {
         width: 100%;
         height: auto;
 
+        @media(max-width: $d770) {
+            display: none;
+        }
+
+        &-mobile {
+            display: none;
+            width: 100%;
+            height: auto;
+
+            @media(max-width: $d770) {
+                display: block;
+            }
+        }
+
     }
 
     &__content {
@@ -1714,6 +1740,18 @@ body.stop-scrolling {
         right: 0;
         top: 387px;
         width: 472px;
+
+        @media(max-width: $d900) {
+            right: -86px;
+            top: 261px;
+        }
+
+        @media(max-width:$d770) {
+            position: static;
+            width: 100%;
+            margin: 26px auto 0;
+            text-align: center;
+        }
     }
 
     &__text {}
@@ -1730,6 +1768,11 @@ body.stop-scrolling {
         border-radius: 48px;
         margin-top: 48px;
         display: inline-block;
+
+        @media(max-width:$d500) {
+            padding: 36px;
+            width: 100%;
+        }
     }
 }
 
@@ -1737,10 +1780,21 @@ body.stop-scrolling {
     padding-top: 120px;
     padding-bottom: 120px;
 
+    @media (max-width: $d770) {
+        padding-top: 0;
+    }
+
     &__h2 {
         width: 80%;
         letter-spacing: 0.07em;
         padding-top: 17px;
+
+        position: relative;
+        z-index: 6;
+
+        @media (max-width: $d770) {
+            width: 100%;
+        }
 
         & .decor {
             position: relative;
@@ -1756,6 +1810,24 @@ body.stop-scrolling {
                 position: absolute;
                 top: -21px;
                 right: -82px;
+
+                z-index: -40;
+
+                @media (max-width: $d770) {
+                    top: -14px;
+                    right: -42px;
+                    width: 50px;
+                    height: 50px;
+
+                }
+
+
+
+                @media (max-width: 400px) {
+                    top: -10px;
+                    right: -50px;
+
+                }
             }
         }
 
@@ -1769,6 +1841,12 @@ body.stop-scrolling {
             position: relative;
             top: -9px;
             left: 259px;
+
+            @media (max-width: $d770) {
+                left: 0;
+                width: 255px;
+            }
+
         }
     }
 

@@ -1277,6 +1277,12 @@ body.stop-scrolling {
   height: auto;
 }
 
+.calculate__img-mobile {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
 .calculate__content {
   position: absolute;
   right: 0;
@@ -1307,6 +1313,8 @@ body.stop-scrolling {
   width: 80%;
   letter-spacing: 0.07em;
   padding-top: 17px;
+  position: relative;
+  z-index: 6;
 }
 
 .functionality__h2 .decor {
@@ -1325,6 +1333,7 @@ body.stop-scrolling {
   position: absolute;
   top: -21px;
   right: -82px;
+  z-index: -40;
 }
 
 .functionality__h2::after {
@@ -2537,6 +2546,10 @@ body.stop-scrolling {
     top: -100px;
   }
 
+  .main-marquee {
+    bottom: -400px;
+  }
+
   .messengers__h2 {
     width: 100%;
     letter-spacing: 0.049em;
@@ -2598,6 +2611,11 @@ body.stop-scrolling {
     flex-direction: column-reverse;
     align-items: center;
   }
+
+  .calculate__content {
+    right: -86px;
+    top: 261px;
+  }
 }
 
 @media (max-width: 770px) {
@@ -2657,7 +2675,7 @@ body.stop-scrolling {
   }
 
   .opportunities {
-    padding-top: 15px;
+    padding-top: 22px;
   }
 
   .opportunities__wrapper {
@@ -2705,6 +2723,7 @@ body.stop-scrolling {
 
   .capabilities {
     padding-top: 0;
+    margin-bottom: 5px;
   }
 
   .capabilities__descr {
@@ -2720,6 +2739,46 @@ body.stop-scrolling {
   .capabilities__descr-text {
     width: 100%;
     font-size: 16px;
+  }
+
+  .calculate {
+    padding-top: 60px;
+    padding-bottom: 103px;
+  }
+
+  .calculate__img {
+    display: none;
+  }
+
+  .calculate__img-mobile {
+    display: block;
+  }
+
+  .calculate__content {
+    position: static;
+    width: 100%;
+    margin: 26px auto 0;
+    text-align: center;
+  }
+
+  .functionality {
+    padding-top: 0;
+  }
+
+  .functionality__h2 {
+    width: 100%;
+  }
+
+  .functionality__h2 .decor::after {
+    top: -14px;
+    right: -42px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .functionality__h2::after {
+    left: 0;
+    width: 255px;
   }
 }
 
@@ -2758,11 +2817,11 @@ body.stop-scrolling {
   .main-banner__imgbox {
     width: 370px;
     right: -90px;
-    top: 270px;
+    top: 320px;
   }
 
   .main-marquee {
-    bottom: -500px;
+    bottom: -530px;
   }
 
   .functions {
@@ -2921,6 +2980,11 @@ body.stop-scrolling {
     height: 127px;
     width: 241px;
   }
+
+  .calculate__btn {
+    padding: 36px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 460px) {
@@ -2930,6 +2994,13 @@ body.stop-scrolling {
     left: inherit;
     right: 22px;
     bottom: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .functionality__h2 .decor::after {
+    top: -10px;
+    right: -50px;
   }
 }
 
