@@ -11,6 +11,14 @@ $mulish: 'Mulish', sans-serif;
 $xolonium: 'Xolonium', sans-serif;
 $time: 0.5s;
 
+$d1250: 1250px;
+$d1000: 1000px;
+$d900: 900px;
+$d770: 770px;
+$d660: 660px;
+$d500: 500px;
+$d350: 350px;
+
 @mixin backsvg {
     background-size: 100% 100%;
     background-position: center center;
@@ -394,6 +402,7 @@ body.stop-scrolling {
         justify-content: space-between;
         align-items: center;
         padding: 24px 0;
+        gap: 10px;
     }
 
     &__login {
@@ -420,6 +429,10 @@ body.stop-scrolling {
             border: 1px solid #FFFFFF;
             border-radius: 32px;
             transition: all $time ease;
+
+            @media (max-width: $d1250) {
+                display: none;
+            }
         }
 
         &-li {
@@ -461,8 +474,13 @@ body.stop-scrolling {
         justify-content: space-between;
         align-items: center;
         flex-basis: 23.3%;
+        gap: 15px;
 
         transition: all $time ease;
+
+        @media (max-width: $d900) {
+            display: none;
+        }
 
         &-login {
             // margin-right: 55px;
@@ -483,6 +501,9 @@ body.stop-scrolling {
         display: none;
         transition: all $time ease;
         position: relative;
+        @media (max-width: $d1250) {
+            display: inline-block;
+        }
         &.show {
             display: inline-block;
             opacity: 1;
@@ -513,7 +534,7 @@ body.stop-scrolling {
 .dropdown {
     background-color: $vulcan;
     width: 100vw;
-    height: 100vw;
+    // height: 100vw;
     position: fixed;
     z-index: 20;
     top: 104px;
@@ -534,12 +555,25 @@ body.stop-scrolling {
     
     &__wrapper {
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     &__list {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 64px;
+        @media (max-width: $d1250) {
+            font-size: 56px;
+        }
+        @media (max-width: $d900) {
+            font-size: 48px;
+        }
+        @media (max-width: $d770) {
+            font-size: 42px;
+        }
         &-li {
             display: inline-flex;
             gap: 16px;
@@ -549,7 +583,7 @@ body.stop-scrolling {
             font-family: $mulish;
             font-style: normal;
             font-weight: 400;
-            font-size: 64px;
+            // font-size: 64px;
             line-height: 160%;
             &:hover {
                 background: linear-gradient(138.53deg, #60E878 13.31%, #72B4F9 76.54%);
@@ -563,8 +597,8 @@ body.stop-scrolling {
             }
         }
         &-img {
-            width: 64px;
-            height: 64px;
+            width: 1em;
+            height: 1em;
             display: inline-block;
             &.dropdown__functions {
                 @include backsvg;
@@ -592,6 +626,14 @@ body.stop-scrolling {
     }
     & .header__user {
         display: none;
+        padding-bottom: 30px;
+        @media (max-width: $d900) {
+            display: inline-flex;
+            justify-content: center;
+            gap: 40px;
+            width: 50%;
+            margin: 40px auto;
+        }
     }
 }
 

@@ -403,6 +403,7 @@ body.stop-scrolling {
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
+  gap: 10px;
 }
 
 .header__login {
@@ -471,6 +472,7 @@ body.stop-scrolling {
   justify-content: space-between;
   align-items: center;
   flex-basis: 23.3%;
+  gap: 15px;
   transition: all 0.5s ease;
 }
 
@@ -526,7 +528,6 @@ body.stop-scrolling {
 .dropdown {
   background-color: #12121C;
   width: 100vw;
-  height: 100vw;
   position: fixed;
   z-index: 20;
   top: 104px;
@@ -547,6 +548,9 @@ body.stop-scrolling {
 
 .dropdown__wrapper {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dropdown__list {
@@ -554,6 +558,7 @@ body.stop-scrolling {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 64px;
 }
 
 .dropdown__list-li {
@@ -566,7 +571,6 @@ body.stop-scrolling {
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 64px;
   line-height: 160%;
 }
 
@@ -583,8 +587,8 @@ body.stop-scrolling {
 }
 
 .dropdown__list-img {
-  width: 64px;
-  height: 64px;
+  width: 1em;
+  height: 1em;
   display: inline-block;
 }
 
@@ -626,6 +630,7 @@ body.stop-scrolling {
 
 .dropdown .header__user {
   display: none;
+  padding-bottom: 30px;
 }
 
 .main-banner {
@@ -2469,6 +2474,44 @@ body.stop-scrolling {
 
 .modal-calc__close-img {
   width: 100%;
+}
+
+@media (max-width: 1250px) {
+  .header__nav-ul {
+    display: none;
+  }
+
+  .burger__btn {
+    display: inline-block;
+  }
+
+  .dropdown__list {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__user {
+    display: none;
+  }
+
+  .dropdown__list {
+    font-size: 48px;
+  }
+
+  .dropdown .header__user {
+    display: inline-flex;
+    justify-content: center;
+    gap: 40px;
+    width: 50%;
+    margin: 40px auto;
+  }
+}
+
+@media (max-width: 770px) {
+  .dropdown__list {
+    font-size: 42px;
+  }
 }
 
 .webp .main-banner__content-h1::after{ background-image: url(../img/IconArrowDown.webp); }
