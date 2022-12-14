@@ -1065,7 +1065,7 @@ body.stop-scrolling {
 }
 
 .capabilities__descr-subtitle {
-  flex-basis: 663px;
+  width: 663px;
 }
 
 .capabilities__descr-text {
@@ -1075,7 +1075,7 @@ body.stop-scrolling {
   font-size: 18px;
   line-height: 140%;
   color: #88888D;
-  flex-basis: 472px;
+  width: 472px;
 }
 
 .capabilities__slider {
@@ -2663,6 +2663,11 @@ body.stop-scrolling {
     letter-spacing: 0.049em;
   }
 
+  .messengers__h2::before {
+    width: 9em;
+    top: -20px;
+  }
+
   .messengers__h2::after {
     width: 32px;
     height: 32px;
@@ -2687,6 +2692,25 @@ body.stop-scrolling {
 
   .messengers__list-li + .messengers__list-li {
     margin-top: 14px;
+  }
+
+  .capabilities {
+    padding-top: 0;
+  }
+
+  .capabilities__descr {
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .capabilities__descr-subtitle {
+    width: 100%;
+  }
+
+  .capabilities__descr-text {
+    width: 100%;
+    font-size: 16px;
   }
 }
 
@@ -2806,6 +2830,13 @@ body.stop-scrolling {
     padding: 24px 15px;
     margin-bottom: 12px;
     width: 100%;
+  }
+
+  .capabilities__h2::after {
+    top: -19px;
+    right: -167px;
+    height: 127px;
+    width: 241px;
   }
 }
 

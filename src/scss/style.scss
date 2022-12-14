@@ -1262,6 +1262,11 @@ body.stop-scrolling {
             width: 380px;
             background-image: url(../img/messengers_h2.svg);
             @include backsvg;
+
+            @media (max-width: $d770) {
+                width: 9em;
+                top: -20px;
+            }
         }
 
         &::after {
@@ -1356,6 +1361,10 @@ body.stop-scrolling {
     padding-bottom: 120px;
     margin-bottom: 77px;
 
+    @media (max-width: $d770) {
+        padding-top: 0;
+    }
+
     &__h2 {
         letter-spacing: 0.068em;
         position: relative;
@@ -1370,6 +1379,13 @@ body.stop-scrolling {
             width: 371px;
             background-image: url(../img/capabilities_h2.svg);
             @include backsvg;
+
+            @media (max-width: $d500) {
+                top: -19px;
+                right: -167px;
+                height: 127px;
+                width: 241px;
+            }
         }
     }
 
@@ -1380,8 +1396,18 @@ body.stop-scrolling {
         justify-content: space-between;
         gap: 65px;
 
+        @media (max-width: $d770) {
+            margin-top: 40px;
+            flex-direction: column;
+            gap: 25px;
+        }
+
         &-subtitle {
-            flex-basis: 663px;
+            width: 663px;
+
+            @media (max-width: $d770) {
+                width: 100%;
+            }
         }
 
         &-text {
@@ -1391,7 +1417,12 @@ body.stop-scrolling {
             font-size: 18px;
             line-height: 140%;
             color: $aluminium;
-            flex-basis: 472px;
+            width: 472px;
+
+            @media (max-width: $d770) {
+                width: 100%;
+                font-size: 16px;
+            }
         }
     }
 
