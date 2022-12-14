@@ -41,6 +41,18 @@ $('.tariffs__slider').slick({
     prevArrow: '<div class="tariffs__slider-btn arrow-btn__circle arrow-btn__circle-left"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
 });
 
+$('.articles__slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: false,
+    variableWidth: true,
+    nextArrow: '<div class="articles__slider-btn arrow-btn__circle arrow-btn__circle-right"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
+    prevArrow: '<div class="articles__slider-btn arrow-btn__circle arrow-btn__circle-left"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
+});
+
 // Ticker
 // https://www.jqueryscript.net/animation/horizontal-animation-conveyor-ticker.html
 $(function () {
@@ -174,6 +186,16 @@ $('.capabilities__slider-btn.arrow-btn__circle-left').hover(function(e) {
 }, function(e) {
     if(Number(window.innerWidth) <= 660) {
         $('.capabilities__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(0)');
+    }
+})
+
+$('.articles__slider-btn.arrow-btn__circle-left').hover(function(e) {
+    if(Number(window.innerWidth) <= 660) {
+        $('.articles__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(100px)');
+    }
+}, function(e) {
+    if(Number(window.innerWidth) <= 660) {
+        $('.articles__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(0)');
     }
 })
 // ------------------------------------------------------------

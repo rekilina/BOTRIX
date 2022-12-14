@@ -1700,7 +1700,7 @@ body {
 }
 
 .progress {
-    display: block;
+    display: inline-block;
     width: 100%;
     height: 2px;
     border-radius: 4px;
@@ -1710,6 +1710,12 @@ body {
     background-repeat: no-repeat;
     background-size: 0 100%;
     transition: background-size .4s ease-in-out;
+
+    @media(max-width: $d500) {
+        width: calc(100% - 42px);
+    }
+
+    width: calc(100% - 100px);
 }
 
 .horizontal-marquee {
@@ -2358,10 +2364,18 @@ body {
     padding-top: 217px;
     padding-bottom: 140px;
 
+    @media(max-width: $d900) {
+        padding-top: 60px;
+    }
+
     &__h2 {
         width: 50%;
         letter-spacing: 0.07em;
         position: relative;
+
+        @media(max-width: $d770) {
+            width: 100%;
+        }
 
         &::after {
             content: '';
@@ -2373,6 +2387,13 @@ body {
             position: absolute;
             top: -47px;
             right: 59px;
+
+            @media(max-width: $d770) {
+                width: 44px;
+                height: 44px;
+                top: -35px;
+                right: 17px;
+            }
         }
     }
 
@@ -2382,10 +2403,23 @@ body {
         justify-content: center;
         gap: 48px;
         flex-wrap: wrap;
+
+        @media(max-width: $d770) {
+            margin-top: 39px;
+        }
+
+        @media(max-width: $d660) {
+            display: none;
+        }
     }
 
     &__card {
-        flex-basis: 368px;
+        // flex-basis: 368px;
+        width: 368px;
+
+        @media(max-width: $d660) {
+            width: 100%;
+        }
 
         &-imgbox {
             display: flex;
@@ -2406,6 +2440,11 @@ body {
         &-text {
             margin-top: 40px;
             padding-left: 10px;
+
+            @media(max-width: $d660) {
+                margin-top: 25px;
+                padding-left: 8px;
+            }
         }
 
         &-link {
@@ -2413,6 +2452,11 @@ body {
             padding: 16px 0 16px 10px;
             margin-top: 8px;
             display: inline-block;
+
+            @media(max-width: $d770) {
+                margin-top: 17px;
+                padding-left: 8px;
+            }
 
             &::after {
                 content: '';
@@ -2426,6 +2470,41 @@ body {
                 @include backsvg;
             }
         }
+    }
+
+    &__slider {
+        display: none;
+
+        @media(max-width: $d660) {
+            display: block;
+        }
+
+        padding-bottom: 177px;
+        margin-top: 39px;
+    }
+
+    &__slide {
+        width: 320px !important;
+        margin-right: 10px;
+
+        @media (max-width: $d360) {
+            width: calc(100vw - 42px) !important;
+        }
+
+    }
+
+    &__progressbar {
+        margin-top: 0;
+        position: absolute;
+        bottom: 133px;
+        display: none;
+        @media(max-width: $d660) {
+            display: inline-block;
+        }
+    }
+
+    & .container {
+        position: relative;
     }
 }
 
