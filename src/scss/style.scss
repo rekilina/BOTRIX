@@ -1943,6 +1943,9 @@ body {
             min-height: 68px;
             align-items: center;
 
+            @media(max-width: $d770) {
+                width: calc(100% - 96px);
+            }
             @media(max-width: $d660) {
                 min-height: 100px;
             }
@@ -1964,7 +1967,7 @@ body {
             flex-grow: 0;
 
             @media(max-width: $d660) {
-                margin-left: 40px;
+                // margin-left: 40px;
             }
         }
 
@@ -1993,12 +1996,6 @@ body {
         &-top {
             display: none;
 
-            // margin-bottom: 3px;
-
-            // position: absolute;
-            // width: 100%;
-            // height: auto;
-            // bottom: 0;
             & .functionality__content-imgwrap {
                 margin-top: 0;
                 margin-bottom: 0;
@@ -2366,6 +2363,7 @@ body {
 
     @media(max-width: $d900) {
         padding-top: 60px;
+        padding-bottom: 128px;
     }
 
     &__h2 {
@@ -2511,6 +2509,10 @@ body {
 .questions {
     padding: 120px 0;
 
+    @media(max-width: $d770) {
+        padding-top: 0;
+    }
+
     &__h2 {
         letter-spacing: 0.078em;
         position: relative;
@@ -2534,6 +2536,7 @@ body {
 
         @media (max-width: $d770) {
             width: 100%;
+            margin-top: 46px;
         }
 
         &-item {
@@ -2541,9 +2544,20 @@ body {
             padding: 24px 0;
             border-bottom: 1px solid #222233;
 
+            @media (max-width: $d770) {
+                padding: 0;
+            }
+
             &:first-child {
                 padding-bottom: 27px;
+
+                @media (max-width: $d770) {
+                    padding: 0;
+                }
             }
+
+
+            
         }
     }
 
@@ -2566,9 +2580,17 @@ body {
         justify-content: space-between;
         transition: all $time ease;
 
+        @media(max-width: $d660) {
+            height: 172px;
+            padding: 0 0;
+            
+        }
+
         &-title {
             transition: all $time ease;
-            max-width: 530px;
+            // max-width: 530px;
+            max-width: calc(100% - 96px);
+            white-space: wrap;
         }
 
         &--active {
@@ -2577,7 +2599,7 @@ body {
 
         &:hover {
             & .questions__circle {
-                width: 56px;
+                width: 84px;
             }
 
             & .questions__circle-vertical {
@@ -2591,7 +2613,7 @@ body {
     }
 
     &__circle {
-        width: 84px;
+        width: 56px;
         height: 56px;
         background: #FFFFFF;
         border-radius: 32px;
