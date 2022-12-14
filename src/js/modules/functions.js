@@ -134,9 +134,7 @@ $(window).on('scroll', function(e) {
             $('.burger__btn').css('display', 'inline-block');
             // $('.header__nav-ul').fadeOut(100, 'linear');
             // $('.burger__btn').fadeIn(200, 'linear');
-        }
-    
-        if (elementTop >= headerBottom) {
+        } else {
             $('.header__nav-ul').css('display', 'flex');
             $('.burger__btn').css('display', 'none');
             // $('.header__nav-ul').fadeIn(200, 'linear');
@@ -145,6 +143,33 @@ $(window).on('scroll', function(e) {
     }
 
 })
+
+$(window).on("resize", function(e) {
+    if(Number(window.innerWidth) >= 1250) {
+        $('.header__nav-ul').css('display', 'flex');
+        $('.burger__btn').css('display', 'none');
+    } else {
+        $('.header__nav-ul').css('display', 'none');
+        $('.burger__btn').css('display', 'inline-block');
+    }
+
+    var elementTop = $('.functions__h2').offset().top;
+    var headerBottom = $('.header').offset().top + $('.header').outerHeight();
+
+    if(Number(window.innerWidth) >= 1250) {
+        if (elementTop < headerBottom) {
+            $('.header__nav-ul').css('display', 'none');
+            $('.burger__btn').css('display', 'inline-block');
+            // $('.header__nav-ul').fadeOut(100, 'linear');
+            // $('.burger__btn').fadeIn(200, 'linear');
+        } else {
+            $('.header__nav-ul').css('display', 'flex');
+            $('.burger__btn').css('display', 'none');
+            // $('.header__nav-ul').fadeIn(200, 'linear');
+            // $('.burger__btn').fadeOut(100, 'linear');
+        }
+    }
+});
 // ------------------------------------------------------------
 
 // --------------------burger menu ----------------------------

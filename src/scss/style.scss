@@ -91,6 +91,9 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
+    @media (max-width: $d660) {
+        font-size: 36px;
+    }
 }
 
 .h2 {
@@ -102,6 +105,9 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
+    @media (max-width: $d660) {
+        font-size: 24px;
+    }
 }
 
 .h3 {
@@ -113,6 +119,9 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
+    @media (max-width: $d660) {
+        font-size: 18px;
+    }
 }
 
 .ticker {
@@ -124,6 +133,9 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $vulcan;
+    @media (max-width: $d660) {
+        font-size: 18px;
+    }
 }
 
 .subtitle {
@@ -136,6 +148,9 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
+    @media (max-width: $d660) {
+        font-size: 20px;
+    }
 }
 
 .descriptor {
@@ -148,6 +163,9 @@ body.stop-scrolling {
     padding: 0;
     margin: 0;
     color: $white;
+    @media (max-width: $d770) {
+        font-size: 14px;
+    }
 }
 
 .btn {

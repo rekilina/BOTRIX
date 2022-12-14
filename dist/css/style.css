@@ -2509,8 +2509,34 @@ body.stop-scrolling {
 }
 
 @media (max-width: 770px) {
+  .descriptor {
+    font-size: 14px;
+  }
+
   .dropdown__list {
     font-size: 42px;
+  }
+}
+
+@media (max-width: 660px) {
+  .h1 {
+    font-size: 36px;
+  }
+
+  .h2 {
+    font-size: 24px;
+  }
+
+  .h3 {
+    font-size: 18px;
+  }
+
+  .ticker {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 20px;
   }
 }
 
