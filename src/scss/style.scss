@@ -742,7 +742,7 @@ body.stop-scrolling {
         z-index: 30;
 
         @media(max-width: $d900) {
-            width: 73%;
+            width: 70%;
         }
 
         @media(max-width: $d770) {
@@ -761,6 +761,8 @@ body.stop-scrolling {
             background-image: url(../img/IconWave4.svg);
             @include backsvg;
             margin-right: 36px;
+            white-space: nowrap;
+            
 
             @media(max-width: $d1250) {
                 margin-right: 10px;
@@ -848,6 +850,11 @@ body.stop-scrolling {
             position: absolute;
             bottom: -257px;
             left: 0;
+
+            @media(max-width: $d1100) {
+                bottom: -325px;
+                left: -31px;
+            }
 
             @media(max-width: $d770) {
                 bottom: -340px;
@@ -966,9 +973,12 @@ body.stop-scrolling {
     padding-top: 236px;
     padding-bottom: 80px;
 
+    @media(max-width: $d660) {
+        padding-top: 328px;
+    }
+
     @media(max-width: $d500) {
         padding-top: 428px;
-        padding-top: 50px;
     }
 
     &__h2 {
@@ -1064,6 +1074,7 @@ body.stop-scrolling {
             height: 155px;
             width: 160px;
             padding: 0;
+
             @media(max-width: $d1250) {
                 display: none;
             }
@@ -1144,7 +1155,7 @@ body.stop-scrolling {
             width: 508px;
             height: 44px;
 
-            @media (max-width: $d900) {
+            @media (max-width: $d660) {
                 width: 173px;
                 height: 46px;
                 left: 118px;
@@ -1153,7 +1164,10 @@ body.stop-scrolling {
                 @include backsvg;
                 display: inline-block;
                 position: absolute;
-                bottom: 3px;
+                bottom: -22px;
+                @media (max-width: $d500) {
+                    bottom: 3px;
+                }
             }
         }
 
@@ -1172,6 +1186,7 @@ body.stop-scrolling {
         // height: 674px;
         // max-width: 1200px;
         width: 100%;
+
         @media (max-width: $d770) {
             margin-top: 42px;
         }
@@ -1248,7 +1263,8 @@ body.stop-scrolling {
         display: inline-block;
         position: relative;
         letter-spacing: 0.067em;
-        @media (max-width: $d770) {
+
+        @media (max-width: $d1100) {
             width: 100%;
             letter-spacing: 0.049em;
         }
@@ -1273,7 +1289,8 @@ body.stop-scrolling {
             content: '';
             position: absolute;
             bottom: 0;
-            right: 178px;
+            // right: 178px;
+            left: 607px;
             height: 55px;
             width: 55px;
             background-image: url(../img/SmileGreen.svg);
@@ -1282,8 +1299,20 @@ body.stop-scrolling {
             transform: rotate(17deg);
 
             @media (max-width: $d770) {
+                right: -24px;
+                left: inherit;
+                bottom: 44px;
+            }
+
+            @media (max-width: $d770) {
+                width: 40px;
+                height: 40px;
+            }
+
+            @media (max-width: 460px) {
                 width: 32px;
                 height: 32px;
+                left: inherit;
                 right: 22px;
                 bottom: 24px;
             }
@@ -1299,6 +1328,7 @@ body.stop-scrolling {
         color: $white;
         margin-top: 64px;
         width: 74%;
+
         @media (max-width: $d770) {
             font-size: 20px;
             width: 100%;
@@ -1310,6 +1340,7 @@ body.stop-scrolling {
         margin-top: 40px;
         display: flex;
         justify-content: flex-end;
+
         @media (max-width: $d770) {
             margin-top: 23px;
         }
@@ -1348,6 +1379,7 @@ body.stop-scrolling {
 
             &+.messengers__list-li {
                 margin-top: 24px;
+
                 @media (max-width: $d770) {
                     margin-top: 14px;
                 }
