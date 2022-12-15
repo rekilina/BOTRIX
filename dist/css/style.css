@@ -2720,7 +2720,7 @@ body {
 
   .articles {
     padding-top: 60px;
-    padding-bottom: 128px;
+    padding-bottom: 68px;
   }
 }
 
@@ -2782,6 +2782,7 @@ body {
 
   .opportunities {
     padding-top: 22px;
+    padding-bottom: 60px;
   }
 
   .opportunities__wrapper {
@@ -2789,7 +2790,8 @@ body {
   }
 
   .messengers {
-    padding-top: 5px;
+    padding-top: 65px;
+    padding-bottom: 60px;
   }
 
   .messengers__h2::before {
@@ -2828,7 +2830,7 @@ body {
   }
 
   .capabilities {
-    padding-top: 0;
+    padding-top: 60px;
     margin-bottom: 5px;
   }
 
@@ -2849,7 +2851,7 @@ body {
 
   .calculate {
     padding-top: 60px;
-    padding-bottom: 103px;
+    padding-bottom: 43px;
   }
 
   .calculate__img {
@@ -2868,7 +2870,8 @@ body {
   }
 
   .functionality {
-    padding-top: 0;
+    padding-top: 60px;
+    padding-bottom: 65px;
   }
 
   .functionality__h2 {
@@ -2909,7 +2912,7 @@ body {
   }
 
   .customdev {
-    padding-top: 5px;
+    padding-top: 60px;
   }
 
   .customdev__cards {
@@ -2986,8 +2989,8 @@ body {
   }
 
   .questions {
-    padding-top: 0;
-    padding-bottom: 116px;
+    padding-top: 60px;
+    padding-bottom: 56px;
   }
 
   .questions__h2::after {
@@ -3012,7 +3015,8 @@ body {
   }
 
   .tariffs {
-    padding-top: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .tariffs__h2::after {
@@ -3070,7 +3074,38 @@ body {
   }
 
   .feedback {
-    padding-top: 1px;
+    padding-top: 61px;
+    padding-bottom: 60px;
+  }
+
+  .subscribe {
+    padding-top: 60px;
+    padding-bottom: 45px;
+  }
+
+  .subscribe__inner {
+    padding: 40px 14px;
+    background-position: center bottom;
+    height: 514px;
+  }
+
+  .subscribe__h2 {
+    text-align: center;
+    letter-spacing: 0.049em;
+  }
+
+  .subscribe__container {
+    position: static;
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .subscribe__container-subtitle {
+    text-align: center;
+  }
+
+  .subscribe__container-btn {
+    margin-top: 138px;
   }
 }
 

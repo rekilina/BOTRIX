@@ -1157,6 +1157,7 @@ body {
 
     @media (max-width: $d770) {
         padding-top: 22px;
+        padding-bottom: 60px;
     }
 
     &__h2 {
@@ -1275,7 +1276,8 @@ body {
     padding-bottom: 120px;
 
     @media (max-width: $d770) {
-        padding-top: 5px;
+        padding-top: 65px;
+        padding-bottom: 60px;
     }
 
     &__h2 {
@@ -1418,7 +1420,7 @@ body {
     }
 
     @media (max-width: $d770) {
-        padding-top: 0;
+        padding-top: 60px;
         margin-bottom: 5px;
     }
 
@@ -1729,7 +1731,7 @@ body {
 
     @media(max-width: $d770) {
         padding-top: 60px;
-        padding-bottom: 103px;
+        padding-bottom: 43px;
     }
 
     &__inner {
@@ -1802,7 +1804,8 @@ body {
     padding-bottom: 120px;
 
     @media (max-width: $d770) {
-        padding-top: 0;
+        padding-top: 60px;
+        padding-bottom: 65px;
     }
 
     &__h2 {
@@ -2148,7 +2151,7 @@ body {
     // margin-top: 56px; // из-за паддингов в предыдущем блоке
 
     @media(max-width: $d770) {
-        padding-top: 5px;
+        padding-top: 60px;
     }
 
     &__h2 {
@@ -2364,7 +2367,7 @@ body {
 
     @media(max-width: $d900) {
         padding-top: 60px;
-        padding-bottom: 128px;
+        padding-bottom: 68px;
     }
 
     &__h2 {
@@ -2512,8 +2515,8 @@ body {
     padding: 120px 0;
 
     @media(max-width: $d770) {
-        padding-top: 0;
-        padding-bottom: 116px;
+        padding-top: 60px;
+        padding-bottom: 56px;
     }
 
     &__h2 {
@@ -2662,7 +2665,8 @@ body {
     padding: 120px 0;
 
     @media(max-width: $d770) {
-        padding-top: 0;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     &__h2 {
@@ -2924,7 +2928,8 @@ body {
     padding: 120px 0;
 
     @media(max-width: $d770) {
-        padding-top: 1px;
+        padding-top: 61px;
+        padding-bottom: 60px;
     }
 
     &__h2 {
@@ -3160,6 +3165,12 @@ body {
     padding: 122px 0;
     margin-bottom: 78px;
 
+    @media (max-width: $d770) {
+        padding-top: 60px;
+        padding-bottom: 45px;
+
+    }
+
     &__inner {
         background-image: url(../img/subscribe_banner.png);
         background-position: left bottom;
@@ -3171,10 +3182,22 @@ body {
         background-color: $steelgrey;
         padding: 81px 95px;
         position: relative;
+
+        @media (max-width: $d770) {
+            padding: 40px 14px;
+            background-position: center bottom;
+            height: 514px;
+        }
     }
 
     &__h2 {
         letter-spacing: 0.066em;
+
+        @media (max-width: $d770) {
+            text-align: center;
+            letter-spacing: 0.049em;
+
+        }
     }
 
     &__container {
@@ -3183,9 +3206,19 @@ body {
         right: 95px;
         bottom: 80px;
 
+        @media (max-width: $d770) {
+            position: static;
+            margin-top: 40px;
+            width: 100%;
+        }
+
         &-subtitle {
             width: 100%;
             margin-bottom: 45px;
+
+            @media (max-width: $d770) {
+                text-align: center;
+            }
         }
 
         &-btn {
@@ -3195,6 +3228,10 @@ body {
             background-color: $navyblue;
             padding: 36px;
             border-radius: 48px;
+
+            @media (max-width: $d770) {
+                margin-top: 138px;
+            }
         }
     }
 }
