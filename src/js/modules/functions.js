@@ -316,7 +316,6 @@ async function formSend(e) {
     }
 }
 
-console.log(response);
 
 function formValidate(form) {
     let error = 0;
@@ -349,7 +348,34 @@ function phoneTest(input) {
     return !/(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/.test(input.value);
 }
 
-    // Получаем input file в переменную
+// function scrollHandler(e) {
+//     e.preventDefault();
+//     const href = this.getAttribute("href");
+//     document.querySelector(href).scrollIntoView({
+//         behavior: "smooth",
+//         block: "start"
+//     });
+// }
+
+$('.header__nav-link, .header__login, .footer__social-logo, .footer__menu').on('click', function(e) {
+    e.preventDefault();
+    const href = $(this).attr('href');
+    $(href)[0].scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
+})
+
+$('.dropdown__list-link').on('click', function(e) {
+    e.preventDefault();
+    const href = $(this).attr('href');
+    $(href)[0].scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
+    $('.dropdown').toggleClass('dropdown--active');
+    $('.header').toggleClass('header--dropdown');
+})
 
 
 
