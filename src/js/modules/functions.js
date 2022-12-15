@@ -127,6 +127,12 @@ $('.main-banner__content-rotatebtn').on('click', function (e) {
     }
 })
 
+// $('.main-banner__content-rotatebtn').on('click', function (e) {
+//     if (!$(this).hasClass('rotatebtn--disabled')) {
+//         $('.modal-success').addClass('modal-success--active');
+//     }
+// })
+
 $('.modal-goto__close').on('click', function (e) {
     e.preventDefault();
     $('.modal-goto').removeClass('modal-goto--active');
@@ -142,6 +148,22 @@ $('.modal-calc__close').on('click', function (e) {
     e.preventDefault();
     $('.modal-calc').removeClass('modal-calc--active');
 })
+
+$('.modal-success__close, .modal-success__close-img').on('click', function (e) {
+    e.preventDefault();
+    console.log('here');
+    $('.modal-success').removeClass('modal-success--active');
+})
+
+$('.modal-failure__close, .modal-failure__close-img').on('click', function (e) {
+    e.preventDefault();
+    $('.modal-failure').removeClass('modal-failure--active');
+})
+
+// $('body').on('click', function(e) {
+//     console.log(e.target);
+//     $('.modal-success').css('visibility', 'hidden');
+// })
 
 // ------------------------------------------------------------
 
@@ -248,6 +270,7 @@ $(window).on("resize", function (e) {
 const form = document.getElementById('form');
 form.addEventListener('submit', formSend);
 
+var response;
 
 async function formSend(e) {
     e.preventDefault();
@@ -263,7 +286,7 @@ async function formSend(e) {
         // Чтобы во время отправки пользователь ничего не мог делать
         form.classList.add('_sending');
         // AJAX
-        let response = await fetch('sendmail.php', {
+        response = await fetch('sendmail.php', {
             method: 'POST',
             body: formData
         });
@@ -272,19 +295,28 @@ async function formSend(e) {
             // let result0 = await response;
             // let result = await response.json();
             // alert(result.message);
-            formPreview.innerHTML = ''; // очищаем превью изображения
+            //formPreview.innerHTML = ''; // очищаем превью изображения
             form.reset(); // очищаем все поля всей формы
             // Убираем класс _sending после отправки
-            form.classList.remove('_sending');
+            //form.classList.remove('_sending');
+            // alert('Успешно отправлено');
+            $('.modal-success').addClass('modal-success--active');
+
+            //console.log(response);
         } else {
-            alert('Error while sending form');
+            // alert('Error while sending form');
+            $('.modal-failure').addClass('modal-failure--active');
             // Убираем класс _sending после ошибки отправки
-            form.classList.remove('_sending');
+            //form.classList.remove('_sending');
         }
     } else {
-        alert('Введите обязательные поля')
+        //alert('Введите обязательные поля')
+        $('.modal-failure').addClass('modal-failure--active');
+        // await new Promise((resolve, reject) => setTimeout(resolve, 100));
     }
 }
+
+console.log(response);
 
 function formValidate(form) {
     let error = 0;
@@ -301,31 +333,6 @@ function formValidate(form) {
         formAddError(formReq);
         error++;
     }
-
-    // let error = 0;
-    // let formReq = document.querySelectorAll('._req');
-
-    // //for (let index = 0; index < formReq.length; index++) {
-    // for (let input of formReq) {
-    //     // const input = formReq[index];
-    //     formRemoveError(input);
-    //     if(input.classList.contains('feedback__form-phone')) {
-    //         console.log('here');
-    //         if(phoneTest(input)) {
-    //             formAddError(input);
-    //             error++;
-    //         }
-    //         if(input.value == '') {
-    //             formAddError(input);
-    //             error++;
-    //         }
-    //     } else {
-    //         if(input.value == '') {
-    //             formAddError(input);
-    //             error++;
-    //         }
-    //     }
-    // }
 
     console.log(error);
     return error;

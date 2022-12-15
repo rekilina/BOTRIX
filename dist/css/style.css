@@ -2034,6 +2034,7 @@ body {
 
 ._error {
   border-color: #FF0033 !important;
+  color: #FF0033;
 }
 
 ._error::-moz-placeholder {
