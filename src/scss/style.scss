@@ -2794,7 +2794,7 @@ body {
 
         margin-top: 63px;
 
-        @media(max-width: $d770) {
+        @media(max-width: $d660) {
             margin-top: 0;
             padding-top: 0;
             padding-bottom: 150px;
@@ -2934,10 +2934,11 @@ body {
         margin-top: 24px;
         width: 100%;
 
-        @media (max-width: $d770) {
+        @media (max-width: $d660) {
             margin-top: 0;
             position: absolute;
             bottom: 133px;
+            width: calc(100%  - 42px);
         }
     }
 }
@@ -3043,7 +3044,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
 
-        @media(max-width: $d660) {
+        @media(max-width: $d1250) {
             margin-bottom: 41px;
         }
 
@@ -3201,12 +3202,22 @@ body {
         padding: 81px 95px;
         position: relative;
 
+        @media (max-width: $d1100) {
+            background-size: 50%;
+            padding: 40px 24px;
+        }
+
         @media (max-width: $d770) {
             padding: 40px 14px;
             background-position: center bottom;
-            height: 514px;
-            background-size: 100%;
+            background-size: 70%;
             background-image: url(../img/subscribe_banner-mobile.png);
+            height: 580px;
+        }
+
+        @media (max-width: $d660) {
+            height: 514px;
+            background-position: center bottom;
         }
     }
 
@@ -3225,6 +3236,11 @@ body {
         position: absolute;
         right: 95px;
         bottom: 80px;
+
+        @media (max-width: $d1100) {
+            bottom: 50px;
+            right: 55px;
+        }
 
         @media (max-width: $d770) {
             position: static;
