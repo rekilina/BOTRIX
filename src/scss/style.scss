@@ -1912,7 +1912,7 @@ body {
             padding: 36px 0 17px;
         }
 
-        
+
 
         @media(max-width: $d900) {
             width: 100%;
@@ -2938,7 +2938,7 @@ body {
             margin-top: 0;
             position: absolute;
             bottom: 133px;
-            width: calc(100%  - 42px);
+            width: calc(100% - 42px);
         }
     }
 }
@@ -3181,7 +3181,7 @@ body {
 }
 
 .subscribe {
-    padding: 122px 0;
+    padding: 122px 0 120px;
     margin-bottom: 78px;
 
     @media (max-width: $d770) {
@@ -3275,6 +3275,103 @@ body {
 .footer {
     padding: 120px 0;
 
+    &__inner {
+        // display: flex;
+        // flex-direction: auto;
+        // flex-direction: row;
+    }
+
+    &__left {
+        width: 43.4%;
+    }
+
+    &__right {
+        width: 56.7%;
+    }
+
+    &__list {
+        &-title {
+            margin-bottom: 48px;
+        }
+
+        &-li {
+            & + .footer__list-li {
+                margin-top: 24px;
+            }
+        }
+
+        &-link {
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: #88888D;
+            transition: all $time ease;
+
+            &:hover {
+                color: $white
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+
+        & .footer__right {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        margin-top: 87px;
+
+        & .footer__right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__line {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__social {
+        width: 241px;
+
+        &-text {
+            margin-top: 17px;
+            font-family: $mulish;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: #FFFFFF;
+            letter-spacing: -0.002em;
+        }
+
+        &-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-icon {
+            width: 48px;
+            height: 48px;
+
+            &-img {
+                width: 100%;
+                margin-top: 64px;
+            }
+        }
+    }
 }
 
 .modal-success {
