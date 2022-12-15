@@ -1875,7 +1875,7 @@ body {
     }
 
     &__container {
-        margin-top: 68px;
+        margin-top: 54px;
 
         @media(max-width: $d660) {
             margin-top: 52px;
@@ -2152,7 +2152,7 @@ body {
 }
 
 .customdev {
-    padding-top: 116px;
+    padding-top: 120px;
     padding-bottom: 120px;
     // margin-top: 56px; // из-за паддингов в предыдущем блоке
 
@@ -3274,6 +3274,7 @@ body {
 
 .footer {
     padding: 120px 0;
+
 }
 
 .modal-success {
