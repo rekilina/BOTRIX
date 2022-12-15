@@ -95,6 +95,7 @@ $('.functionality__preview').on('click', function(e) {
     });
     if(Number(window.innerWidth) <= 660) {
         $(this).toggleClass("p-low");
+        $(this).find('.functionality__preview-title').toggleClass('p-open');
         $(this).parent().find('.functionality__content-top').slideToggle('fast',function() {
             if ($(this).is(':visible'))
                 $(this).css('display','flex');

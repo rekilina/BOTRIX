@@ -1375,7 +1375,7 @@ body {
 }
 
 .functionality__preview.p-low {
-  padding: 27px 0;
+  padding: 36px 0 17px;
 }
 
 .functionality__preview:hover .functionality__preview-plus {
@@ -1400,6 +1400,10 @@ body {
   max-width: 538px;
   min-height: 68px;
   align-items: center;
+}
+
+.functionality__preview-title.p-open {
+  width: 100%;
 }
 
 .functionality__preview-circle {
