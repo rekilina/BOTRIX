@@ -134,7 +134,8 @@ $('.questions__preview').on('click', function (e) {
 
 
 // -------------------  modal windows ---------------------
-$('.main-banner__content-rotatebtn').on('click', function (e) {
+$('.avoke_modal-goto').on('click', function (e) {
+    e.preventDefault();
     if (!$(this).hasClass('rotatebtn--disabled')) {
         $('.modal-goto').addClass('modal-goto--active');
     }
@@ -152,7 +153,7 @@ $('.modal-goto__close').on('click', function (e) {
 })
 
 
-$('.calculate__btn').on('click', function (e) {
+$('.avoke_modal-calc').on('click', function (e) {
     e.preventDefault();
     $('.modal-calc').addClass('modal-calc--active');
 })
@@ -370,7 +371,7 @@ function phoneTest(input) {
 //     });
 // }
 
-$('.header__nav-link, .header__login, .footer__social-logo, .footer__menu').on('click', function(e) {
+$('.smooth-scroll').on('click', function(e) {
     e.preventDefault();
     const href = $(this).attr('href');
     $(href)[0].scrollIntoView({
@@ -390,6 +391,13 @@ $('.dropdown__list-link').on('click', function(e) {
     $('.header').toggleClass('header--dropdown');
     $('.burger__btn').toggleClass('open');
     $('.burger__btn').toggleClass('close');
+})
+
+$('.header__login').on('click', function(e) {
+    $('.dropdown').removeClass('dropdown--active');
+    $('.header').removeClass('header--dropdown');
+    $('.burger__btn').removeClass('close');
+    $('.burger__btn').addClass('open');
 })
 
 
