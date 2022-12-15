@@ -1639,6 +1639,10 @@ body {
             }
         }
 
+        &:active {
+            background-color: #12121C;
+        }
+
         &-right {
             position: absolute;
             top: 0;
@@ -1677,6 +1681,12 @@ body {
                 right: 50%;
                 top: 40px;
                 transition: all $time ease;
+            }
+
+            &:active {
+                & .arrow-btn__arrow-long {
+                    background-image: url(../img/slider-arrow-long-right-white.svg);
+                }
             }
         }
 
@@ -1717,6 +1727,12 @@ body {
                 right: 50%;
                 top: 40px;
                 transition: scale $time ease;
+            }
+
+            &:active {
+                & .arrow-btn__arrow-long {
+                    background-image: url(../img/slider-arrow-long-left-white.svg);
+                }
             }
         }
     }

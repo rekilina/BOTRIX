@@ -58,6 +58,7 @@ $('.articles__slider').slick({
 $(function () {
     $('.main-banner .main-marquee').jConveyorTicker({
         anim_duration: 150,
+        force_loop: true,
     });
 });
 
