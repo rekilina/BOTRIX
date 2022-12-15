@@ -3487,6 +3487,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: all $time ease;
+    z-index: 200;
 
     &--active {
         visibility: visible;
@@ -3498,7 +3499,7 @@ body {
     }
 
     &__wrapper {
-        width: 576px;
+        max-width: 576px;
         height: 395px;
         display: flex;
         flex-direction: column;
@@ -3514,11 +3515,19 @@ body {
         padding: 24px;
 
         transition: all $time ease;
+
+        @media(max-width:$d770) {
+            width: 90%;
+        }
     }
 
     &__h3 {
         margin-bottom: 16px;
         margin-top: 40px;
+
+        @media(max-width:$d500) {
+            font-size: 18px;
+        }
     }
 
     &__text {
@@ -3531,6 +3540,10 @@ body {
         color: $aluminium;
         text-align: center;
         max-width: 472px;
+
+        @media(max-width:$d500) {
+            font-size: 16px;
+        }
     }
 
     &__img {
@@ -3592,11 +3605,19 @@ body {
         padding: 24px;
 
         transition: all $time ease;
+
+        @media(max-width:$d770) {
+            width: 90%;
+        }
     }
 
     &__h3 {
         margin-bottom: 16px;
         margin-top: 40px;
+
+        @media(max-width:$d500) {
+            font-size: 18px;
+        }
     }
 
     &__text {
@@ -3609,6 +3630,10 @@ body {
         color: $aluminium;
         text-align: center;
         max-width: 472px;
+
+        @media(max-width:$d500) {
+            font-size: 16px;
+        }
     }
 
     &__img {
@@ -3670,11 +3695,19 @@ body {
         padding: 110px 40px 40px;
 
         transition: all $time ease;
+
+        @media(max-width:$d770) {
+            width: 90%;
+        }
     }
 
     &__subtitle {
         text-align: center;
         width: 100%;
+
+        @media(max-width:$d500) {
+            font-size: 18px;
+        }
     }
 
     &__social {
@@ -3752,11 +3785,19 @@ body {
         padding: 110px 40px 40px;
 
         transition: all $time ease;
+
+        @media(max-width:$d770) {
+            width: 90%;
+        }
     }
 
     &__subtitle {
         text-align: center;
         width: 100%;
+
+        @media(max-width:$d500) {
+            font-size: 18px;
+        }
     }
 
     &__social {
