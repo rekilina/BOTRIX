@@ -2902,6 +2902,12 @@ body {
         }
     }
 
+    & .container {
+        @media (max-width: $d770) {
+            position: relative;
+        }
+    }
+
     &__progressbar {
         margin-top: 24px;
         width: 100%;
@@ -2916,6 +2922,10 @@ body {
 
 .feedback {
     padding: 120px 0;
+
+    @media(max-width: $d770) {
+        padding-top: 1px;
+    }
 
     &__h2 {
         letter-spacing: 0.07em;

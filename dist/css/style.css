@@ -3059,10 +3059,18 @@ body {
     letter-spacing: -0.03em;
   }
 
+  .tariffs .container {
+    position: relative;
+  }
+
   .tariffs__progressbar {
     margin-top: 0;
     position: absolute;
     bottom: 133px;
+  }
+
+  .feedback {
+    padding-top: 1px;
   }
 }
 
