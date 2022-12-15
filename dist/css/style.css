@@ -3272,6 +3272,59 @@ body {
   .tariffs__list-li + .tariffs__list-li {
     margin-top: 16px;
   }
+
+  .feedback__h2 {
+    width: 100%;
+  }
+
+  .feedback__h2::after {
+    background-image: url(../img/feedback_h2-mobile.svg);
+    width: 316px;
+    height: 37px;
+    top: 32px;
+  }
+
+  .feedback__h2 .decor::before {
+    left: -2px;
+    top: 4px;
+  }
+
+  .feedback__h2-decor {
+    margin-right: 13px;
+  }
+
+  .feedback__inner {
+    margin-top: 50px;
+  }
+
+  .feedback__main {
+    max-width: inherit;
+    width: 100%;
+  }
+
+  .feedback__main-title {
+    margin-bottom: 23px;
+  }
+
+  .feedback__form {
+    margin-bottom: 41px;
+  }
+
+  .feedback__form-text {
+    margin-top: 0;
+  }
+
+  .feedback__form-btn {
+    margin-top: 13px;
+  }
+
+  .feedback__social-text {
+    margin-bottom: 25px;
+  }
+
+  .feedback__social-icons {
+    gap: 64px;
+  }
 }
 
 @media (max-width: 660px) and (max-width: 500px) {

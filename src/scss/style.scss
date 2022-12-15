@@ -2932,6 +2932,10 @@ body {
         position: relative;
         width: 600px;
 
+        @media(max-width: $d660) {
+            width: 100%;
+        }
+
         &::after {
             content: '';
             display: inline-block;
@@ -2942,6 +2946,14 @@ body {
             position: absolute;
             top: 22px;
             left: 0;
+
+            @media(max-width: $d660) {
+                background-image: url(../img/feedback_h2-mobile.svg);
+                width: 316px;
+                height: 37px;
+                top: 32px
+            }
+
         }
 
         & .decor {
@@ -2956,12 +2968,21 @@ body {
                 position: relative;
                 top: 0;
                 left: -10px;
+
+                @media(max-width: $d660) {
+                    left: -2px;
+                    top: 4px;
+                }
             }
         }
 
         &-decor {
             display: block;
             text-align: right;
+
+            @media(max-width: $d660) {
+                margin-right: 13px;
+            }
         }
 
     }
@@ -2971,13 +2992,26 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 64px;
+
+        @media(max-width: $d660) {
+            margin-top: 50px;
+        }
     }
 
     &__main {
         max-width: 576px;
 
+        @media(max-width: $d660) {
+            max-width: inherit;
+            width: 100%;
+        }
+
         &-title {
             margin-bottom: 48px;
+
+            @media(max-width: $d660) {
+                margin-bottom: 23px;
+            }
         }
     }
 
@@ -2985,6 +3019,10 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        @media(max-width: $d660) {
+            margin-bottom: 41px;
+        }
 
         &-wrapper {
             position: relative;
@@ -3052,6 +3090,10 @@ body {
             line-height: 140%;
             color: $aluminium;
             margin-top: 14px;
+
+            @media(max-width: $d660) {
+                margin-top: 0;
+            }
         }
 
         &-link {
@@ -3073,6 +3115,10 @@ body {
             text-align: center;
             border: none;
             margin-top: 24px;
+
+            @media(max-width: $d660) {
+                margin-top: 13px;
+            }
         }
     }
 
@@ -3082,11 +3128,19 @@ body {
         &-text {
             width: 80%;
             margin-bottom: 48px;
+
+            @media(max-width: $d660) {
+                margin-bottom: 25px;
+            }
         }
 
         &-icons {
             display: flex;
             gap: 48px;
+
+            @media(max-width: $d660) {
+                gap: 64px;
+            }
         }
 
         &-link {
