@@ -163,7 +163,6 @@ $('.modal-calc__close').on('click', function (e) {
 
 $('.modal-success__close, .modal-success__close-img').on('click', function (e) {
     e.preventDefault();
-    console.log('here');
     $('.modal-success').removeClass('modal-success--active');
 })
 
@@ -314,12 +313,13 @@ async function formSend(e) {
             // alert('Успешно отправлено');
             $('.modal-success').addClass('modal-success--active');
 
-            //console.log(response);
+            // console.log(response);
         } else {
             // alert('Error while sending form');
             $('.modal-failure').addClass('modal-failure--active');
             // Убираем класс _sending после ошибки отправки
             //form.classList.remove('_sending');
+            // console.log(response);
         }
     } else {
         //alert('Введите обязательные поля')
@@ -387,6 +387,8 @@ $('.dropdown__list-link').on('click', function(e) {
     })
     $('.dropdown').toggleClass('dropdown--active');
     $('.header').toggleClass('header--dropdown');
+    $('.burger__btn').toggleClass('open');
+    $('.burger__btn').toggleClass('close');
 })
 
 
