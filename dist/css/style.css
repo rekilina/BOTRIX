@@ -3515,6 +3515,7 @@ body {
   .subscribe__inner {
     height: 514px;
     background-position: center bottom;
+    background-size: 100%;
   }
 }
 
