@@ -643,6 +643,9 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width: $d660) {
+            padding-left: 36px;
+        }
     }
 
     &__list {
@@ -651,6 +654,7 @@ body {
         flex-direction: column;
         align-items: center;
         font-size: 64px;
+        margin-top: 50px;
 
         @media (max-width: $d1250) {
             font-size: 56px;
@@ -662,6 +666,18 @@ body {
 
         @media (max-width: $d770) {
             font-size: 42px;
+        }
+
+        @media (max-width: $d660) {
+            font-size: 16px;
+            gap: 46px;
+            margin-top: 28px;
+            width: 100%;
+            letter-spacing: 0.037em;
+        }
+
+        @media (max-width: $d500) {
+            align-items: flex-start;
         }
 
         &-li {
@@ -694,6 +710,10 @@ body {
             width: 1em;
             height: 1em;
             display: inline-block;
+
+            @media (max-width: $d660) {
+                display: none;
+            }
 
             &.dropdown__functions {
                 @include backsvg;
