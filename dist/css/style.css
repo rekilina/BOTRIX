@@ -565,6 +565,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-size: 64px;
+  margin-top: 50px;
 }
 
 .dropdown__list-li {
@@ -3288,6 +3289,22 @@ body {
     font-size: 20px;
   }
 
+  .dropdown__wrapper {
+    padding-left: 36px;
+  }
+
+  .dropdown__list {
+    font-size: 16px;
+    gap: 46px;
+    margin-top: 28px;
+    width: 100%;
+    letter-spacing: 0.037em;
+  }
+
+  .dropdown__list-img {
+    display: none;
+  }
+
   .main-banner__content {
     width: 100%;
   }
@@ -3552,6 +3569,10 @@ body {
   .header__login {
     width: 106px;
     height: 48px;
+  }
+
+  .dropdown__list {
+    align-items: flex-start;
   }
 
   .main-banner__content .decor::before {
