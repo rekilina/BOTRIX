@@ -643,6 +643,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         @media (max-width: $d660) {
             padding-left: 36px;
         }
@@ -2963,6 +2964,14 @@ body {
     }
 }
 
+._error {
+    border-color: #FF0033!important;
+    
+    &::placeholder {
+        color:#FF0033!important;
+    }
+}
+
 .feedback {
     padding: 120px 0;
 
@@ -3082,8 +3091,28 @@ body {
             line-height: 140%;
             color: $aluminium;
             position: absolute;
-            top: 16px;
+            top: 17px;
             left: 24px;
+        }
+
+        & .input-phone {
+            width: 100%;
+            position: relative;
+
+            &__span {
+                position: absolute;
+                top: 20px;
+                left: 24px;
+
+                font-family: $mulish;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color: #FFFFFF;
+
+                display: none;
+            }
         }
 
         &-input {
@@ -3115,11 +3144,31 @@ body {
             &:valid~.placeholder {
                 display: none;
             }
+
         }
 
         &-name {}
 
-        &-phone {}
+        &-phone {
+            // &:focus {
+            //     &::placeholder {
+            //         color: transparent;
+            //     }
+            //     & + .input-phone__span {
+            //         display: block;
+            //     }
+            // }
+            // &:valid {
+            //     & + .input-phone__span {
+            //         display: none;
+            //     }
+            // }
+            // &:not(.form__input-phone:placeholder-shown) {
+            //     & + .input-phone__span {
+            //         display: none;
+            //     }
+            // }
+        }
 
         &-message {
             min-height: 132px;
@@ -3312,6 +3361,7 @@ body {
         @media(max-width: $d1100) {
             width: 35%;
         }
+
         @media(max-width: $d900) {
             width: 100%;
         }
@@ -3319,9 +3369,11 @@ body {
 
     &__right {
         width: 56.7%;
+
         @media(max-width: $d1100) {
             width: 63%;
         }
+
         @media(max-width: $d900) {
             width: 100%;
         }
@@ -3330,6 +3382,7 @@ body {
     &__list {
         &-title {
             margin-bottom: 48px;
+
             @media(max-width: $d500) {
                 font-size: 24px;
                 margin-bottom: 34px;
@@ -3337,8 +3390,9 @@ body {
         }
 
         &-li {
-            & + .footer__list-li {
+            &+.footer__list-li {
                 margin-top: 24px;
+
                 @media(max-width: $d500) {
                     margin-top: 21px;
                 }
@@ -3407,6 +3461,7 @@ body {
     &__copyright {
         color: $aluminium;
         margin-top: 40px;
+
         @media(max-width: $d500) {
             font-size: 16px;
         }

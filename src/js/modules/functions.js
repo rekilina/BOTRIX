@@ -88,17 +88,17 @@ export function createProgressBar(slider_selector) {
     });
 }
 
-$('.functionality__preview').on('click', function(e) {
-    $(this).siblings('.functionality__content').slideToggle('fast', function() {
+$('.functionality__preview').on('click', function (e) {
+    $(this).siblings('.functionality__content').slideToggle('fast', function () {
         if ($(this).is(':visible'))
-            $(this).css('display','flex');
+            $(this).css('display', 'flex');
     });
-    if(Number(window.innerWidth) <= 660) {
+    if (Number(window.innerWidth) <= 660) {
         $(this).toggleClass("p-low");
         $(this).find('.functionality__preview-title').toggleClass('p-open');
-        $(this).parent().find('.functionality__content-top').slideToggle('fast',function() {
+        $(this).parent().find('.functionality__content-top').slideToggle('fast', function () {
             if ($(this).is(':visible'))
-                $(this).css('display','flex');
+                $(this).css('display', 'flex');
         });
     }
     $(this).find('.functionality__preview-circle').toggleClass('transparent');
@@ -106,39 +106,39 @@ $('.functionality__preview').on('click', function(e) {
     $(this).toggleClass('functionality__preview-bordernone');
 })
 
-$('.questions__preview').on('click', function(e) {
+$('.questions__preview').on('click', function (e) {
     $(this).siblings('.questions__text').slideToggle();
     $(this).toggleClass('questions__preview--active');
     $(this).find('.questions__preview-title').toggleClass('color-green');
     $(this).find('.questions__circle-vertical').toggleClass('questions__circle-vertical--active');
 
-    if(Number(window.innerWidth) <= 770) {
+    if (Number(window.innerWidth) <= 770) {
         $(this).toggleClass("p-open");
-        
+
     }
 })
 
 
 
 // -------------------  modal windows ---------------------
-$('.main-banner__content-rotatebtn').on('click', function(e) {
-    if(!$(this).hasClass('rotatebtn--disabled')) {
+$('.main-banner__content-rotatebtn').on('click', function (e) {
+    if (!$(this).hasClass('rotatebtn--disabled')) {
         $('.modal-goto').addClass('modal-goto--active');
     }
 })
 
-$('.modal-goto__close').on('click', function(e) {
+$('.modal-goto__close').on('click', function (e) {
     e.preventDefault();
     $('.modal-goto').removeClass('modal-goto--active');
 })
 
 
-$('.calculate__btn').on('click', function(e) {
+$('.calculate__btn').on('click', function (e) {
     e.preventDefault();
     $('.modal-calc').addClass('modal-calc--active');
 })
 
-$('.modal-calc__close').on('click', function(e) {
+$('.modal-calc__close').on('click', function (e) {
     e.preventDefault();
     $('.modal-calc').removeClass('modal-calc--active');
 })
@@ -146,10 +146,10 @@ $('.modal-calc__close').on('click', function(e) {
 // ------------------------------------------------------------
 
 //------------------------- hide menu -------------------------
-$(window).on('scroll', function(e) {
+$(window).on('scroll', function (e) {
     var elementTop = $('.functions__h2').offset().top;
     var headerBottom = $('.header').offset().top + $('.header').outerHeight();
-    if(Number(window.innerWidth) >= 1250) {
+    if (Number(window.innerWidth) >= 1250) {
         if (elementTop < headerBottom) {
             $('.header__nav-ul').css('display', 'none');
             $('.burger__btn').css('display', 'inline-block');
@@ -172,7 +172,7 @@ $(window).on('scroll', function(e) {
 
 // --------------------burger menu ----------------------------
 
-$('.burger__btn').on('click', function(e) {
+$('.burger__btn').on('click', function (e) {
     e.preventDefault();
     $(this).toggleClass('open');
     $(this).toggleClass('close');
@@ -185,32 +185,32 @@ $('.burger__btn').on('click', function(e) {
 
 //---------------------slick btns-----------------------------
 
-$('.capabilities__slider-btn.arrow-btn__circle-left').hover(function(e) {
-    if(Number(window.innerWidth) <= 660) {
+$('.capabilities__slider-btn.arrow-btn__circle-left').hover(function (e) {
+    if (Number(window.innerWidth) <= 660) {
         $('.capabilities__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(100px)');
     }
-}, function(e) {
-    if(Number(window.innerWidth) <= 660) {
+}, function (e) {
+    if (Number(window.innerWidth) <= 660) {
         $('.capabilities__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(0)');
     }
 })
 
-$('.articles__slider-btn.arrow-btn__circle-left').hover(function(e) {
-    if(Number(window.innerWidth) <= 660) {
+$('.articles__slider-btn.arrow-btn__circle-left').hover(function (e) {
+    if (Number(window.innerWidth) <= 660) {
         $('.articles__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(100px)');
     }
-}, function(e) {
-    if(Number(window.innerWidth) <= 660) {
+}, function (e) {
+    if (Number(window.innerWidth) <= 660) {
         $('.articles__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(0)');
     }
 })
 
-$('.tariffs__slider-btn.arrow-btn__circle-left').hover(function(e) {
-    if(Number(window.innerWidth) <= 660) {
+$('.tariffs__slider-btn.arrow-btn__circle-left').hover(function (e) {
+    if (Number(window.innerWidth) <= 660) {
         $('.tariffs__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(100px)');
     }
-}, function(e) {
-    if(Number(window.innerWidth) <= 660) {
+}, function (e) {
+    if (Number(window.innerWidth) <= 660) {
         $('.tariffs__slider-btn.arrow-btn__circle-right').css('transform', 'translateX(0)');
     }
 })
@@ -219,11 +219,130 @@ $('.tariffs__slider-btn.arrow-btn__circle-left').hover(function(e) {
 
 // ------------------------ resize ----------------------------
 
-$(window).on("resize", function(e) {
-    if(Number(window.innerWidth) > 660) {
+$(window).on("resize", function (e) {
+    if (Number(window.innerWidth) > 660) {
         $('.functionality__content-top').css('display', 'none');
         // if ($('.functionality__content-top').css('display') != 'none') {
         // }
     }
 
 })
+
+
+
+
+// function phoneMask(e) { 
+//     var KeyID = event.keyCode;
+
+//     var num = $(this).val().replace(/\D/g,''); 
+//     $(this).val('+' + num.substring(0,1) + '(' + num.substring(1,4) + ')' + ' ' + num.substring(4,5) + num.substring(5,6) + num.substring(6,7) + ' ' + num.substring(7,8)+ num.substring(8,9) + ' ' + num.substring(9,10)+ num.substring(10,11)); 
+// }
+// $('[type="tel"]').keyup(phoneMask);
+
+
+//  !/(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/.test(input.value);
+
+
+// Проверяем, что документ загружен
+
+const form = document.getElementById('form');
+form.addEventListener('submit', formSend);
+
+
+async function formSend(e) {
+    e.preventDefault();
+    let error = formValidate(form);
+
+    let formData = new FormData(form);
+
+
+    if (error === 0) {
+        // Процесс отправки вормы может занимать некоторое время
+        // Поэтому как только мы убедились, что ошибок в отправляемой форме нет,
+        // мы сразу добавляем форме класс _sending
+        // Чтобы во время отправки пользователь ничего не мог делать
+        form.classList.add('_sending');
+        // AJAX
+        let response = await fetch('sendmail.php', {
+            method: 'POST',
+            body: formData
+        });
+        if (response.ok) {
+            // код sendmail.php возвращает json
+            // let result0 = await response;
+            // let result = await response.json();
+            // alert(result.message);
+            formPreview.innerHTML = ''; // очищаем превью изображения
+            form.reset(); // очищаем все поля всей формы
+            // Убираем класс _sending после отправки
+            form.classList.remove('_sending');
+        } else {
+            alert('Error while sending form');
+            // Убираем класс _sending после ошибки отправки
+            form.classList.remove('_sending');
+        }
+    } else {
+        alert('Введите обязательные поля')
+    }
+}
+
+function formValidate(form) {
+    let error = 0;
+    let formReq = document.querySelector('.feedback__form-phone');
+    formRemoveError(formReq);
+
+    if (phoneTest(formReq)) {
+        console.log('here1');
+        formAddError(formReq);
+        error++;
+    }
+    if (formReq.value == '') {
+        console.log('here2');
+        formAddError(formReq);
+        error++;
+    }
+
+    // let error = 0;
+    // let formReq = document.querySelectorAll('._req');
+
+    // //for (let index = 0; index < formReq.length; index++) {
+    // for (let input of formReq) {
+    //     // const input = formReq[index];
+    //     formRemoveError(input);
+    //     if(input.classList.contains('feedback__form-phone')) {
+    //         console.log('here');
+    //         if(phoneTest(input)) {
+    //             formAddError(input);
+    //             error++;
+    //         }
+    //         if(input.value == '') {
+    //             formAddError(input);
+    //             error++;
+    //         }
+    //     } else {
+    //         if(input.value == '') {
+    //             formAddError(input);
+    //             error++;
+    //         }
+    //     }
+    // }
+
+    console.log(error);
+    return error;
+}
+function formAddError(input) {
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+}
+function formRemoveError(input) {
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+}
+function phoneTest(input) {
+    return !/(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/.test(input.value);
+}
+
+    // Получаем input file в переменную
+
+
+
