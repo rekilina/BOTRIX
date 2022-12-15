@@ -3276,6 +3276,10 @@ body {
 .footer {
     padding: 120px 0;
 
+    @media(max-width: $d770) {
+        padding-top: 60px;
+    }
+
     &__inner {
         // display: flex;
         // flex-direction: auto;
@@ -3287,6 +3291,9 @@ body {
 
         @media(max-width: $d1100) {
             width: 35%;
+        }
+        @media(max-width: $d900) {
+            width: 100%;
         }
     }
 
@@ -3303,11 +3310,18 @@ body {
     &__list {
         &-title {
             margin-bottom: 48px;
+            @media(max-width: $d500) {
+                font-size: 24px;
+                margin-bottom: 34px;
+            }
         }
 
         &-li {
             & + .footer__list-li {
                 margin-top: 24px;
+                @media(max-width: $d500) {
+                    margin-top: 21px;
+                }
             }
         }
 
@@ -3323,6 +3337,11 @@ body {
             &:hover {
                 color: $white
             }
+
+            @media(max-width: $d500) {
+                font-size: 24px;
+                font-size: 16px;
+            }
         }
     }
 
@@ -3336,7 +3355,7 @@ body {
             @media(max-width: $d500) {
                 display: flex;
                 flex-direction: column;
-                gap: 40px;
+                gap: 48px;
             }
         }
 
@@ -3354,6 +3373,10 @@ body {
             flex-direction: column-reverse;
         }
 
+        @media(max-width: $d500) {
+            margin-top: 64px;
+        }
+
         & .footer__right {
             display: flex;
             justify-content: space-between;
@@ -3364,6 +3387,9 @@ body {
     &__copyright {
         color: $aluminium;
         margin-top: 40px;
+        @media(max-width: $d500) {
+            font-size: 16px;
+        }
     }
 
     &__line {
@@ -3377,11 +3403,19 @@ body {
             grid-template-columns: 1fr 1fr;
             row-gap: 24px;
         }
+
+        @media(max-width: $d500) {
+            font-size: 16px;
+        }
     }
 
     &__social {
         width: 241px;
         margin-bottom: 40px;
+
+        @media(max-width: $d500) {
+            width: 100%;
+        }
 
         &-text {
             margin-top: 17px;
@@ -3392,6 +3426,11 @@ body {
             line-height: 140%;
             color: #FFFFFF;
             letter-spacing: -0.002em;
+
+            @media(max-width: $d500) {
+                margin-top: 20px;
+                font-size: 16px;
+            }
         }
 
         &-icons {
@@ -3399,6 +3438,10 @@ body {
             justify-content: space-between;
             align-items: center;
             margin-top: 64px;
+
+            @media(max-width: $d500) {
+                margin-top: 40px;
+            }
         }
 
         &-icon {
