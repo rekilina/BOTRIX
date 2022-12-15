@@ -56,7 +56,19 @@ $('.articles__slider').slick({
 // Ticker
 // https://www.jqueryscript.net/animation/horizontal-animation-conveyor-ticker.html
 $(function () {
-    $('.main-marquee').jConveyorTicker({
+    $('.main-banner .main-marquee').jConveyorTicker({
+        anim_duration: 150,
+    });
+});
+
+$(function () {
+    $('.horizontal-marquee-1').jConveyorTicker({
+        anim_duration: 150,
+    });
+});
+
+$(function () {
+    $('.horizontal-marquee-2').jConveyorTicker({
         anim_duration: 150,
     });
 });
