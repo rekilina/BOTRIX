@@ -2590,6 +2590,13 @@ body {
         color: #88888D;
         padding: 48px 0 22px 0;
         display: none;
+
+        @media(max-width: $d770) {
+            font-size: 16px;
+            letter-spacing: -0.007em;
+            padding-bottom: 40px;
+            padding-top: 40px;
+        }
     }
 
     &__preview {
@@ -2600,10 +2607,15 @@ body {
         justify-content: space-between;
         transition: all $time ease;
 
-        @media(max-width: $d660) {
+        @media(max-width: $d770) {
             height: 172px;
             padding: 0 0;
 
+        }
+
+        &.p-open {
+            height: inherit;
+            padding-top: 40px;
         }
 
         &-title {

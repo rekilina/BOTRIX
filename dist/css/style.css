@@ -1798,6 +1798,11 @@ body {
   transition: all 0.5s ease;
 }
 
+.questions__preview.p-open {
+  height: inherit;
+  padding-top: 40px;
+}
+
 .questions__preview-title {
   transition: all 0.5s ease;
   max-width: calc(100% - 96px);
@@ -3018,6 +3023,18 @@ body {
     padding: 0;
   }
 
+  .questions__text {
+    font-size: 16px;
+    letter-spacing: -0.007em;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .questions__preview {
+    height: 172px;
+    padding: 0 0;
+  }
+
   .tariffs {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -3294,11 +3311,6 @@ body {
 
   .articles__progressbar {
     display: inline-block;
-  }
-
-  .questions__preview {
-    height: 172px;
-    padding: 0 0;
   }
 
   .tariffs__wrapper {

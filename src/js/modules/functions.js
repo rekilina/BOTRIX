@@ -111,6 +111,11 @@ $('.questions__preview').on('click', function(e) {
     $(this).toggleClass('questions__preview--active');
     $(this).find('.questions__preview-title').toggleClass('color-green');
     $(this).find('.questions__circle-vertical').toggleClass('questions__circle-vertical--active');
+
+    if(Number(window.innerWidth) <= 770) {
+        $(this).toggleClass("p-open");
+        
+    }
 })
 
 
@@ -142,21 +147,21 @@ $('.modal-calc__close').on('click', function(e) {
 
 //------------------------- hide menu -------------------------
 $(window).on('scroll', function(e) {
-    var elementTop = $('.functions__h2').offset().top;
-    var headerBottom = $('.header').offset().top + $('.header').outerHeight();
-    if(Number(window.innerWidth) >= 1250) {
-        if (elementTop < headerBottom) {
-            $('.header__nav-ul').css('display', 'none');
-            $('.burger__btn').css('display', 'inline-block');
-            // $('.header__nav-ul').fadeOut(100, 'linear');
-            // $('.burger__btn').fadeIn(200, 'linear');
-        } else {
-            $('.header__nav-ul').css('display', 'flex');
-            $('.burger__btn').css('display', 'none');
-            // $('.header__nav-ul').fadeIn(200, 'linear');
-            // $('.burger__btn').fadeOut(100, 'linear');
-        }
-    }
+    // var elementTop = $('.functions__h2').offset().top;
+    // var headerBottom = $('.header').offset().top + $('.header').outerHeight();
+    // if(Number(window.innerWidth) >= 1250) {
+    //     if (elementTop < headerBottom) {
+    //         $('.header__nav-ul').css('display', 'none');
+    //         $('.burger__btn').css('display', 'inline-block');
+    //         // $('.header__nav-ul').fadeOut(100, 'linear');
+    //         // $('.burger__btn').fadeIn(200, 'linear');
+    //     } else {
+    //         $('.header__nav-ul').css('display', 'flex');
+    //         $('.burger__btn').css('display', 'none');
+    //         // $('.header__nav-ul').fadeIn(200, 'linear');
+    //         // $('.burger__btn').fadeOut(100, 'linear');
+    //     }
+    // }
 
 })
 
