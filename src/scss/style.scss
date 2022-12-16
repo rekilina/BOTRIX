@@ -2982,7 +2982,7 @@ body {
 
 ._error {
     border-color: #FF0033!important;
-    color: #FF0033;
+    color: #FF0033!important;
     &::placeholder {
         color:#FF0033!important;
     }

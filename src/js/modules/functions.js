@@ -288,6 +288,7 @@ var response;
 async function formSend(e) {
     e.preventDefault();
     let error = formValidate(form);
+    //error = 0
 
     let formData = new FormData(form);
 
@@ -359,7 +360,7 @@ function formRemoveError(input) {
     input.classList.remove('_error');
 }
 function phoneTest(input) {
-    return !/(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/.test(input.value);
+    return !/(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/.test(input.value.replace(/ /g,''));
 }
 
 // function scrollHandler(e) {
@@ -402,3 +403,4 @@ $('.header__login').on('click', function(e) {
 
 
 
+$("#phone").inputmask({"mask": "+7 (9 9 9) 9 9 9 9 9 9 9"});
