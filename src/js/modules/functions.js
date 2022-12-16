@@ -291,12 +291,10 @@ function formValidate(form) {
     formRemoveError(formReq);
 
     if (phoneTest(formReq)) {
-        console.log('here1');
         formAddError(formReq);
         error++;
     }
     if (formReq.value == '') {
-        console.log('here2');
         formAddError(formReq);
         error++;
     }
