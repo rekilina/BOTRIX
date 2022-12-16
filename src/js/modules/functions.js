@@ -141,11 +141,6 @@ $('.avoke_modal-goto').on('click', function (e) {
     }
 })
 
-// $('.main-banner__content-rotatebtn').on('click', function (e) {
-//     if (!$(this).hasClass('rotatebtn--disabled')) {
-//         $('.modal-success').addClass('modal-success--active');
-//     }
-// })
 
 $('.modal-goto__close').on('click', function (e) {
     e.preventDefault();
@@ -173,10 +168,6 @@ $('.modal-failure__close, .modal-failure__close-img').on('click', function (e) {
     $('.modal-failure').removeClass('modal-failure--active');
 })
 
-// $('body').on('click', function(e) {
-//     console.log(e.target);
-//     $('.modal-success').css('visibility', 'hidden');
-// })
 
 // ------------------------------------------------------------
 
@@ -188,13 +179,9 @@ $(window).on('scroll', function (e) {
         if (elementTop < headerBottom) {
             $('.header__nav-ul').css('display', 'none');
             $('.burger__btn').css('display', 'inline-block');
-            // $('.header__nav-ul').fadeOut(100, 'linear');
-            // $('.burger__btn').fadeIn(200, 'linear');
         } else {
             $('.header__nav-ul').css('display', 'flex');
             $('.burger__btn').css('display', 'none');
-            // $('.header__nav-ul').fadeIn(200, 'linear');
-            // $('.burger__btn').fadeOut(100, 'linear');
         }
     }
 
@@ -266,20 +253,6 @@ $(window).on("resize", function (e) {
 
 
 
-// function phoneMask(e) { 
-//     var KeyID = event.keyCode;
-
-//     var num = $(this).val().replace(/\D/g,''); 
-//     $(this).val('+' + num.substring(0,1) + '(' + num.substring(1,4) + ')' + ' ' + num.substring(4,5) + num.substring(5,6) + num.substring(6,7) + ' ' + num.substring(7,8)+ num.substring(8,9) + ' ' + num.substring(9,10)+ num.substring(10,11)); 
-// }
-// $('[type="tel"]').keyup(phoneMask);
-
-
-//  !/(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/.test(input.value);
-
-
-// Проверяем, что документ загружен
-
 const form = document.getElementById('form');
 form.addEventListener('submit', formSend);
 
@@ -288,16 +261,12 @@ var response;
 async function formSend(e) {
     e.preventDefault();
     let error = formValidate(form);
-    //error = 0
 
     let formData = new FormData(form);
 
 
     if (error === 0) {
-        // Процесс отправки вормы может занимать некоторое время
-        // Поэтому как только мы убедились, что ошибок в отправляемой форме нет,
-        // мы сразу добавляем форме класс _sending
-        // Чтобы во время отправки пользователь ничего не мог делать
+
         form.classList.add('_sending');
         // AJAX
         response = await fetch('sendmail.php', {
@@ -305,29 +274,13 @@ async function formSend(e) {
             body: formData
         });
         if (response.ok) {
-            // код sendmail.php возвращает json
-            // let result0 = await response;
-            // let result = await response.json();
-            // alert(result.message);
-            //formPreview.innerHTML = ''; // очищаем превью изображения
             form.reset(); // очищаем все поля всей формы
-            // Убираем класс _sending после отправки
-            //form.classList.remove('_sending');
-            // alert('Успешно отправлено');
             $('.modal-success').addClass('modal-success--active');
-
-            // console.log(response);
         } else {
-            // alert('Error while sending form');
             $('.modal-failure').addClass('modal-failure--active');
-            // Убираем класс _sending после ошибки отправки
-            //form.classList.remove('_sending');
-            // console.log(response);
         }
     } else {
-        //alert('Введите обязательные поля')
         $('.modal-failure').addClass('modal-failure--active');
-        // await new Promise((resolve, reject) => setTimeout(resolve, 100));
     }
 }
 
@@ -362,15 +315,6 @@ function formRemoveError(input) {
 function phoneTest(input) {
     return !/(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/.test(input.value.replace(/ /g,''));
 }
-
-// function scrollHandler(e) {
-//     e.preventDefault();
-//     const href = this.getAttribute("href");
-//     document.querySelector(href).scrollIntoView({
-//         behavior: "smooth",
-//         block: "start"
-//     });
-// }
 
 $('.smooth-scroll').on('click', function(e) {
     e.preventDefault();
