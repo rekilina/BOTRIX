@@ -19,37 +19,37 @@ export function iswebp() {
 
 $('.capabilities__slider').slick({
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: false,
     variableWidth: true,
-    nextArrow: '<div class="capabilities__slider-btn arrow-btn__circle arrow-btn__circle-right"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
+    nextArrow: '<div class="capabilities__slider-btn arrow-btn__circle arrow-btn__circle-right active"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
     prevArrow: '<div class="capabilities__slider-btn arrow-btn__circle arrow-btn__circle-left"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
 });
 
 $('.tariffs__slider').slick({
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: false,
     variableWidth: true,
-    nextArrow: '<div class="tariffs__slider-btn arrow-btn__circle arrow-btn__circle-right"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
+    nextArrow: '<div class="tariffs__slider-btn arrow-btn__circle arrow-btn__circle-right active"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
     prevArrow: '<div class="tariffs__slider-btn arrow-btn__circle arrow-btn__circle-left"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
 });
 
 $('.articles__slider').slick({
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: false,
     variableWidth: true,
-    nextArrow: '<div class="articles__slider-btn arrow-btn__circle arrow-btn__circle-right"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
+    nextArrow: '<div class="articles__slider-btn arrow-btn__circle arrow-btn__circle-right active"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
     prevArrow: '<div class="articles__slider-btn arrow-btn__circle arrow-btn__circle-left"><div class="arrow-btn__arrow-small"></div><div class="arrow-btn__arrow-long"></div></div>',
 });
 
@@ -94,7 +94,7 @@ export function createProgressBar(slider_selector) {
     var $progressBar = $slider.siblings('.progress');
     var $progressBarLabel = $progressBar.find('.slider__label');
     $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+        var calc = ((nextSlide) / (slick.slideCount - 3)) * 100;
         $progressBar
             .css('background-size', calc + '% 100%')
             .attr('aria-valuenow', calc);
@@ -102,33 +102,48 @@ export function createProgressBar(slider_selector) {
 }
 
 $('.functionality__preview').on('click', function (e) {
-    $(this).siblings('.functionality__content').slideToggle('fast', function () {
-        if ($(this).is(':visible'))
-            $(this).css('display', 'flex');
-    });
-    if (Number(window.innerWidth) <= 660) {
-        $(this).toggleClass("p-low");
-        $(this).find('.functionality__preview-title').toggleClass('p-open');
-        $(this).parent().find('.functionality__content-top').slideToggle('fast', function () {
+    // сначала у всех убираем активное состояние
+    if (!$(this).hasClass('functionality__preview-bordernone')) {
+        $('.functionality__preview').parent().find('.functionality__content, .functionality__content-top').css('display', 'none');
+        $('.functionality__preview').find('.functionality__preview-circle').removeClass('transparent');
+        $('.functionality__preview').find('.functionality__preview-title').removeClass('color-green');
+        $('.functionality__preview').removeClass('functionality__preview-bordernone');
+
+        $('.functionality__preview').removeClass("p-low");
+        $('.functionality__preview').find('.functionality__preview-title').removeClass('p-open');
+
+
+        $(this).siblings('.functionality__content').slideToggle('fast', function () {
             if ($(this).is(':visible'))
                 $(this).css('display', 'flex');
         });
+        if (Number(window.innerWidth) <= 660) {
+
+
+            $(this).addClass("p-low");
+            $(this).find('.functionality__preview-title').addClass('p-open');
+
+            $(this).parent().find('.functionality__content-top').slideToggle('fast', function () {
+                if ($(this).is(':visible'))
+                    $(this).css('display', 'flex');
+            });
+        }
+        $(this).find('.functionality__preview-circle').addClass('transparent');
+        $(this).find('.functionality__preview-title').addClass('color-green');
+        $(this).addClass('functionality__preview-bordernone');
     }
-    $(this).find('.functionality__preview-circle').toggleClass('transparent');
-    $(this).find('.functionality__preview-title').toggleClass('color-green');
-    $(this).toggleClass('functionality__preview-bordernone');
 })
 
 $('.questions__preview').on('click', function (e) {
-    $(this).siblings('.questions__text').slideToggle();
+        $(this).siblings('.questions__text').slideToggle();
     $(this).toggleClass('questions__preview--active');
     $(this).find('.questions__preview-title').toggleClass('color-green');
     $(this).find('.questions__circle-vertical').toggleClass('questions__circle-vertical--active');
 
-    if (Number(window.innerWidth) <= 770) {
+        if (Number(window.innerWidth) <= 770) {
         $(this).toggleClass("p-open");
 
-    }
+        }
 })
 
 
@@ -173,10 +188,11 @@ $('.modal-failure__close, .modal-failure__close-img').on('click', function (e) {
 
 //------------------------- hide menu -------------------------
 $(window).on('scroll', function (e) {
+    //hide menu
     var elementTop = $('.functions__h2').offset().top;
     var headerBottom = $('.header').offset().top + $('.header').outerHeight();
     if (Number(window.innerWidth) >= 1250) {
-        if (elementTop < headerBottom) {
+        if (elementTop - 200 < headerBottom) {
             $('.header__nav-ul').css('display', 'none');
             $('.burger__btn').css('display', 'inline-block');
         } else {
@@ -185,6 +201,23 @@ $(window).on('scroll', function (e) {
         }
     }
 
+    //hilight menu
+    let allMenu = $(".dropdown__list-link");
+    let functions_block = $('.functions').offset().top;
+    let capabilities_block = $('.capabilities').offset().top;
+    let tariffs_block = $('.tariffs').offset().top;
+    if (functions_block - 200 < headerBottom) {
+        allMenu.removeClass("color-green");
+        allMenu.parent().find('[href="#functions"]').addClass("color-green");
+    }
+    if (capabilities_block - 200 < headerBottom) {
+        allMenu.removeClass("color-green");
+        allMenu.parent().find('[href="#capabilities"]').addClass("color-green");
+    }
+    if (tariffs_block - 200 < headerBottom) {
+        allMenu.removeClass("color-green");
+        allMenu.parent().find('[href="#tariffs"]').addClass("color-green");
+    }
 })
 
 
@@ -311,10 +344,10 @@ function formRemoveError(input) {
     input.classList.remove('_error');
 }
 function phoneTest(input) {
-    return !/(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/.test(input.value.replace(/ /g,''));
+    return !/(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/.test(input.value.replace(/ /g, ''));
 }
 
-$('.smooth-scroll').on('click', function(e) {
+$('.smooth-scroll').on('click', function (e) {
     e.preventDefault();
     const href = $(this).attr('href');
     $(href)[0].scrollIntoView({
@@ -323,7 +356,7 @@ $('.smooth-scroll').on('click', function(e) {
     })
 })
 
-$('.dropdown__list-link').on('click', function(e) {
+$('.dropdown__list-link').on('click', function (e) {
     e.preventDefault();
     const href = $(this).attr('href');
     $(href)[0].scrollIntoView({
@@ -336,7 +369,7 @@ $('.dropdown__list-link').on('click', function(e) {
     $('.burger__btn').toggleClass('close');
 })
 
-$('.header__login').on('click', function(e) {
+$('.header__login').on('click', function (e) {
     $('.dropdown').removeClass('dropdown--active');
     $('.header').removeClass('header--dropdown');
     $('.burger__btn').removeClass('close');
@@ -345,4 +378,4 @@ $('.header__login').on('click', function(e) {
 
 
 
-$("#phone").inputmask({"mask": "+7 (9 9 9) 9 9 9 9 9 9 9"});
+$("#phone").inputmask({ "mask": "+7 (9 9 9) 9 9 9 9 9 9 9" });
