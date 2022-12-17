@@ -17,6 +17,18 @@ export function iswebp() {
     })
 }
 
+export function createProgressBar(slider_selector) {
+    var $slider = $(slider_selector);
+    var $progressBar = $slider.siblings('.progress');
+    var $progressBarLabel = $progressBar.find('.slider__label');
+    $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        var calc = ((nextSlide) / (slick.slideCount - 3)) * 100;
+        $progressBar
+            .css('background-size', calc + '% 100%')
+            .attr('aria-valuenow', calc);
+    });
+}
+$(document).ready(function() {
 $('.capabilities__slider').slick({
     dots: false,
     infinite: false,
@@ -86,19 +98,6 @@ function videoPlay(wrapper) {
     var src = iframe.data('src');
     wrapper.addClass('videoWrapperActive');
     iframe.attr('src', src + "?autoplay=1");
-}
-
-
-export function createProgressBar(slider_selector) {
-    var $slider = $(slider_selector);
-    var $progressBar = $slider.siblings('.progress');
-    var $progressBarLabel = $progressBar.find('.slider__label');
-    $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        var calc = ((nextSlide) / (slick.slideCount - 3)) * 100;
-        $progressBar
-            .css('background-size', calc + '% 100%')
-            .attr('aria-valuenow', calc);
-    });
 }
 
 $('.functionality__preview').on('click', function (e) {
@@ -187,6 +186,7 @@ $('.modal-failure__close, .modal-failure__close-img').on('click', function (e) {
 // ------------------------------------------------------------
 
 //------------------------- hide menu -------------------------
+ /* code here */
 $(window).on('scroll', function (e) {
     //hide menu
     var elementTop = $('.functions__h2').offset().top;
@@ -379,3 +379,11 @@ $('.header__login').on('click', function (e) {
 
 
 $("#phone").inputmask({ "mask": "+7 (9 9 9) 9 9 9 9 9 9 9" });
+/*
+iswebp();
+
+createProgressBar('.capabilities__slider');
+createProgressBar('.tariffs__slider');
+createProgressBar('.articles__slider');
+*/
+});

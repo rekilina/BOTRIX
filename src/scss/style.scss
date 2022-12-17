@@ -353,7 +353,7 @@ body {
         position: absolute;
         top: 0;
         right: 0;
-        background-image: url(../img/rotatebtn/Ellipse63.png);
+        background-image: url(../img/rotatebtn/Ellipse63.svg);
         background-size: 100% 100%;
         background-position: center center;
         background-repeat: no-repeat;
@@ -370,7 +370,7 @@ body {
     top: 50%;
     transform: translateY(-50%) translateX(50%);
     right: 50%;
-    background-image: url(../img/rotatebtn/Ellipse53.png);
+    background-image: url(../img/rotatebtn/Ellipse53.svg);
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -393,7 +393,7 @@ body {
         position: absolute;
         top: 12px;
         right: 12px;
-        background-image: url(../img/rotatebtn/Ellipse50.png);
+        background-image: url(../img/rotatebtn/Ellipse50.svg);
         background-size: 100% 100%;
         background-position: center center;
         background-repeat: no-repeat;
@@ -3567,7 +3567,6 @@ body {
             &:nth-child(3) {
                 @media(max-width: $d660) {
                     order: 2;
-                    background-color: red;
                 }
             }
         }
@@ -3581,7 +3580,7 @@ body {
         @media(max-width: $d660) {
             font-size: 16px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-wrap: wrap;
         }
 
@@ -3591,7 +3590,9 @@ body {
         }
 
         &-item {
-            min-width: 40%;
+            @media(max-width: $d660) {
+            min-width: 45%;
+            }
         }
     }
 

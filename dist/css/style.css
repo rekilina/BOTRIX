@@ -294,9 +294,6 @@ body {
   z-index: 1;
 }
 
-.no-webp .ellips_63-img{
-  background-image: url(../img/rotatebtn/Ellipse63.png); }
-
 .ellips_63-img {
   width: 165px;
   height: 165px;
@@ -304,15 +301,13 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  background-image: url(../img/rotatebtn/Ellipse63.svg);
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 1;
 }
-
-.no-webp .ellips_53{
-  background-image: url(../img/rotatebtn/Ellipse53.png); }
 
 .ellips_53 {
   width: 172px;
@@ -322,6 +317,7 @@ body {
   top: 50%;
   transform: translateY(-50%) translateX(50%);
   right: 50%;
+  background-image: url(../img/rotatebtn/Ellipse53.svg);
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -337,9 +333,6 @@ body {
   z-index: 3;
 }
 
-.no-webp .ellips_50-img{
-  background-image: url(../img/rotatebtn/Ellipse50.png); }
-
 .ellips_50-img {
   width: 172px;
   height: 172px;
@@ -347,6 +340,7 @@ body {
   position: absolute;
   top: 12px;
   right: 12px;
+  background-image: url(../img/rotatebtn/Ellipse50.svg);
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2404,10 +2398,6 @@ body {
   width: 100%;
 }
 
-.footer__line-item {
-  min-width: 40%;
-}
-
 .footer__social {
   width: 241px;
   margin-bottom: 40px;
@@ -3656,14 +3646,17 @@ body {
 
   .footer__line-item:nth-child(3) {
     order: 2;
-    background-color: red;
   }
 
   .footer__line {
     font-size: 16px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+  }
+
+  .footer__line-item {
+    min-width: 45%;
   }
 }
 
@@ -3901,12 +3894,6 @@ body {
     align-items: flex-start;
   }
 }
-
-.webp .ellips_63-img{ background-image: url(../img/rotatebtn/Ellipse63.webp); }
-
-.webp .ellips_53{ background-image: url(../img/rotatebtn/Ellipse53.webp); }
-
-.webp .ellips_50-img{ background-image: url(../img/rotatebtn/Ellipse50.webp); }
 
 .webp .main-banner__content-h1::after{ background-image: url(../img/IconArrowDown.webp); }
 
