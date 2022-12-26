@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="img/IconRobot.svg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -85,11 +86,11 @@
             <div class="container">
                 <div class="main-banner__inner">
                     <div class="main-banner__content">
-                        <h1 class="h1 main-banner__content-h1">
+                        <h1 class="h1 main-banner__content-h1 ">
                             Конструктор <span class="color-green decor">чат&nbsp;ботов</span> и&nbsp;массовых <span
                                 class="color-green">рассылок</span>
                         </h1>
-                        <p class="main-banner__content-description">Автоматизируйте бизнес в мессенджерах вместе
+                        <p class="main-banner__content-description textanim wow animate__fadeInUp animate__animated">Автоматизируйте бизнес в мессенджерах вместе
                             c&nbsp;Botrix и получите конверсию до 75%</p>
                         <div class="main-banner__content-rotatebtn avoke_modal-goto">
                             <div class="rotatebtn">
@@ -142,7 +143,7 @@
             </div>
         </section>
 
-        <section class="functions" id="functions">
+        <section class="functions" data-wow-delay="0.5s" id="functions">
             <div class="container">
                 <div class="functions__inner">
                     <h2 class="h2 functions__h2">
@@ -211,13 +212,14 @@
         <section class="messengers" id="messengers">
             <div class="container">
                 <h2 class="h2 messengers__h2">
-                    Мессенджеры — быстрый, доступный способ привлечь и удержать клиентов
+                    <span class="color-green">Мессенджеры</span> — быстрый, доступный способ привлечь и удержать клиентов
                 </h2>
-                <p class="messengers__text">Смартфоны сегодня — это главный источник трафика, а&nbsp;значит
+                <p class="messengers__text textanim wow animate__fadeInUp animate__animated">Смартфоны сегодня — это главный источник трафика, а&nbsp;значит
                     и потенциальных клиентов. Любому бизнесу для существования и развития нужно присутствовать
                     в Интернете, а&nbsp;ещё важнее — в телефоне клиента. Лучше всего для этого подходят
                     мессенджеры:</p>
                 <div class="messengers__wrapper">
+                    <img src="img/MessagesBanner.png" alt="MessagesBanner" class="messengers__banner">
                     <ul class="messengers__list">
                         <li class="messengers__list-li">
                             Открываемость сообщений от 88%. Высокая вероятность, что клиент увидит ваше послание,
@@ -243,15 +245,15 @@
             </div>
         </section>
 
-        <section class="capabilities" id="capabilities">
+        <section class="capabilities " id="capabilities">
             <div class="container">
                 <h2 class="h2 capabilities__h2">
                     <span class="color-green">Возможности:</span> автоматизируйте все потоки в мессенджерах
                 </h2>
                 <div class="capabilities__descr">
-                    <p class="capabilities__descr-subtitle subtitle">Botrix - оператор в WhatsApp и Telegram, доступный
+                    <p class="capabilities__descr-subtitle subtitle textanim wow animate__fadeInUp animate__animated">Botrix - оператор в WhatsApp и Telegram, доступный
                         24/7 и способный обрабатывать неограниченный трафик с&nbsp;записью всех клиентов в базе.</p>
-                    <p class="capabilities__descr-text">Botrix заменяет работу нескольких менеджеров, позволяет
+                    <p class="capabilities__descr-text textanim wow animate__fadeInUp animate__animated">Botrix заменяет работу нескольких менеджеров, позволяет
                         экономить на рекламе и не упускать ни одного клиента, который проконтактировал с вашей
                         компанией.</p>
                 </div>
@@ -869,9 +871,10 @@
                 <h2 class="h2 tariffs__h2">
                     <span class="color-green">Тарифы:</span> всё необходимое без переплат
                 </h2>
-                <p class="tariffs__subtitle subtitle">Наши тарифные планы ориентированы на удобство клиентов и разумный
+                <p class="tariffs__subtitle subtitle textanim wow animate__fadeInUp animate__animated">Наши тарифные планы ориентированы на удобство клиентов и разумный
                     подход к стоимости:</p>
                 <div class="tariffs__wrapper">
+                    <img src="img/TariffsBaner.png" alt="TariffsBaner" class="tariffs__banner">
                     <ul class="tariffs__list">
                         <li class="tariffs__list-li">
                             При работе наших пользователей с&nbsp;WhatsApp, мы помогаем подключить <span
@@ -1457,6 +1460,9 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
     <script src="js/jConveyorTicker.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+    <script src="https://unpkg.com/textillate@0.4.1/jquery.textillate.js"></script>
     <script src="js/app.js"></script>
 </body>
 

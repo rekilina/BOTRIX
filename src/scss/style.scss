@@ -19,6 +19,8 @@ $d660: 660px;
 $d500: 500px;
 $d360: 359px;
 
+
+
 @mixin backsvg {
     background-size: 100% 100%;
     background-position: center center;
@@ -452,8 +454,6 @@ body {
     left: 0;
 
     background: rgb(18, 18, 28);
-    background: -moz-linear-gradient(180deg, rgba(18, 18, 28, 1) 0%, rgba(18, 18, 28, 0) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(18, 18, 28, 1) 0%, rgba(18, 18, 28, 0) 100%);
     background: linear-gradient(180deg, rgba(18, 18, 28, 1) 0%, rgba(18, 18, 28, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12121c", endColorstr="#12121c", GradientType=1);
 
@@ -804,12 +804,21 @@ body {
 
 .main-banner {
     padding-top: 175px;
-    padding-bottom: 260px;
+    padding-bottom: 263px;
     position: relative;
 
     @media(max-width: $d900) {
         padding-top: 124px;
     }
+
+    @media(max-width: $d660) {
+        padding-bottom: 328px;
+    }
+
+    @media(max-width: $d500) {
+        padding-bottom: 428px;
+    }
+
 
     &__inner {
         position: relative;
@@ -996,6 +1005,9 @@ body {
     flex-wrap: nowrap;
     position: relative;
     bottom: -360px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     pointer-events: none;
 
@@ -1053,15 +1065,15 @@ body {
 }
 
 .functions {
-    padding-top: 236px;
+    margin-top: 236px;
     padding-bottom: 73px;
 
     @media(max-width: $d660) {
-        padding-top: 328px;
+        margin-top: 328px;
     }
 
     @media(max-width: $d500) {
-        padding-top: 428px;
+        margin-top: 428px;
     }
 
     &__h2 {
@@ -1154,6 +1166,7 @@ body {
             align-items: center;
             justify-content: center;
             border: 1px solid #60E878;
+            -webkit-filter: drop-shadow(0px 0px 12px rgba(96, 232, 120, 0.5));
             filter: drop-shadow(0px 0px 12px rgba(96, 232, 120, 0.5));
             height: 155px;
             width: 160px;
@@ -1307,11 +1320,7 @@ body {
     text-indent: -999em;
     overflow: hidden;
     opacity: 1;
-    -webkit-transition: opacity 800ms, height 0s;
-    -moz-transition: opacity 800ms, height 0s;
     transition: opacity 800ms, height 0s;
-    -webkit-transition-delay: 0s, 0s;
-    -moz-transition-delay: 0s, 0s;
     transition-delay: 0s, 0s;
 }
 
@@ -1334,19 +1343,19 @@ body {
 .videoWrapperActive .videoPoster {
     opacity: 0;
     height: 0;
-    -webkit-transition-delay: 0s, 800ms;
-    -moz-transition-delay: 0s, 800ms;
     transition-delay: 0s, 800ms;
 }
 
 .messengers {
     padding-top: 132px;
-    padding-bottom: 120px;
+    padding-bottom: 355px; //change
 
-    @media (max-width: $d770) {
+    @media (max-width: $d1100) {
+        //change
         padding-top: 65px;
         padding-bottom: 60px;
     }
+
 
     &__h2 {
         width: 70%;
@@ -1362,12 +1371,25 @@ body {
         &::before {
             content: '';
             position: absolute;
-            left: 0;
+            left: 607px;
             top: -10px;
-            height: 65px;
-            width: 380px;
-            background-image: url(../img/messengers_h2.svg);
+            height: 165px;
+            width: 493px;
+            background-image: url(../img/messengers_h2_desctop.svg);
             @include backsvg;
+
+            @media (max-width: $d1250) {
+                left: 500px;
+                top: -20px;
+            }
+
+            @media (max-width: $d1100) {
+                left: 0;
+                top: -10px;
+                height: 65px;
+                width: 380px;
+                background-image: url(../img/messengers_h2.svg);
+            }
 
             @media (max-width: $d770) {
                 width: 9em;
@@ -1378,20 +1400,22 @@ body {
         &::after {
             content: '';
             position: absolute;
-            bottom: 8px;
-            // right: 178px;
-            left: 615px;
-            height: 38px;
-            width: 38px;
+            bottom: 12px;
+            left: 1105px;
+            height: 81px;
+            width: 81px;
             background-image: url(../img/SmileGreen.svg);
             @include backsvg;
 
-            transform: rotate(32deg);
+            transform: rotate(30deg);
 
-            @media (max-width: $d770) {
-                right: -24px;
+            @media (max-width: $d1250) {}
+
+            @media (max-width: $d1250) {
                 left: inherit;
-                bottom: 44px;
+                right: 0;
+                bottom: -28px;
+
             }
 
             @media (max-width: $d770) {
@@ -1427,12 +1451,31 @@ body {
     }
 
     &__wrapper {
+        //change
         margin-top: 40px;
         display: flex;
         justify-content: flex-end;
+        position: relative;
 
         @media (max-width: $d770) {
             margin-top: 23px;
+        }
+    }
+
+    &__banner {
+        //change
+        width: 58%;
+        position: absolute;
+        top: 64px;
+        left: -86px;
+        z-index: 10;
+
+        @media (max-width: $d1100) {
+            width: 42%;
+        }
+
+        @media (max-width: $d900) {
+            display: none;
         }
     }
 
@@ -1564,11 +1607,16 @@ body {
         -moz-clip-path: inset(-100vw -100vw -100vw -20px) !important;
         padding-top: 90px; // чтобы было куда стрелки ставить
 
+        // &.slick-slider {
+        //     width: calc(100% - 200px)!important;
+        // }
+
         & .slick-list {
             padding-top: 24px !important;
             padding-bottom: 24px !important;
             overflow: visible !important;
             margin-top: 30px;
+
 
             @media (max-width: $d660) {
                 // padding-top: 10px !important;
@@ -1649,6 +1697,10 @@ body {
     }
 }
 
+.tr100 {
+    transform: translateX(100px) !important;
+}
+
 .arrow-btn {
     &__circle {
         width: 94px;
@@ -1660,10 +1712,46 @@ body {
         transition: all $time ease;
         cursor: pointer;
 
-        // &.active {
-        //     width: 194px;
-        //     background-color: $white;
-        // }
+        &.active {
+            width: 194px;
+            background-color: $white;
+
+            &.arrow-btn__circle-right {
+                // поскольку transform-origin тут не спасет
+                // 194px - 94px = 100px
+                transform: translateX(100px);
+
+                @media (max-width: $d660) {
+                    transform: translateX(0);
+                }
+
+                & .arrow-btn__arrow-long {
+                    background-image: url(../img/slider-arrow-long-right.svg);
+                    transform: scale(1) translateX(50%);
+                    opacity: 1;
+                }
+
+                & .arrow-btn__arrow-small {
+                    opacity: 0;
+                }
+            }
+
+            &.arrow-btn__circle-left {
+                @media (max-width: $d660) {
+                    transform: translateX(0);
+                }
+
+                & .arrow-btn__arrow-long {
+                    background-image: url(../img/slider-arrow-long-left.svg);
+                    transform: scale(1) translateX(50%);
+                    opacity: 1;
+                }
+
+                & .arrow-btn__arrow-small {
+                    opacity: 0;
+                }
+            }
+        }
 
         &:hover {
             width: 194px;
@@ -1689,7 +1777,15 @@ body {
         }
 
         &:active {
-            background-color: $white;
+            background-color: transparent;
+
+            &.arrow-btn__circle-right .arrow-btn__arrow-long {
+                background-image: url(../img/slider-arrow-long-right-white.svg);
+            }
+
+            &.arrow-btn__circle-left .arrow-btn__arrow-long {
+                background-image: url(../img/slider-arrow-long-left-white.svg);
+            }
         }
 
         &-right {
@@ -1732,11 +1828,8 @@ body {
                 transition: all $time ease;
             }
 
-            &:active {
-                & .arrow-btn__arrow-long {
-                    background-image: url(../img/slider-arrow-long-right.svg);
-                }
-            }
+            &:active {}
+
         }
 
         &-left {
@@ -1786,7 +1879,7 @@ body {
 
             &:active {
                 & .arrow-btn__arrow-long {
-                    background-image: url(../img/slider-arrow-long-left.svg);
+                    background-image: url(../img/slider-arrow-long-left-white.svg);
                 }
             }
         }
@@ -2082,6 +2175,7 @@ body {
 
     &__content {
         overflow: visible !important;
+        -webkit-clip-path: inset(-100vw 0 0 0) !important;
         clip-path: inset(-100vw 0 0 0) !important;
         // display: flex;
         display: none;
@@ -2795,13 +2889,23 @@ body {
         &::after {
             content: '';
             display: inline-block;
-            width: 739px;
-            height: 85px;
+            width: 795px;
+            height: 95px;
             background-image: url(../img/tariffs_h2.svg);
             @include backsvg;
             position: absolute;
-            top: 53px;
-            left: 0;
+            top: 23px;
+            left: 410px;
+
+            @media(max-width: $d1250) {
+                top: 80px;
+                left: 0;
+            }
+
+            @media(max-width: $d1100) {
+                top: 120px;
+                left: 0;
+            }
 
             @media(max-width: $d770) {
                 // left: inherit;
@@ -2818,7 +2922,7 @@ body {
     }
 
     &__subtitle {
-        margin-top: 100px;
+        margin-top: 78px;
         max-width: 785px;
 
         @media(max-width: $d770) {
@@ -2830,11 +2934,33 @@ body {
         margin-top: 38px;
         display: flex;
         justify-content: flex-end;
+        position: relative;
+        padding-bottom: 423px;
+
+        @media(max-width: $d900) {
+            padding-bottom: 0;
+        }
 
         @media(max-width: $d660) {
             margin-top: 23px;
         }
 
+    }
+
+    &__banner{
+        position: absolute;
+        width: 70%;
+        top: 78px;
+        left: -132px;
+
+        @media (max-width: $d1100) {
+            top: 200px;
+            width: 80%;
+        }
+
+        @media (max-width: $d900) {
+            display: none;
+        }
     }
 
     &__list {
@@ -3051,6 +3177,22 @@ body {
     border-color: #FF0033 !important;
     color: #FF0033 !important;
 
+    &::-webkit-input-placeholder {
+        color: #FF0033 !important;
+    }
+
+    &::-moz-placeholder {
+        color: #FF0033 !important;
+    }
+
+    &:-ms-input-placeholder {
+        color: #FF0033 !important;
+    }
+
+    &::-ms-input-placeholder {
+        color: #FF0033 !important;
+    }
+
     &::placeholder {
         color: #FF0033 !important;
     }
@@ -3214,6 +3356,42 @@ body {
             font-size: 18px;
             line-height: 140%;
             color: $white;
+
+            &::-webkit-input-placeholder {
+                font-family: $mulish;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color: $aluminium;
+            }
+
+            &::-moz-placeholder {
+                font-family: $mulish;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color: $aluminium;
+            }
+
+            &:-ms-input-placeholder {
+                font-family: $mulish;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color: $aluminium;
+            }
+
+            &::-ms-input-placeholder {
+                font-family: $mulish;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color: $aluminium;
+            }
 
             &::placeholder {
                 font-family: $mulish;
@@ -3591,7 +3769,7 @@ body {
 
         &-item {
             @media(max-width: $d660) {
-            min-width: 45%;
+                min-width: 45%;
             }
         }
     }
